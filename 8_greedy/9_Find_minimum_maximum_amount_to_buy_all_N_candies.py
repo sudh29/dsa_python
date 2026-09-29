@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Find Minimum and Maximum Amount to Buy All N Candies
+Category: Greedy Algorithms
+Pattern: Sorting / Two Pointers / Free Candy Greed
+
+Time Complexity:  O(N log N) - Sorting candy prices
+Space Complexity: O(1) auxiliary space
+"""
 
 
 class Solution:
@@ -21,17 +28,7 @@ class Solution:
         return min_val, max_val
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-
-    for _ in range(t):
-        N, K = [int(x) for x in input().split()]
-        candies = [int(x) for x in input().split()]
-
-        solObj = Solution()
-
-        print(*solObj.candyStore(candies, N, K))
+    candies = [3, 2, 1, 4]
+    k = 2
+    print(f"Min and max cost with {k} free: {Solution().candyStore(candies, len(candies), k)}")

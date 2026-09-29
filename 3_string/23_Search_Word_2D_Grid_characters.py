@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Search Word in 2D Grid
+Category: Strings
+Pattern: 8-Directional Matrix Search
+
+Time Complexity:  O(R * C * 8 * len(word)) - Checking 8 directions from each cell
+Space Complexity: O(1) auxiliary space
+"""
 
 
 def is_valid(x, y, n, m):
@@ -35,31 +42,12 @@ class Solution:
         return result
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    T = int(input())
-    for i in range(T):
-        n, m = input().split()
-        n = int(n)
-        m = int(m)
-        grid = []
-        for _ in range(n):
-            cur = input()
-            temp = []
-            for __ in cur:
-                temp.append(__)
-            grid.append(temp)
-        word = input()
-        obj = Solution()
-        ans = obj.searchWord(grid, word)
-        for _ in ans:
-            for __ in _:
-                print(__, end=" ")
-            print()
-        if len(ans) == 0:
-            print(-1)
-
-# } Driver Code Ends
+    obj = Solution()
+    grid = [
+        ["a", "b", "c"],
+        ["d", "r", "f"],
+        ["g", "h", "i"],
+    ]
+    word = "abc"
+    print(f"Occurrences of '{word}': {obj.searchWord(grid, word)}")

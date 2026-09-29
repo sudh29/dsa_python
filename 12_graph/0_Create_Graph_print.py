@@ -1,3 +1,13 @@
+"""
+Problem: Create Graph Print
+Category: Graph Algorithms
+Pattern: Breadth-First Search / Depth-First Search
+
+Time Complexity:  O(V + E)
+Space Complexity: O(V) - Visited set and traversal queue/stack
+"""
+
+
 class Graph:
     def __init__(self):
         self.adjlist = {}

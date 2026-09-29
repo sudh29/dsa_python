@@ -1,11 +1,22 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
+"""
+Problem: Deletion Node Binary Search Tree
+Category: Binary Search Trees
+Pattern: BST Inorder / Divide & Conquer
+
+Time Complexity:  O(H) where H is tree height
+Space Complexity: O(H) - Recursion stack
+"""
+
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+
 class Solution:
-    def deleteNode(self, root: Optional[TreeNode], key: int) -> Optional[TreeNode]:
+    def deleteNode(self, root: TreeNode | None, key: int) -> TreeNode | None:
         def minValueNode(node):
             current = node
             while current.left:

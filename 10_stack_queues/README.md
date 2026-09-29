@@ -9,9 +9,11 @@
 | [4_Implement_N_stacks_in_an_Array.py](4_Implement_N_stacks_in_an_Array.py) | Stack / Space-Efficient Design |
 | [5_Parenthesis_Checker.py](5_Parenthesis_Checker.py) | Stack / Balanced Brackets |
 | [6_Reverse_a_String_using_Stack.py](6_Reverse_a_String_using_Stack.py) | Stack / String Reversal |
-| [7_stack_that_supports_getMin()_in_O(1)_time_and_O(1).py](7_stack_that_supports_getMin()_in_O(1)_time_and_O(1).py) | Stack / Auxiliary Min Stack |
+| [7_stack_that_supports_getMin_in_O1_time_and_O1.py](7_stack_that_supports_getMin_in_O1_time_and_O1.py) | Stack / Auxiliary Min Stack |
 | [8_Find_the_next_Greater_element.py](8_Find_the_next_Greater_element.py) | Stack / Monotonic Stack |
 | [11_Evaluation_of_Postfix_Expression.py](11_Evaluation_of_Postfix_Expression.py) | Stack / Expression Evaluation |
 | [14_Sort_a_Stack_using_recursion.py](14_Sort_a_Stack_using_recursion.py) | Stack / Recursion |
 | [15_Merge_Overlapping_Intervals.py](15_Merge_Overlapping_Intervals.py) | Sorting / Interval Merging |
 | [36_First_non-repeating_character_in_a_stream.py](36_First_non-repeating_character_in_a_stream.py) | Queue / Frequency Hashing |
+| [stack.py](stack.py) | Stack Class Implementation |
+| [queue.py](queue.py) | Queue Class Implementation |

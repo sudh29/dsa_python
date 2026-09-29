@@ -1,4 +1,13 @@
-# User function Template for python3
+"""
+Problem: Largest Number in K Swaps
+Category: Backtracking
+Pattern: Backtracking with Max Digit Search & Pruning
+
+Time Complexity:  O(N! / (N-K)!) worst case permutations explore
+Space Complexity: O(N) - Recursion stack and string array
+"""
+
+
 def get_max(arr, max_val, idx, n):
     for i in range(idx + 1, n):
         if int(arr[i]) > int(max_val):
@@ -36,15 +45,7 @@ class Solution:
         return ans[0]
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    for _ in range(int(input())):
-        k = int(input())
-        s = input()
-        ob = Solution()
-        print(ob.findMaximumNum(s, k))
-
-# } Driver Code Ends
+    s = "1234567"
+    k = 4
+    print(f"Largest number with {k} swaps from '{s}': {Solution().findMaximumNum(s, k)}")

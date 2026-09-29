@@ -1,3 +1,12 @@
+"""
+Problem: Detect Cycle in an Undirected Graph
+Category: Graph Algorithms
+Pattern: BFS / DFS with Parent Tracking
+
+Time Complexity:  O(V + E) - Traverses vertices and edges
+Space Complexity: O(V) - Visited array and traversal queue/stack
+"""
+
 from typing import List
 
 
@@ -23,23 +32,7 @@ class Solution:
         return False
 
 
-# {
-# Driver Code Starts
-
 if __name__ == "__main__":
-    T = int(input())
-    for i in range(T):
-        V, E = map(int, input().split())
-        adj = [[] for i in range(V)]
-        for _ in range(E):
-            u, v = map(int, input().split())
-            adj[u].append(v)
-            adj[v].append(u)
-        obj = Solution()
-        ans = obj.isCycle(V, adj)
-        if ans:
-            print("1")
-        else:
-            print("0")
-
-# } Driver Code Ends
+    v = 4
+    adj = [[1, 2], [0, 2], [0, 1, 3], [2]]
+    print(f"Cycle in undirected graph: {Solution().isCycle(v, adj)}")

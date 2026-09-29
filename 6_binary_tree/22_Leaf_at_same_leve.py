@@ -1,3 +1,13 @@
+"""
+Problem: Leaf At Same Leve
+Category: Binary Trees
+Pattern: Tree Traversal (DFS / BFS)
+
+Time Complexity:  O(N) - Visits each node once
+Space Complexity: O(H) - Recursion stack bounded by tree height
+"""
+
+
 class Solution:
     # Your task is to complete this function
     # function should return True/False or 1/0

@@ -1,7 +1,16 @@
-# User function Template for python3
+"""
+Problem: Longest Palindromic Substring
+Category: Strings
+Pattern: Manacher's Algorithm / Center Expansion
+
+Time Complexity:  O(N) using Manacher's algorithm
+Space Complexity: O(N) auxiliary space
+"""
+
+
 # Manacher’s Algorithm
 class Solution:
-    def longestPalin(self, s):
+    def longestPalinManacher(self, s):
         # Preprocess the string to add boundaries
         T = "^#" + "#".join(s) + "#$"
         n = len(T)
@@ -28,41 +37,15 @@ class Solution:
         max_len, center_index = max((P[i], i) for i in range(1, n - 1))
 
         # Extract the longest palindromic substring
-        start = (
-            center_index - max_len
-        ) // 2  # Convert index in T back to original string
+        start = (center_index - max_len) // 2  # Convert index in T back to original string
         return s[start : start + max_len]
 
+    def longestPalin(self, s: str) -> str:
+        # Center expansion approach (or delegate to Manacher)
+        return self.longestPalinManacher(s)
 
-def helper(s, left, right):
-    while (left >= 0 and right < len(s)) and s[left] == s[right]:
-        left -= 1
-        right += 1
-    return s[left + 1 : right]
-
-
-class Solution:
-    def longestPalin(self, s):
-        # code here
-        res = ""
-        for i in range(len(s)):
-            test = helper(s, i, i)
-            if len(test) > len(res):
-                res = test
-            test = helper(s, i, i + 1)
-            if len(test) > len(res):
-                res = test
-        return res if len(res) > 1 else s[0]
-
-
-# {
-# Driver Code Starts
-# Initial Template for Python 3
 
 if __name__ == "__main__":
-    t = int(input())
-
-    for _ in range(t):
-        S = input()
-
-        ob = Solution()
+    ob = Solution()
+    for s in ["babad", "cbbd", "racecar"]:
+        print(f"Longest palindrome in '{s}': {ob.longestPalin(s)}")

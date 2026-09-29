@@ -1,3 +1,13 @@
+"""
+Problem: Isomorphic Strings
+Category: Strings
+Pattern: Two-Way Hash Map / Bijection Check
+
+Time Complexity:  O(N) - Single pass mapping characters between strings
+Space Complexity: O(distinct_chars) - Character mapping dictionaries
+"""
+
+
 # User function Template for python3
 
 
@@ -22,33 +32,7 @@ class Solution:
         return True
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-import atexit
-import io
-import sys
-
-_INPUT_LINES = sys.stdin.read().splitlines()
-input = iter(_INPUT_LINES).__next__
-_OUTPUT_BUFFER = io.StringIO()
-sys.stdout = _OUTPUT_BUFFER
-
-
-@atexit.register
-def write():
-    sys.__stdout__.write(_OUTPUT_BUFFER.getvalue())
-
-
 if __name__ == "__main__":
-    t = int(input())
-    for i in range(t):
-        s = str(input())
-        p = str(input())
-        ob = Solution()
-        if ob.areIsomorphic(s, p):
-            print(1)
-        else:
-            print(0)
-# } Driver Code Ends
+    ob = Solution()
+    print(f"areIsomorphic('aab', 'xxy') -> {ob.areIsomorphic('aab', 'xxy')}")
+    print(f"areIsomorphic('aab', 'xyz') -> {ob.areIsomorphic('aab', 'xyz')}")

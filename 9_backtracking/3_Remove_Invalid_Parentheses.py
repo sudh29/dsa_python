@@ -1,3 +1,13 @@
+"""
+Problem: Remove Invalid Parentheses
+Category: Backtracking
+Pattern: Exhaustive State Exploration / Pruning
+
+Time Complexity:  O(2^N) / Exponential
+Space Complexity: O(N) - Recursion call stack
+"""
+
+
 def isParenthesis(c):
     return (c == "(") or (c == ")")
 
@@ -15,29 +25,27 @@ def isValidString(str):
 
 
 class Solution:
-    def removeInvalidParentheses(self, str: str) -> List[str]:
+    def removeInvalidParentheses(self, s: str) -> list[str]:
         res = []
-        if len(str) == 0:
-            return
+        if len(s) == 0:
+            return []
 
         visit = set()
         q = []
-        temp = 0
-        level = 0
-        q.append(str)
-        visit.add(str)
+        level = False
+        q.append(s)
+        visit.add(s)
         while len(q):
-            str = q[0]
-            q.pop(0)
-            if isValidString(str):
-                res.append(str)
+            curr_str = q.pop(0)
+            if isValidString(curr_str):
+                res.append(curr_str)
                 level = True
             if level:
                 continue
-            for i in range(len(str)):
-                if not isParenthesis(str[i]):
+            for i in range(len(curr_str)):
+                if not isParenthesis(curr_str[i]):
                     continue
-                temp = str[0:i] + str[i + 1 :]
+                temp = curr_str[0:i] + curr_str[i + 1 :]
                 if temp not in visit:
                     q.append(temp)
                     visit.add(temp)

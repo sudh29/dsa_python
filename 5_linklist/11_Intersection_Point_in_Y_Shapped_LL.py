@@ -1,3 +1,13 @@
+"""
+Problem: Intersection Point In Y Shapped Linked List
+Category: Linked Lists
+Pattern: Pointer Manipulation / Fast & Slow Pointers
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 # Function to find intersection point in Y shaped Linked Lists.
 def intersetPoint(head1, head2):
     # code here

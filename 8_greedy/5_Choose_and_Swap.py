@@ -1,4 +1,12 @@
-# User function Template for python3
+"""
+Problem: Choose and Swap for Lexicographically Smallest String
+Category: Greedy Algorithms
+Pattern: Greedy First Occurrence / Set Lookup
+
+Time Complexity:  O(N * 26) - Scanning first occurrences of characters
+Space Complexity: O(26) - Character set lookup
+"""
+
 MAX = 256
 
 
@@ -30,18 +38,6 @@ class Solution:
         return "".join(A)
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-
 if __name__ == "__main__":
-    ob = Solution()
-    t = int(input())
-    for _ in range(t):
-        A = input()
-        ans = ob.chooseandswap(A)
-        print(ans)
-
-
-# } Driver Code Ends
+    s = "ccad"
+    print(f"Choose and swap '{s}': {Solution().chooseandswap(s)}")

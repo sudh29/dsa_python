@@ -1,3 +1,13 @@
+"""
+Problem: M-Coloring Problem
+Category: Graph Algorithms
+Pattern: Backtracking / Vertex Coloring
+
+Time Complexity:  O(M^V) worst case exponential exploration
+Space Complexity: O(V) - Color assignment array and recursion depth
+"""
+
+
 def valid(node, graph, color, c, graph_len):
     for i in range(graph_len):
         if graph[node][i] and color[i] == c:
@@ -27,26 +37,7 @@ def graphColoring(graph, k, V):
     return 0
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-    while t > 0:
-        V = int(input())
-        k = int(input())
-        m = int(input())
-        l = [int(x) for x in input().strip().split()]
-        graph = [[0 for i in range(V)] for j in range(V)]
-        cnt = 0
-        for i in range(m):
-            graph[l[cnt] - 1][l[cnt + 1] - 1] = 1
-            graph[l[cnt + 1] - 1][l[cnt] - 1] = 1
-            cnt += 2
-        if graphColoring(graph, k, V) == True:
-            print(1)
-        else:
-            print(0)
-
-        t = t - 1
+    graph = [[0, 1, 1], [1, 0, 1], [1, 1, 0]]
+    print(f"Can color 3-clique with 3 colors: {graphColoring(graph, 3, 3)}")
+    print(f"Can color 3-clique with 2 colors: {graphColoring(graph, 2, 3)}")

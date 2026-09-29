@@ -1,3 +1,13 @@
+"""
+Problem: Sort An Array Of 0S, 1S And 2S
+Category: Arrays
+Pattern: Two Pointers / Linear Scan
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def sort012(self, arr, n):
         # code here

@@ -1,4 +1,13 @@
-# User function Template for python3
+"""
+Problem: Count Balanced Binary Trees of Height H
+Category: Dynamic Programming
+Pattern: Fibonacci Variant / Modular Arithmetic
+
+Time Complexity:  O(H) - Linear iteration up to height H
+Space Complexity: O(H) - DP array for tree counts
+"""
+
+
 class Solution:
     def countBT(self, h):
         MOD = 10**9 + 7
@@ -12,14 +21,6 @@ class Solution:
         return dp[h]
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        h = int(input())
-
-        ob = Solution()
-        print(ob.countBT(h))
-# } Driver Code Ends
+    h = 3
+    print(f"Balanced binary trees of height {h}: {Solution().countBT(h)}")

@@ -1,3 +1,13 @@
+"""
+Problem: Job Sequencing Problem
+Category: Greedy Algorithms
+Pattern: Greedy by Profit / Slot Assignment
+
+Time Complexity:  O(N log N + N * max_deadline) - Sorting by profit and linear slot scan
+Space Complexity: O(max_deadline) - Time slots array
+"""
+
+
 class Solution:
     # Function to find the maximum profit and the number of jobs done.
     def JobScheduling(self, Jobs, n):
@@ -19,12 +29,6 @@ class Solution:
         return [job_count, max_profit]
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-
-# Contributed by : Nagendra Jha
 class Job:
     """
     Job class which stores profit and deadline.
@@ -37,16 +41,13 @@ class Job:
 
 
 if __name__ == "__main__":
-    test_cases = int(input())
-    for cases in range(test_cases):
-        n = int(input())
-        info = list(map(int, input().strip().split()))
-        Jobs = [Job() for i in range(n)]
-        for i in range(n):
-            Jobs[i].id = info[3 * i]
-            Jobs[i].deadline = info[3 * i + 1]
-            Jobs[i].profit = info[3 * i + 2]
-        ob = Solution()
-        res = ob.JobScheduling(Jobs, n)
-        print(res[0], end=" ")
-        print(res[1])
+    j1 = Job(50, 2)
+    j1.id = 1
+    j2 = Job(10, 1)
+    j2.id = 2
+    j3 = Job(20, 2)
+    j3.id = 3
+    j4 = Job(30, 1)
+    j4.id = 4
+    res = Solution().JobScheduling([j1, j2, j3, j4], 4)
+    print(f"Jobs scheduled: {res[0]}, Max profit: {res[1]}")

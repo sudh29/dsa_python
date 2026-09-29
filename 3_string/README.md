@@ -35,3 +35,8 @@
 | [37_Remove_Consecutive_Characters.py](37_Remove_Consecutive_Characters.py) | Stack / Iterative Traversal |
 | [41_Isomorphic_Strings.py](41_Isomorphic_Strings.py) | Hash Map / Character Mapping |
 | [42_Recursively_print_all_sentences_formed_from_list_word_lists.py](42_Recursively_print_all_sentences_formed_from_list_word_lists.py) | Recursion / Backtracking |
+| [43_Longest_Substring_Without_Repeating_Characters.py](43_Longest_Substring_Without_Repeating_Characters.py) | Sliding Window / Hash Map |
+| [44_Minimum_Window_Substring.py](44_Minimum_Window_Substring.py) | Sliding Window / Frequency Map |
+| [45_Longest_Repeating_Character_Replacement.py](45_Longest_Repeating_Character_Replacement.py) | Sliding Window / Character Counts |
+| [21_Count_Palindromic_Subsequences.py](21_Count_Palindromic_Subsequences.py) | Dynamic Programming / Palindrome Subsequences |
+| [string1.py](string1.py) | String Basics & Traversal |

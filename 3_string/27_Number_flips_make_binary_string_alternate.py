@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Min Number of Flips to Make Binary String Alternating
+Category: Strings
+Pattern: Greedy / Two-Pattern Comparison
+
+Time Complexity:  O(N) - Linear pass comparing with '0101...' and '1010...'
+Space Complexity: O(1) auxiliary space
+"""
 
 
 class Solution:
@@ -16,15 +23,7 @@ class Solution:
         return min(flips_starting_with_0, flips_starting_with_1)
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-    for i in range(t):
-        S = input()
-        Obj = Solution()
-        ans = Obj.minFlips(S)
-        print(ans)
-# } Driver Code Ends
+    ob = Solution()
+    s = "0001010111"
+    print(f"Min flips for '{s}': {ob.minFlips(s)}")

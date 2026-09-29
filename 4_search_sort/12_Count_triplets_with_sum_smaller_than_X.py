@@ -1,3 +1,13 @@
+"""
+Problem: Count Triplets With Sum Smaller Than X
+Category: Searching & Sorting
+Pattern: Binary Search / Divide & Conquer
+
+Time Complexity:  O(N log N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     # Function to count triplets with sum smaller than the given value
     def countTriplets(self, arr, n, target_sum):

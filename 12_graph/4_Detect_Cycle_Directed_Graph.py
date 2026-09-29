@@ -1,5 +1,11 @@
-# User function Template for python3
-from typing import List
+"""
+Problem: Detect Cycle in a Directed Graph
+Category: Graph Algorithms
+Pattern: DFS with Recursion Stack / Color Marking
+
+Time Complexity:  O(V + E) - Standard DFS cycle detection
+Space Complexity: O(V) - Visited and recursion stack arrays
+"""
 
 
 def dfs(val, graph, visited, rec_stack):
@@ -17,7 +23,7 @@ def dfs(val, graph, visited, rec_stack):
 
 class Solution:
     # Function to detect cycle in a directed graph.
-    def isCyclic(self, V: int, adj: List[List[int]]) -> bool:
+    def isCyclic(self, V: int, adj: list[list[int]]) -> bool:
         visited = [False] * V
         rec_stack = [False] * V
         for i in range(V):
@@ -27,27 +33,7 @@ class Solution:
         return False
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-import sys
-
-sys.setrecursionlimit(10**6)
-
 if __name__ == "__main__":
-    t = int(input())
-    for i in range(t):
-        V, E = list(map(int, input().strip().split()))
-        adj = [[] for i in range(V)]
-        for i in range(E):
-            a, b = map(int, input().strip().split())
-            adj[a].append(b)
-        ob = Solution()
-
-        if ob.isCyclic(V, adj):
-            print(1)
-        else:
-            print(0)
-
-# } Driver Code Ends
+    v = 4
+    adj = [[1], [2], [3], [1]]
+    print(f"Cycle detected: {Solution().isCyclic(v, adj)}")

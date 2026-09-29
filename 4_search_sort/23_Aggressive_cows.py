@@ -1,3 +1,13 @@
+"""
+Problem: Aggressive Cows
+Category: Searching & Sorting
+Pattern: Binary Search on Answer
+
+Time Complexity:  O(N log N + N log(max_dist)) where N is number of stalls
+Space Complexity: O(1) auxiliary space (in-place sort)
+"""
+
+
 def largest_min_distance(t, test_cases):
     results = []
 
@@ -33,14 +43,10 @@ def largest_min_distance(t, test_cases):
     return results
 
 
-# Example usage:
-t = int(input("Enter number of test cases: "))
-test_cases = []
-for _ in range(t):
-    n, c = map(int, input("Enter n and c: ").split())
-    stall_location = list(map(int, input("Enter stall locations: ").split()))
-    test_cases.append((n, c, stall_location))
-
-results = largest_min_distance(t, test_cases)
-for result in results:
-    print(result)
+if __name__ == "__main__":
+    demo_cases = [
+        (5, 3, [1, 2, 8, 4, 9]),
+    ]
+    results = largest_min_distance(len(demo_cases), demo_cases)
+    assert results == [3], f"Expected [3], got {results}"
+    print(f"Aggressive cows demo passed: {results}")

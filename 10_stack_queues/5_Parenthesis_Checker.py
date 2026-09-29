@@ -1,3 +1,13 @@
+"""
+Problem: Parenthesis Checker
+Category: Stacks & Queues
+Pattern: Stack-based Bracket Matching
+
+Time Complexity:  O(N) - Single pass over characters
+Space Complexity: O(N) - Stack for unmatched open brackets
+"""
+
+
 class Solution:
     # Function to check if brackets are balanced or not.
     def ispar(self, x):

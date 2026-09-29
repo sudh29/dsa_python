@@ -1,3 +1,12 @@
+"""
+Problem: Unique Rows in Boolean Matrix
+Category: Trie
+Pattern: Binary Trie (Alphabet size = 2)
+
+Time Complexity:  O(R * C) - Traverses each boolean matrix cell once
+Space Complexity: O(R * C) - Binary trie storage
+"""
+
 from typing import List
 
 
@@ -44,34 +53,6 @@ class Solution:
         return res
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-
-def main():
-    testcase = int(input())
-    while testcase:
-        s = input().split()
-        row = int(s[0])
-        col = int(s[1])
-        matrix = [[None for _ in range(col)] for _ in range(row)]
-        s = input().split()
-        for i in range(row):
-            for j in range(col):
-                matrix[i][j] = int(s[i * col + j])
-
-        ob = Solution()
-        a = ob.uniqueRow(row, col, matrix)
-
-        for row in a:
-            for value in row:
-                print(value, end=" ")
-            print("$", end="")
-        print()
-        testcase -= 1
-
-
 if __name__ == "__main__":
-    main()
-# } Driver Code Ends
+    matrix = [[1, 1, 0, 1], [1, 0, 0, 1], [1, 1, 0, 1]]
+    print(f"Unique rows: {Solution().uniqueRow(matrix, 3, 4)}")

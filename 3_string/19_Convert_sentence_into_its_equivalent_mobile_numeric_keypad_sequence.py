@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Mobile Numeric Keypad Sequence
+Category: Strings
+Pattern: Lookup Table / Character Mapping
+
+Time Complexity:  O(N) - Linear scan of input sentence
+Space Complexity: O(1) auxiliary space (fixed keypad table)
+"""
 
 
 class Solution:
@@ -57,17 +64,7 @@ class Solution:
         return output
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-
-    for _ in range(t):
-        inputStr = input()
-
-        solObj = Solution()
-
-        print(solObj.printSequence(inputStr))
-# } Driver Code Ends
+    sol = Solution()
+    sentence = "HELLO WORLD"
+    print(f"Keypad sequence for '{sentence}': {sol.printSequence(sentence)}")

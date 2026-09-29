@@ -1,3 +1,13 @@
+"""
+Problem: Cyclically Rotate An Array By One
+Category: Arrays
+Pattern: Two Pointers / Linear Scan
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 def rotate(arr, n):
     m = len(arr)
     rem = n % (m + 1)

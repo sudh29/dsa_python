@@ -1,10 +1,10 @@
 """
-# Tree Node
-class Node:
-    def __init__(self, val):
-        self.right = None
-        self.data = val
-        self.left = None
+Problem: Convert Binary Tree Into Binary Search Tree
+Category: Binary Search Trees
+Pattern: BST Inorder / Divide & Conquer
+
+Time Complexity:  O(H) where H is tree height
+Space Complexity: O(H) - Recursion stack
 """
 
 

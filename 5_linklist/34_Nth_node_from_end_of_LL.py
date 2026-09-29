@@ -1,27 +1,22 @@
-def getNthFromLast(head,n):
-    #code here
-     '''temp=head
-    c=0
-    while temp!=None:
-        temp=temp.next
-        c+=1
-    if n>c:
-        return -1
-    n_new=c-n
-    temp=head
-    for i in range(n_new):
-        temp=temp.next
-    return temp.data'''
+"""
+Problem: Nth Node From End Of Linked List
+Category: Linked Lists
+Pattern: Pointer Manipulation / Fast & Slow Pointers
 
-    slow=head
-    fast=head
-    for i in range(1,n):
-        if fast.next != None:
-            fast=fast.next
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
+def getNthFromLast(head, n):
+    slow = head
+    fast = head
+    for _ in range(1, n):
+        if fast and fast.next is not None:
+            fast = fast.next
         else:
             return -1
-    #print(fast.data)
     while fast and fast.next:
-        fast=fast.next
-        slow=slow.next
-    return slow.data
+        fast = fast.next
+        slow = slow.next
+    return slow.data if slow else -1

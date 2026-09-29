@@ -1,46 +1,56 @@
-def cal(a,b,operator):
-    if operator=='+':
-        return int(a)+int(b)
-    elif operator=='-':
-        return int(a)-int(b)
-    elif operator=='*':
-        return int(a)*int(b)
-    elif operator=='/':
-        return int(a)/int(b)
+"""
+Problem: Evaluation Of Postfix Expression
+Category: Stacks & Queues
+Pattern: LIFO / FIFO State Tracking / Monotonic Stack
+
+Time Complexity:  O(N)
+Space Complexity: O(N) - Auxiliary stack/queue
+"""
+
+
+def cal(a, b, operator):
+    if operator == "+":
+        return int(a) + int(b)
+    elif operator == "-":
+        return int(a) - int(b)
+    elif operator == "*":
+        return int(a) * int(b)
+    elif operator == "/":
+        return int(a) / int(b)
+
 
 class Solution:
-
-    #Function to evaluate a postfix expression.
+    # Function to evaluate a postfix expression.
     def evaluatePostfix(self, S):
-        operator=['*','/','+','-']
-        temp=[]
+        operator = ["*", "/", "+", "-"]
+        temp = []
         for i in S:
             if i not in operator:
                 temp.append(i)
             else:
-                if len(temp)>0:
-                    temp1=temp.pop()
-                    temp2=temp.pop()
-                    res= cal(temp2,temp1,i)
+                if len(temp) > 0:
+                    temp1 = temp.pop()
+                    temp2 = temp.pop()
+                    res = cal(temp2, temp1, i)
                     temp.append(res)
         return temp[0]
 
-     def evaluate_postfix(self, S):
+    def evaluate_postfix(self, S):
         n = len(S)
         stack = []
 
         for i in range(n):
-            if S[i] in ['+', '-', '*', '/']:
+            if S[i] in ["+", "-", "*", "/"]:
                 a = stack.pop()
                 b = stack.pop()
 
-                if S[i] == '+':
+                if S[i] == "+":
                     res = b + a
-                elif S[i] == '-':
+                elif S[i] == "-":
                     res = b - a
-                elif S[i] == '*':
+                elif S[i] == "*":
                     res = b * a
-                elif S[i] == '/':
+                elif S[i] == "/":
                     res = int(b / a)  # Use int() to ensure integer division
                 stack.append(res)
             else:

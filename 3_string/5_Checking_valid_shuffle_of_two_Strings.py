@@ -1,3 +1,13 @@
+"""
+Problem: Checking Valid Shuffle Of Two Strings
+Category: Strings
+Pattern: Two Pointers / Sliding Window
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 def validShuffle(str1, str2, shuffle):
     n1 = len(str1)
     n2 = len(str2)

@@ -1,6 +1,16 @@
+"""
+Problem: Merge Two Sorted Arrays
+Category: Searching & Sorting
+Pattern: Binary Search / Divide & Conquer
+
+Time Complexity:  O(N log N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 def mergeArrays(arr1, arr2, n1, n2):
     arr3 = []
-    i, j, k = 0, 0, 0
+    i, j, _k = 0, 0, 0
 
     # Merge elements from both arrays until one of them is exhausted
     while i < n1 and j < n2:

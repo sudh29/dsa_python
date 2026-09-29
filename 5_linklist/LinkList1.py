@@ -1,3 +1,12 @@
+"""
+Problem: Linklist1
+Category: Linked Lists
+Pattern: Pointer Manipulation / Fast & Slow Pointers
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
 # LinkList
 
 
@@ -68,7 +77,7 @@ class LinkList:
                 break
             prev = current
             current = current.next
-        if current == None:
+        if current is None:
             return
         prev.next = current.next
         current = None

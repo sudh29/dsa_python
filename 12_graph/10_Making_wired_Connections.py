@@ -1,3 +1,13 @@
+"""
+Problem: Making Wired Connections
+Category: Graph Algorithms
+Pattern: Breadth-First Search / Depth-First Search
+
+Time Complexity:  O(V + E)
+Space Complexity: O(V) - Visited set and traversal queue/stack
+"""
+
+
 def solve_dfs(val, graph, visited):
     visited[val] = True
     for i in graph[val]:
@@ -6,7 +16,7 @@ def solve_dfs(val, graph, visited):
 
 
 class Solution:
-    def makeConnected(self, n: int, connections: List[List[int]]) -> int:
+    def makeConnected(self, n: int, connections: list[list[int]]) -> int:
         m = len(connections)
         if m < n - 1:
             return -1

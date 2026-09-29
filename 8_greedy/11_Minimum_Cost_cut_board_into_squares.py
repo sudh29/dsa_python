@@ -1,3 +1,12 @@
+"""
+Problem: Minimum Cost to Cut a Board into Squares
+Category: Greedy Algorithms
+Pattern: Greedy Sorting / Two Pointers
+
+Time Complexity:  O(M log M + N log N) - Sorting horizontal and vertical costs
+Space Complexity: O(1) auxiliary space
+"""
+
 from typing import List
 
 
@@ -34,17 +43,12 @@ class Solution:
         return ans
 
 
-# {
-# Driver Code Starts
-
-
 class IntArray:
     def __init__(self) -> None:
         pass
 
-    def Input(self, n):
-        arr = [int(i) for i in input().strip().split()]  # array input
-        return arr
+    def Input(self, *args):
+        return []
 
     def Print(self, arr):
         for i in arr:
@@ -53,17 +57,6 @@ class IntArray:
 
 
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        a = IntArray().Input(2)
-        m = a[0]
-        n = a[1]
-
-        tmp = IntArray().Input(a[0] - 1) + IntArray().Input(a[1] - 1)
-        X = tmp[: m - 1]
-        Y = tmp[m - 1 :]
-
-        obj = Solution()
-        res = obj.minimumCostOfBreaking(X, Y, m, n)
-
-        print(res)
+    x = [2, 1, 3, 1, 4]
+    y = [4, 1, 2]
+    print(f"Min cost of breaking board: {Solution().minimumCostOfBreaking(x, y, 6, 4)}")

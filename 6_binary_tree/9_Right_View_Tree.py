@@ -1,3 +1,13 @@
+"""
+Problem: Right View Tree
+Category: Binary Trees
+Pattern: Tree Traversal (DFS / BFS)
+
+Time Complexity:  O(N) - Visits each node once
+Space Complexity: O(H) - Recursion stack bounded by tree height
+"""
+
+
 class Solution:
     # Function to return list containing elements of right view of binary tree.
     def rightView(self, root):
@@ -10,12 +20,12 @@ class Solution:
             n = len(q)
             for i in range(1, n + 1):
                 temp = q.pop(0)
-                if temp != None:
+                if temp is not None:
                     if i == 1:
                         res.append(temp.data)
-                    if temp.right != None:
+                    if temp.right is not None:
                         q.append(temp.right)
-                    if temp.left != None:
+                    if temp.left is not None:
                         q.append(temp.left)
         return res
 

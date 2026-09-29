@@ -1,3 +1,13 @@
+"""
+Problem: Longest Consecutive Subsequence
+Category: Arrays
+Pattern: Two Pointers / Linear Scan
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     # arr[] : the input array
     # N : size of the array arr[]
@@ -21,7 +31,7 @@ class Solution:
 
         HS = set(arr)
         res = -1000000
-        for i in range(n):
+        for i in range(N):
             if (arr[i] - 1) not in HS:
                 val = arr[i] + 1
                 while val in HS:

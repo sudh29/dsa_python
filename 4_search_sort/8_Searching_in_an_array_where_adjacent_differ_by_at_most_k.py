@@ -1,3 +1,13 @@
+"""
+Problem: Searching In An Array Where Adjacent Differ By At Most K
+Category: Searching & Sorting
+Pattern: Binary Search / Divide & Conquer
+
+Time Complexity:  O(N log N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 def search(arr: list, n: int, x: int, k: int) -> int:
     i = 0
     while i < n:

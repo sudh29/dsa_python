@@ -1,3 +1,13 @@
+"""
+Problem: Shortest Unique Prefix for Every Word
+Category: Trie
+Pattern: Trie with Frequency/Subtree Counter
+
+Time Complexity:  O(N * L) - Insertion and prefix retrieval bounded by total characters
+Space Complexity: O(N * L) - Trie node storage
+"""
+
+
 class TrieNode:
     def __init__(self):
         self.children = {}
@@ -39,21 +49,6 @@ class Solution:
         return unique_prefixes
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-import sys
-
-sys.setrecursionlimit(10**6)
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        N = int(input())
-        arr = list(map(str, input().split()))
-
-        ob = Solution()
-        res = ob.findPrefixes(arr, N)
-        for i in res:
-            print(i, end=" ")
-        print()
+    words = ["zebra", "dog", "duck", "dove"]
+    print(f"Unique prefixes for {words}: {Solution().findPrefixes(words, len(words))}")

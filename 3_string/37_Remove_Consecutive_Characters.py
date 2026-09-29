@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Remove Consecutive Characters
+Category: Strings
+Pattern: Linear Scan / Adjacent Comparison
+
+Time Complexity:  O(N) - Single pass through string
+Space Complexity: O(N) - Result string construction
+"""
 
 
 def solve(S):
@@ -27,16 +34,7 @@ class Solution:
         # return solve(S)
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    T = int(input())
-
-    for tcs in range(T):
-        s = input()
-        ob = Solution()
-        print(ob.removeConsecutiveCharacter(s))
-
-# } Driver Code Ends
+    ob = Solution()
+    for s in ["aabb", "aabaa"]:
+        print(f"Remove consecutive from '{s}': {ob.removeConsecutiveCharacter(s)}")

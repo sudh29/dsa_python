@@ -1,3 +1,13 @@
+"""
+Problem: Trapping Rain Water
+Category: Arrays
+Pattern: Two Pointers / Prefix and Suffix Maxima
+
+Time Complexity:  O(N) - Linear pass calculating trapped water
+Space Complexity: O(1) auxiliary space with two pointers
+"""
+
+
 class Solution:
     def trappingWater(self, arr, n):
         # Code here

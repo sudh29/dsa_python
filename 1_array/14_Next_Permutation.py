@@ -1,5 +1,15 @@
+"""
+Problem: Next Permutation
+Category: Arrays
+Pattern: Two Pointers / Linear Scan
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
-    def nextPermutation(self, nums: List[int]) -> None:
+    def nextPermutation(self, nums: list[int]) -> None:
         """
         Do not return anything, modify nums in-place instead.
         print(nums)

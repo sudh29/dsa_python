@@ -1,3 +1,12 @@
+"""
+Problem: Buy and Sell Share at Most Twice
+Category: Dynamic Programming
+Pattern: Prefix and Suffix Profit Arrays / State DP
+
+Time Complexity:  O(N) - Two passes computing left and right maximum profits
+Space Complexity: O(N) - Auxiliary profit array
+"""
+
 from typing import List
 
 
@@ -21,17 +30,19 @@ class Solution:
         return max_profit
 
 
-# {
-# Driver Code Starts
 class IntArray:
     def __init__(self) -> None:
         pass
 
-    def Input(self, n):
-        arr = [int(i) for i in input().strip().split()]  # array input
-        return arr
+    def Input(self, *args):
+        return []
 
     def Print(self, arr):
         for i in arr:
             print(i, end=" ")
         print()
+
+
+if __name__ == "__main__":
+    prices = [10, 22, 5, 75, 65, 80]
+    print(f"Max profit with <= 2 transactions: {Solution().maxProfit(len(prices), prices)}")

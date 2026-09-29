@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Minimum Sum of Absolute Difference of Pairs of Two Arrays
+Category: Greedy Algorithms
+Pattern: Greedy Sorting / Parallel Matching
+
+Time Complexity:  O(N log N) - Sorting both arrays
+Space Complexity: O(1) auxiliary space
+"""
 
 
 class Solution:
@@ -9,17 +16,7 @@ class Solution:
         return sum(new)
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        N = int(input())
-        A = list(map(int, input().strip().split()))
-        B = list(map(int, input().strip().split()))
-        ob = Solution()
-        ans = ob.findMinSum(A, B, N)
-        print(ans)
-# } Driver Code Ends
+    a = [4, 1, 8, 7]
+    b = [2, 3, 6, 5]
+    print(f"Min absolute difference sum: {Solution().findMinSum(a, b, len(a))}")

@@ -1,4 +1,13 @@
-# User function Template for python3
+"""
+Problem: Maximum Sum Increasing Subsequence
+Category: Dynamic Programming
+Pattern: LIS DP Variant
+
+Time Complexity:  O(N^2) - Nested loop comparing prefix elements
+Space Complexity: O(N) - 1D DP array storing max sums
+"""
+
+
 class Solution:
     def maxSumIS(self, arr, n):
         dp = arr[:]
@@ -9,17 +18,6 @@ class Solution:
         return max(dp)
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    T = int(input())
-    for i in range(T):
-        n = int(input())
-        Arr = [int(x) for x in input().split()]
-        ob = Solution()
-        ans = ob.maxSumIS(Arr, n)
-        print(ans)
-
-# } Driver Code Ends
+    arr = [1, 101, 2, 3, 100, 4, 5]
+    print(f"Max sum increasing subsequence of {arr}: {Solution().maxSumIS(arr, len(arr))}")

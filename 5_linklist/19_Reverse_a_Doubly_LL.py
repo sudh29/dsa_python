@@ -1,6 +1,16 @@
+"""
+Problem: Reverse A Doubly Linked List
+Category: Linked Lists
+Pattern: In-place Pointer Reversal
+
+Time Complexity:  O(N) - Traverses list once reversing pointers
+Space Complexity: O(1) - In-place pointer modifications
+"""
+
+
 def reverseDLL(head):
     # return head after
-    if head == None or head.next == None:
+    if head is None or head.next is None:
         return head
     curr = head
     while curr.next:

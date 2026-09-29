@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Depth First Traversal of Graph
+Category: Graph Algorithms
+Pattern: Recursive / Stack-based DFS
+
+Time Complexity:  O(V + E) - Visits all reachable vertices and traverses each edge
+Space Complexity: O(V) - Recursion call stack and visited array
+"""
 
 
 def solve_dfs(val, visited, graph, ans):
@@ -38,22 +45,7 @@ class Solution:
         # return res
 
 
-# {
-# Driver Code Starts
-
 if __name__ == "__main__":
-    T = int(input())
-    while T > 0:
-        V, E = map(int, input().split())
-        adj = [[] for i in range(V + 1)]
-        for i in range(E):
-            u, v = map(int, input().split())
-            adj[u].append(v)
-            adj[v].append(u)
-        ob = Solution()
-        ans = ob.dfsOfGraph(V, adj)
-        for i in range(len(ans)):
-            print(ans[i], end=" ")
-        print()
-        T -= 1
-# } Driver Code Ends
+    v = 5
+    adj = [[2, 3, 1], [0], [0, 4], [0], [2]]
+    print(f"DFS traversal: {Solution().dfsOfGraph(v, adj)}")

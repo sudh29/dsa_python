@@ -1,3 +1,13 @@
+"""
+Problem: Count Binary Search Tree Nodes Lie Range
+Category: Binary Search Trees
+Pattern: BST Inorder / Divide & Conquer
+
+Time Complexity:  O(H) where H is tree height
+Space Complexity: O(H) - Recursion stack
+"""
+
+
 # Function to count number of nodes in BST that lie in the given range.
 class Solution:
     def inorder(self, root, ans):

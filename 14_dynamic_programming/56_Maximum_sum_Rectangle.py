@@ -1,3 +1,15 @@
+"""
+Problem: Maximum Sum Rectangle
+Category: Dynamic Programming
+Pattern: Memoization / Tabulation / Subproblem Overlap
+
+Time Complexity:  O(N^2) / Polynomial
+Space Complexity: O(N) - DP table storage
+"""
+
+import sys
+
+
 def kadane(arr):
     max_ending_here = arr[0]
     max_so_far = arr[0]
@@ -24,8 +36,6 @@ class Solution:
 # {
 # Driver Code Starts
 # Initial Template for Python 3
-
-import sys
 
 if __name__ == "__main__":
     t = int(sys.stdin.readline().strip())

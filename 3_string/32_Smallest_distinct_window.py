@@ -1,3 +1,13 @@
+"""
+Problem: Smallest Distinct Window
+Category: Strings
+Pattern: Sliding Window / Two Pointers
+
+Time Complexity:  O(N) - Each character visited at most twice
+Space Complexity: O(distinct_chars) - Frequency map of characters
+"""
+
+
 class Solution:
     def findSubString(self, str):
         # if len(str)==1:
@@ -40,23 +50,7 @@ class Solution:
         return min_length if min_length != float("inf") else 0
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-
-def main():
-    T = int(input())
-
-    while T > 0:
-        str = input()
-        ob = Solution()
-        print(ob.findSubString(str))
-
-        T -= 1
-
-
 if __name__ == "__main__":
-    main()
-
-# } Driver Code Ends
+    ob = Solution()
+    s = "AABBBCBBAC"
+    print(f"Smallest distinct window of '{s}': {ob.findSubString(s)}")

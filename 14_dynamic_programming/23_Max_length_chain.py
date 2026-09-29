@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Max Length Chain of Pairs
+Category: Dynamic Programming
+Pattern: Greedy / Activity Selection on Intervals
+
+Time Complexity:  O(N log N) - Sorting pairs by second element
+Space Complexity: O(1) auxiliary space
+"""
 
 """
 class Pair(object):
@@ -30,11 +37,6 @@ class Solution:
         # return max(dp)
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-
 class Pair(object):
     def __init__(self, a, b):
         self.a = a
@@ -42,22 +44,5 @@ class Pair(object):
 
 
 if __name__ == "__main__":
-    tcs = int(input())
-
-    for _ in range(tcs):
-        n = int(input())
-
-        arr = [int(x) for x in input().split()]
-
-        Parr = []
-
-        i = 0
-        while n * 2 > i:
-            Parr.append(Pair(arr[i], arr[i + 1]))
-
-            i += 2
-
-        # print(Parr,len(Parr))
-        obj = Solution()
-        print(obj.maxChainLen(Parr, n))
-# } Driver Code Ends
+    pairs = [Pair(5, 24), Pair(39, 60), Pair(15, 28), Pair(27, 40), Pair(50, 90)]
+    print(f"Max length chain: {Solution().maxChainLen(pairs, len(pairs))}")

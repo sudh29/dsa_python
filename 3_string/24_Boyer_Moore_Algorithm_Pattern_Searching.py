@@ -1,4 +1,12 @@
-# User function Template for python3
+"""
+Problem: Boyer-Moore Pattern Searching (Bad Character Heuristic)
+Category: Strings
+Pattern: Bad Character Table / String Matching
+
+Time Complexity:  O(N / M) best case, O(N * M) worst case
+Space Complexity: O(alphabet_size) for bad character table
+"""
+
 NO_OF_CHARS = 256
 
 
@@ -26,16 +34,7 @@ def searchPattern(txt, pat):
     return False
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-t = int(input())
-for i in range(t):
-    st = input()
-    pat = input()
-    if searchPattern(st, pat):
-        print("Present")
-    else:
-        print("Not present")
-# } Driver Code Ends
+if __name__ == "__main__":
+    txt = "ABAAABCD"
+    pat = "ABC"
+    print(f"Search '{pat}' in '{txt}': {searchPattern(txt, pat)}")

@@ -1,3 +1,13 @@
+"""
+Problem: Topological Sort (Kahn's Algorithm)
+Category: Graph Algorithms
+Pattern: In-Degree Array / BFS Queue (Kahn)
+
+Time Complexity:  O(V + E) - Visits each vertex and decrements each edge once
+Space Complexity: O(V) - In-degree array, queue, and result list
+"""
+
+
 class Solution:
     # Function to return list containing vertices in Topological order.
     def topoSort(self, V, adj):
@@ -37,15 +47,6 @@ class Solution:
         return res
 
 
-# {
-# Driver Code Starts
-# Driver Program
-
-import sys
-
-sys.setrecursionlimit(10**6)
-
-
 def check(graph, N, res):
     if N != len(res):
         return False
@@ -60,23 +61,8 @@ def check(graph, N, res):
 
 
 if __name__ == "__main__":
-    t = int(input())
-    for i in range(t):
-        e, N = list(map(int, input().strip().split()))
-        adj = [[] for i in range(N)]
-
-        for i in range(e):
-            u, v = map(int, input().split())
-            adj[u].append(v)
-
-        ob = Solution()
-
-        res = ob.topoSort(N, adj)
-
-        if check(adj, N, res):
-            print(1)
-        else:
-            print(0)
-# Contributed By: Harshit Sidhwa
-
-# } Driver Code Ends
+    n = 6
+    adj = [[], [], [3], [1], [0, 1], [0, 2]]
+    res = Solution().topoSort(n, adj)
+    print(f"Topological order: {res}")
+    assert check(adj, n, res)

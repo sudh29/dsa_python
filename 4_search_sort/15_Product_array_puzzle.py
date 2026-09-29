@@ -1,3 +1,13 @@
+"""
+Problem: Product Array Puzzle
+Category: Searching & Sorting
+Pattern: Binary Search / Divide & Conquer
+
+Time Complexity:  O(N log N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 def productExceptSelf(nums, n):
     total_product = 1
     total_product2 = 1

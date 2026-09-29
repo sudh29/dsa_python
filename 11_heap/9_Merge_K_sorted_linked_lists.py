@@ -1,4 +1,12 @@
-# User function Template for python3
+"""
+Problem: Merge K Sorted Linked Lists
+Category: Heaps
+Pattern: Min-Heap Priority Queue / Divide and Conquer
+
+Time Complexity:  O(N * K * log K) where N is average list length
+Space Complexity: O(K) - Min-heap storing node heads
+"""
+
 import heapq
 
 """
@@ -38,11 +46,6 @@ class Solution:
         return res.next
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-
 class Node:
     def __init__(self, x):
         self.data = x
@@ -63,35 +66,10 @@ class LinkedList:
             self.tail = self.tail.next
 
 
-def printList(head):
-    walk = head
-    while walk:
-        print(walk.data, end=" ")
-        walk = walk.next
-    print()
-
-
 if __name__ == "__main__":
-    for _ in range(int(input())):
-        n = int(input())
-        line = [int(x) for x in input().strip().split()]
-
-        heads = []
-        index = 0
-
-        for i in range(n):
-            size = line[index]
-            index += 1
-
-            newList = LinkedList()
-
-            for _ in range(size):
-                newList.add(line[index])
-                index += 1
-
-            heads.append(newList.head)
-
-        merged_list = Solution().mergeKLists(heads, n)
-        printList(merged_list)
-
-# } Driver Code Ends
+    h1 = Node(1)
+    h1.next = Node(3)
+    h2 = Node(2)
+    h2.next = Node(4)
+    merged = Solution().mergeKLists([h1, h2], 2)
+    print("Merged K lists successfully.")

@@ -1,3 +1,12 @@
+"""
+Problem: Count Palindromic Subsequences
+Category: Dynamic Programming
+Pattern: 2D Interval DP / Inclusion-Exclusion
+
+Time Complexity:  O(N^2) - Filling 2D DP array modulo 10^9 + 7
+Space Complexity: O(N^2) - 2D DP table
+"""
+
 MOD = 10**9 + 7
 
 
@@ -37,18 +46,6 @@ class Solution:
         return dp[0][n - 1]
 
 
-# {
-# Driver Code Starts
-# Initial template for Python 3
-
-import sys
-
-sys.setrecursionlimit(10**6)
-
 if __name__ == "__main__":
-    t = int(input())
-    for i in range(t):
-        ob = Solution()
-        print(ob.countPS(input().strip()))
-
-# } Driver Code Ends
+    s = "abcd"
+    print(f"Palindromic subsequences in '{s}': {Solution().countPS(s)}")

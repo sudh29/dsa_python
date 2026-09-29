@@ -1,3 +1,13 @@
+"""
+Problem: Boundary Traversal Tree
+Category: Binary Trees
+Pattern: Tree Traversal (DFS / BFS)
+
+Time Complexity:  O(N) - Visits each node once
+Space Complexity: O(H) - Recursion stack bounded by tree height
+"""
+
+
 def printLeftBoundary(root, res):
     curr = root.left
     while curr:
@@ -47,7 +57,7 @@ class Node:
 class Solution:
     def printBoundaryView(self, root):
         if not root:
-            return res
+            return []
         res = []
         if not isleaf(root):
             res.append(root.data)

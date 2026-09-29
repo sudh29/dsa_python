@@ -1,16 +1,22 @@
 """
+Problem: Find Largest Subtree Sum Tree
+Category: Binary Trees
+Pattern: Tree Traversal (DFS / BFS)
 
-definition of binary tree node.
-class Node:
-    def _init_(self,val):
-        self.data = val
-        self.left = None
-        self.right = None
+Time Complexity:  O(N) - Visits each node once
+Space Complexity: O(H) - Recursion stack bounded by tree height
 """
 
 
+class Node:
+    def __init__(self, val):
+        self.data = val
+        self.left = None
+        self.right = None
+
+
 class Solution:
-    def findLargestSubtreeSum(self, root: Optional["Node"]) -> int:
+    def findLargestSubtreeSum(self, root: Node | None) -> int:
         def solve(root, ans):
             if root is None:
                 return 0

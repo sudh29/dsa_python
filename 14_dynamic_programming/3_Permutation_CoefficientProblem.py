@@ -1,3 +1,12 @@
+"""
+Problem: Permutation Coefficient (P(n, k))
+Category: Dynamic Programming
+Pattern: Multiplicative Prefix DP
+
+Time Complexity:  O(K) - Computing product n * (n-1) * ... * (n-k+1)
+Space Complexity: O(1) auxiliary space
+"""
+
 MOD = 10**9 + 7
 
 
@@ -18,18 +27,6 @@ class Solution:
         return dp[k]
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-
 if __name__ == "__main__":
-    T = int(input())
-    for i in range(T):
-        n, k = input().split()
-        n = int(n)
-        k = int(k)
-        ob = Solution()
-        ans = ob.permutationCoeff(n, k)
-        print(ans)
-# } Driver Code Ends
+    n, k = 10, 2
+    print(f"P({n}, {k}): {Solution().permutationCoeff(n, k)}")

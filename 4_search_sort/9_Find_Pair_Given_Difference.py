@@ -1,3 +1,13 @@
+"""
+Problem: Find Pair Given Difference
+Category: Searching & Sorting
+Pattern: Binary Search / Divide & Conquer
+
+Time Complexity:  O(N log N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 def find_pair(arr: list, size: int, n: int) -> bool:
     arr.sort()  # Sort the array
     start, end = 0, 1

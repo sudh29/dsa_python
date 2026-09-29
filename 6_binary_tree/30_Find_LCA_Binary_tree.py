@@ -1,9 +1,10 @@
 """
-class Node:
-    def __init__(self, value):
-        self.left = None
-        self.data = value
-        self.right = None
+Problem: Find Lca Binary Tree
+Category: Binary Trees
+Pattern: Recursive Tree Traversal (Bottom-Up LCA)
+
+Time Complexity:  O(N) - Visits each node at most once
+Space Complexity: O(H) - Recursion stack
 """
 
 
@@ -28,8 +29,8 @@ class Solution:
             path.append(root)
             if root.data == k:
                 return True
-            if (root.left != None and solve(root.left, path, k)) or (
-                root.right != None and solve(root.right, path, k)
+            if (root.left is not None and solve(root.left, path, k)) or (
+                root.right is not None and solve(root.right, path, k)
             ):
                 return True
             path.pop()

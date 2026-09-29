@@ -6,16 +6,9 @@ repos:
       - id: check-toml
       - id: end-of-file-fixer
       - id: trailing-whitespace
-  - repo: https://github.com/psf/black
-    rev: 25.1.0 # Using a more recent version of black
-    hooks:
-      - id: black
-        language_version: python3.12
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.11.13 # Using a more recent version of ruff
+    rev: v0.11.13
     hooks:
-      # Run the linter
       - id: ruff
         args: [--fix]
-      # Run the formatter (replaces isort)
       - id: ruff-format

@@ -1,16 +1,25 @@
+"""
+Problem: Kth Smallest Largest Element Unsorted Array
+Category: Heaps
+Pattern: Priority Queue / Min-Max Heapify
+
+Time Complexity:  O(N log K)
+Space Complexity: O(K) auxiliary heap space
+"""
+
 import heapq
 
 
 class Solution:
-    def kthSmallest(self, arr, l, r, k):
+    def kthSmallest(self, arr, left, r, k):
         """
         arr : given array
-        l : starting index of the array i.e 0
+        left : starting index of the array i.e 0
         r : ending index of the array i.e size-1
         k : find kth smallest element and return using this function
         """
         min_heap = []
-        for i in range(l, r + 1):
+        for i in range(left, r + 1):
             heapq.heappush(min_heap, arr[i])
 
         if k > len(min_heap):

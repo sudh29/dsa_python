@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Breadth First Traversal of Graph
+Category: Graph Algorithms
+Pattern: Queue-based BFS Traversal
+
+Time Complexity:  O(V + E) - Visits all vertices and edges
+Space Complexity: O(V) - Visited array and BFS queue
+"""
 
 from typing import List
 
@@ -23,23 +30,7 @@ class Solution:
         return res
 
 
-# {
-# Driver Code Starts
-
-
 if __name__ == "__main__":
-    T = int(input())
-    for i in range(T):
-        V, E = map(int, input().split())
-        adj = [[] for i in range(V)]
-        for _ in range(E):
-            u, v = map(int, input().split())
-            adj[u].append(v)
-        ob = Solution()
-        ans = ob.bfsOfGraph(V, adj)
-        for i in range(len(ans)):
-            print(ans[i], end=" ")
-        print()
-
-
-# } Driver Code Ends
+    v = 5
+    adj = [[1, 2, 3], [], [4], [], []]
+    print(f"BFS traversal: {Solution().bfsOfGraph(v, adj)}")

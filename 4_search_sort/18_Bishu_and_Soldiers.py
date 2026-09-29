@@ -1,38 +1,41 @@
-def main():
-    # Read number of soldiers
-    n = int(input())
+"""
+Problem: Bishu and Soldiers
+Category: Searching & Sorting
+Pattern: Binary Search / Prefix Sums
 
-    # Read soldier powers
-    soldier_power = []
-    for _ in range(n):
-        temp = int(input())
-        soldier_power.append(temp)
+Time Complexity:  O(N log N + Q log N) - Sorting soldiers takes O(N log N), each query takes O(log N)
+Space Complexity: O(N) - Storing prefix sums for cumulative soldier power
+"""
 
-    # Sort soldier powers
-    soldier_power.sort()
-
-    # Read number of queries
-    q = int(input())
-
-    # Process each query
-    for _ in range(q):
-        bishnu_power = int(input())
-        count = 0
-        cumulative_strength = 0
-
-        # Check each soldier's power against Bishnu's power
-        for i in range(n):
-            if bishnu_power >= soldier_power[i]:
-                count += 1
-                cumulative_strength += soldier_power[i]
-            else:
-                print(count, cumulative_strength)
-                break
-        else:
-            # If loop completes without break (Bishnu can defeat all soldiers)
-            print(count, cumulative_strength)
+import bisect
 
 
-# Run the main function
+def bishu_and_soldiers(soldier_powers: list[int], queries: list[int]) -> list[tuple[int, int]]:
+    """Calculates number of defeated soldiers and cumulative power for each query.
+
+    Args:
+        soldier_powers: List of soldier power ratings.
+        queries: List of Bishu's power for each round.
+
+    Returns:
+        List of tuples (count_defeated, total_strength).
+    """
+    sorted_powers = sorted(soldier_powers)
+    prefix_sum = [0]
+    for p in sorted_powers:
+        prefix_sum.append(prefix_sum[-1] + p)
+
+    results = []
+    for q in queries:
+        idx = bisect.bisect_right(sorted_powers, q)
+        results.append((idx, prefix_sum[idx]))
+    return results
+
+
 if __name__ == "__main__":
-    main()
+    soldiers = [1, 2, 3, 4, 5, 6, 7]
+    queries = [3, 10, 2]
+    expected = [(3, 6), (7, 28), (2, 3)]
+    actual = bishu_and_soldiers(soldiers, queries)
+    assert actual == expected, f"Expected {expected}, got {actual}"
+    print(f"Bishu and Soldiers demo passed: {actual}")

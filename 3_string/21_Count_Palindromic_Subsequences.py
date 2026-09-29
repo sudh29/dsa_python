@@ -1,3 +1,12 @@
+"""
+Problem: Count Palindromic Subsequences
+Category: Strings
+Pattern: Dynamic Programming (2D Interval DP)
+
+Time Complexity:  O(N^2) - Substring interval matrix filling
+Space Complexity: O(N^2) - DP table for substring counts
+"""
+
 MOD = 10**9 + 7
 
 
@@ -37,18 +46,7 @@ class Solution:
         return dp[0][n - 1]
 
 
-# {
-# Driver Code Starts
-# Initial template for Python 3
-
-import sys
-
-sys.setrecursionlimit(10**6)
-
 if __name__ == "__main__":
-    t = int(input())
-    for i in range(t):
-        ob = Solution()
-        print(ob.countPS(input().strip()))
-
-# } Driver Code Ends
+    ob = Solution()
+    s = "abcd"
+    print(f"Palindromic subsequences in '{s}': {ob.countPS(s)}")

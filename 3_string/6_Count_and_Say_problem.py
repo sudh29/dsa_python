@@ -1,3 +1,13 @@
+"""
+Problem: Count And Say Problem
+Category: Strings
+Pattern: Two Pointers / Sliding Window
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 def rel(ip: str) -> str:
     res = []
     c = 1

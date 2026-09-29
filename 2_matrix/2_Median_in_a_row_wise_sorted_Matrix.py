@@ -1,3 +1,13 @@
+"""
+Problem: Median In A Row Wise Sorted Matrix
+Category: Matrix
+Pattern: 2D Grid Traversal / Row-Column Scan
+
+Time Complexity:  O(R * C)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def median(self, matrix, r, c):
         # code here
@@ -16,15 +26,15 @@ class Solution:
             mid = (end + start) // 2
             ans = 0
             for i in range(0, r, 1):
-                l = 0
+                low = 0
                 h = c - 1
-                while l <= h:
-                    m = l + (h - l) // 2
+                while low <= h:
+                    m = low + (h - low) // 2
                     if matrix[i][m] <= mid:
-                        l = m + 1
+                        low = m + 1
                     else:
                         h = m - 1
-                ans += l
+                ans += low
             if ans <= n / 2:
                 start = mid + 1
             else:

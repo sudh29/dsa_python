@@ -1,4 +1,13 @@
-# User function Template for python3
+"""
+Problem: Longest Alternating Subsequence
+Category: Dynamic Programming
+Pattern: Greedy Peak-Valley Counting / State Tracking
+
+Time Complexity:  O(N) - Single pass updating inc and dec states
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     # Function to find the maximum length of alternating subsequence
     def alternatingMaxLength(self, arr):
@@ -15,20 +24,6 @@ class Solution:
         return max(up, down)
 
 
-# {
-# Driver Code Starts
 if __name__ == "__main__":
-    import sys
-
-    input = sys.stdin.read
-    data = input().splitlines()
-
-    tc = int(data[0])
-    for i in range(1, tc + 1):
-        s = data[i].strip().split()
-        nums = list(map(int, s))
-        obj = Solution()
-        ans = obj.alternatingMaxLength(nums)
-        print(ans)
-
-# } Driver Code Ends
+    nums = [1, 5, 4]
+    print(f"Longest alternating subsequence: {Solution().AlternatingaMaxLength(nums)}")

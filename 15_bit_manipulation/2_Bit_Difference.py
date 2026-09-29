@@ -1,3 +1,13 @@
+"""
+Problem: Bit Difference
+Category: Bit Manipulation
+Pattern: Bitwise AND / OR / XOR / Shift Tricks
+
+Time Complexity:  O(1) / O(log N) - Proportional to number of bits
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def countBitsFlip(self, a, b):
         # a_bin= bin(a)[2:]
@@ -15,12 +25,12 @@ class Solution:
         #     if a_bin[i]!=b_bin[i]:
         #         c+=1
         # return c
-        
+
         # xor = a ^ b
         # count = 0
         # while xor:
         #     count += xor & 1
         #     xor >>= 1
         # return count
-        
-        return bin(a ^ b).count('1')
+
+        return bin(a ^ b).count("1")

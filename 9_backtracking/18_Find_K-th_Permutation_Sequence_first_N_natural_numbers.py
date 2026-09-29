@@ -1,27 +1,11 @@
-# {
-# Driver Code Starts
-# Initial Template for Python 3
+"""
+Problem: Find K-th Permutation Sequence of First N Natural Numbers
+Category: Backtracking
+Pattern: Factorial Number System / Mathematical Selection
 
-# } Driver Code Ends
-
-
-def solve(nums, index, res):
-    if index == len(nums) - 1:
-        res.append("".join(nums))
-        return
-    seen = set()
-    for i in range(index, len(nums)):
-        if nums[i] not in seen:
-            seen.add(nums[i])
-            nums[index], nums[i] = nums[i], nums[index]
-            solve(nums, index + 1, res)
-            nums[index], nums[i] = nums[i], nums[index]
-
-
-def factorial(n):
-    if n == 0 or n == 1:
-        return 1
-    return n * factorial(n - 1)
+Time Complexity:  O(N^2) - Iterative extraction of digits via factorial blocks
+Space Complexity: O(N) - Available digits array
+"""
 
 
 class Solution:
@@ -50,17 +34,25 @@ class Solution:
         return "".join(result)
 
 
-# {
-# Driver Code Starts.
+def solve(nums, index, res):
+    if index == len(nums) - 1:
+        res.append("".join(nums))
+        return
+    seen = set()
+    for i in range(index, len(nums)):
+        if nums[i] not in seen:
+            seen.add(nums[i])
+            nums[index], nums[i] = nums[i], nums[index]
+            solve(nums, index + 1, res)
+            nums[index], nums[i] = nums[i], nums[index]
+
+
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
+
+
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        N, K = map(int, input().split())
-
-        obj = Solution()
-        res = obj.kthPermutation(N, K)
-
-        print(res)
-
-
-# } Driver Code Ends
+    n, k = 4, 9
+    print(f"{k}-th permutation for N={n}: {Solution().kthPermutation(n, k)}")

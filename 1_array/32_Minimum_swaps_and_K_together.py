@@ -1,10 +1,18 @@
+"""
+Problem: Minimum Swaps And K Together
+Category: Arrays
+Pattern: Two Pointers / Linear Scan
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
 import sys
 
 
 def minSwap(arr, n, k):
     # Complete the function
     res = sys.maxsize
-    swaps = 0
     fav = 0
     no_fav = 0
     for i in range(n):

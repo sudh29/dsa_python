@@ -1,3 +1,12 @@
+"""
+Problem: Binomial Coefficient (nCr % MOD)
+Category: Dynamic Programming
+Pattern: Pascal's Triangle / 1D DP
+
+Time Complexity:  O(N * R) - DP table filling modulo 10^9 + 7
+Space Complexity: O(R) - 1D DP array space
+"""
+
 MOD = 10**9 + 7
 
 
@@ -13,19 +22,6 @@ class Solution:
         return dp[r]
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-import sys
-
-sys.setrecursionlimit(10**6)
-
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        n, r = [int(x) for x in input().split()]
-
-        ob = Solution()
-        print(ob.nCr(n, r))
-# } Driver Code Ends
+    n, r = 5, 2
+    print(f"C({n}, {r}) % MOD: {Solution().nCr(n, r)}")

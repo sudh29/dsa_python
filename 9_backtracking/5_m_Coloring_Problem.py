@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: M-Coloring Problem
+Category: Backtracking
+Pattern: Vertex Coloring with Conflict Checking
+
+Time Complexity:  O(M^V) worst case exponential exploration
+Space Complexity: O(V) - Color assignment array
+"""
 
 
 def valid(node, graph, color, c, graph_len):
@@ -29,28 +36,6 @@ def graphColoring(graph, k, V):
     return 0
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-    while t > 0:
-        V = int(input())
-        k = int(input())
-        m = int(input())
-        list = [int(x) for x in input().strip().split()]
-        graph = [[0 for i in range(V)] for j in range(V)]
-        cnt = 0
-        for i in range(m):
-            graph[list[cnt] - 1][list[cnt + 1] - 1] = 1
-            graph[list[cnt + 1] - 1][list[cnt] - 1] = 1
-            cnt += 2
-        if graphColoring(graph, k, V) == True:
-            print(1)
-        else:
-            print(0)
-
-        t = t - 1
-
-# } Driver Code Ends
+    graph = [[0, 1, 1], [1, 0, 1], [1, 1, 0]]
+    print(f"3-clique with 3 colors: {graphColoring(graph, 3, 3)}")

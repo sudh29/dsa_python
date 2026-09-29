@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Merge Two Binary Max Heaps
+Category: Heaps
+Pattern: Concatenate & Build-Heap
+
+Time Complexity:  O(N + M) - Linear time build heap on concatenated arrays
+Space Complexity: O(N + M) - Merged array storage
+"""
 
 
 def heapify(arr, n, i):
@@ -46,36 +53,8 @@ class Solution:
         return merged_heap
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-
-def isMerged(arr1, arr2, merged):
-    if len(arr1) + len(arr2) != len(merged):
-        return False
-    arr1 += arr2
-    arr1.sort()
-    mergedCopy = sorted(merged)
-    if arr1 != mergedCopy:
-        return False
-    for i in range(1, len(merged)):
-        if merged[i] > merged[(i - 1) // 2]:
-            return False
-
-    return True
-
-
 if __name__ == "__main__":
-    for _ in range(int(input())):
-        n, m = map(int, input().split())
-        a = [int(i) for i in input().split()]
-        b = [int(i) for i in input().split()]
-        copyA = a[:]
-        copyB = b[:]
-        obj = Solution()
-        merged = obj.mergeHeaps(a, b, n, m)
-        flag = isMerged(copyA, copyB, merged)
-        print(0 if flag == False else 1)
-
-# } Driver Code Ends
+    obj = Solution()
+    h1, h2 = [10, 5, 6, 2], [12, 7, 9]
+    res = obj.mergeHeaps(h1, h2, len(h1), len(h2))
+    print(f"Merged heap: {res}")

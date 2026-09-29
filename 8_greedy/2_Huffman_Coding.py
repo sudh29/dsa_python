@@ -1,4 +1,12 @@
-# User function Template for python3
+"""
+Problem: Huffman Coding
+Category: Greedy Algorithms
+Pattern: Greedy Binary Tree / Priority Queue
+
+Time Complexity:  O(N log N) - N insertions and deletions from min-heap
+Space Complexity: O(N) - Storage for Huffman tree nodes and codes
+"""
+
 import heapq
 
 
@@ -45,20 +53,7 @@ class Solution:
         return ans
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-
 if __name__ == "__main__":
-    t = int(input())
-    for i in range(t):
-        S = input()
-        N = len(S)
-        f = [int(x) for x in input().split()]
-        ob = Solution()
-        ans = ob.huffmanCodes(S, f, N)
-        for i in ans:
-            print(i, end=" ")
-        print()
-# } Driver Code Ends
+    s = "abcdef"
+    f = [5, 9, 12, 13, 16, 45]
+    print(f"Huffman codes for {s}: {Solution().huffmanCodes(s, f, len(s))}")

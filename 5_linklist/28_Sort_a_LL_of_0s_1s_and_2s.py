@@ -1,3 +1,13 @@
+"""
+Problem: Sort A Linked List Of 0S 1S And 2S
+Category: Linked Lists
+Pattern: Pointer Manipulation / Fast & Slow Pointers
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     # Function to sort a linked list of 0s, 1s and 2s.
     def segregate(self, head):

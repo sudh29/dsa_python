@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Largest Sum Contiguous Subarray (Kadane's Algorithm)
+Category: Dynamic Programming
+Pattern: Kadane's Algorithm / Prefix Tracking
+
+Time Complexity:  O(N) - Single pass through the array
+Space Complexity: O(1) auxiliary space
+"""
 
 
 class Solution:
@@ -11,24 +18,6 @@ class Solution:
         return max_so_far
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-
-def main():
-    T = int(input())
-    while T > 0:
-        arr = [int(x) for x in input().strip().split()]
-
-        ob = Solution()
-
-        print(ob.maxSubArraySum(arr))
-
-        T -= 1
-
-
 if __name__ == "__main__":
-    main()
-
-# } Driver Code End
+    arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+    print(f"Max contiguous sum: {Solution().maxSubArraySum(arr)}")

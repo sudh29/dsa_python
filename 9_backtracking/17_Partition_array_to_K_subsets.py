@@ -1,4 +1,13 @@
-# User function Template for python3
+"""
+Problem: Partition Array to K Subsets with Equal Sum
+Category: Backtracking
+Pattern: Backtracking / Subset Sum Partitioning with Pruning
+
+Time Complexity:  O(K * 2^N) - Pruned recursive search
+Space Complexity: O(N) - Visited array and recursion depth
+"""
+
+
 def solve(a, n, k, curr_sum, count, visited, sub_set_sum, idx):
     if sub_set_sum == curr_sum:
         if count == k - 2:
@@ -33,18 +42,9 @@ class Solution:
         return solve(a, n, k, curr_sum, count, visited, target_sum, n - 1)
 
 
-# {
-# Driver Code Starts
-
-
 if __name__ == "__main__":
-    tcs = int(input())
-    for _ in range(tcs):
-        N = int(input())
-        arr = [int(x) for x in input().split()]
-        k = int(input())
-        if Solution().isKPartitionPossible(arr, k):
-            print(1)
-        else:
-            print(0)
-# } Driver Code Ends
+    arr = [2, 1, 4, 5, 6]
+    k = 3
+    print(
+        f"Can partition {arr} into {k} equal subsets: {Solution().isKPartitionPossible(arr, len(arr), k)}"
+    )

@@ -1,3 +1,12 @@
+"""
+Problem: K-th Largest Sum Contiguous Subarray
+Category: Heaps
+Pattern: Prefix Sums / Min-Heap of Size K
+
+Time Complexity:  O(N^2 log K) - Evaluates all subarrays maintaining min-heap of size K
+Space Complexity: O(K) - Min-heap storage
+"""
+
 from typing import List
 import heapq
 
@@ -23,15 +32,12 @@ class Solution:
         return min_heap[0]
 
 
-# {
-# Driver Code Starts
 class IntArray:
     def __init__(self) -> None:
         pass
 
     def Input(self, n):
-        arr = [int(i) for i in input().strip().split()]  # array input
-        return arr
+        return []
 
     def Print(self, arr):
         for i in arr:
@@ -40,18 +46,7 @@ class IntArray:
 
 
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        N = int(input())
-
-        K = int(input())
-
-        Arr = IntArray().Input(N)
-
-        obj = Solution()
-        res = obj.kthLargest(N, K, Arr)
-
-        print(res)
-
-
-# } Driver Code Ends
+    obj = Solution()
+    arr = [2, 6, 4, 1]
+    k = 3
+    print(f"{k}-th largest contiguous sum: {obj.kthLargest(len(arr), k, arr)}")

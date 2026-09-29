@@ -1,13 +1,18 @@
 """
-# Node class
+Problem: Construct Binary Tree From Inorder And Preorder Traversal
+Category: Binary Trees
+Pattern: Tree Traversal / DFS
+
+Time Complexity:  O(N) - Visits every node exactly once
+Space Complexity: O(H) - Call stack depth
+"""
+
 
 class Node:
-    def __init__(self,val):
+    def __init__(self, val):
         self.data = val
         self.right = None
         self.left = None
-
-"""
 
 
 class Solution:
@@ -19,9 +24,7 @@ class Solution:
             root = Node(root_val)
             root_index = inorder.index(root_val)
             root.left = buildTree(preorder[1 : 1 + root_index], inorder[:root_index])
-            root.right = buildTree(
-                preorder[1 + root_index :], inorder[root_index + 1 :]
-            )
+            root.right = buildTree(preorder[1 + root_index :], inorder[root_index + 1 :])
             return root
 
         root = buildTree(preorder, inorder)

@@ -1,3 +1,13 @@
+"""
+Problem: Smallest Factorial Number
+Category: Searching & Sorting
+Pattern: Binary Search / Divide & Conquer
+
+Time Complexity:  O(N log N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def findTrailingZeros(self, n: int) -> int:
         count = 0

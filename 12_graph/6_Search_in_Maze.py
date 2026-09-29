@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Rat in a Maze Problem
+Category: Graph Algorithms
+Pattern: Backtracking / 4-Directional DFS
+
+Time Complexity:  O(4^(N^2)) worst case exhaustive path search
+Space Complexity: O(N^2) - Recursion call stack and visited matrix
+"""
 
 
 def dfs(m, n, paths, curr_path, i, j, visited):
@@ -30,29 +37,11 @@ class Solution:
         return res
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-    for i in range(t):
-        n = list(map(int, input().strip().split()))
-        arr = list(map(int, input().strip().split()))
-
-        matrix = [[0 for i in range(n[0])] for j in range(n[0])]
-        k = 0
-        for i in range(n[0]):
-            for j in range(n[0]):
-                matrix[i][j] = arr[k]
-                k += 1
-        ob = Solution()
-        result = ob.findPath(matrix, n[0])
-        result.sort()
-        if len(result) == 0:
-            print(-1)
-        else:
-            for x in result:
-                print(x, end=" ")
-            print()
-# } Driver Code Ends
+    maze = [
+        [1, 0, 0, 0],
+        [1, 1, 0, 1],
+        [1, 1, 0, 0],
+        [0, 1, 1, 1],
+    ]
+    print(f"Paths in maze: {Solution().findPath(maze, 4)}")

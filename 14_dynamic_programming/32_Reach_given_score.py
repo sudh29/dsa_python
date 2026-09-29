@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Reach a Given Score (Move combinations 3, 5, 10)
+Category: Dynamic Programming
+Pattern: Coin Change / Unbounded Combination DP
+
+Time Complexity:  O(N) - Three linear passes for scores 3, 5, and 10
+Space Complexity: O(N) - 1D DP array
+"""
 
 
 class Solution:
@@ -12,14 +19,6 @@ class Solution:
         return dp[n]
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    for _ in range(int(input())):
-        n = int(input())
-        ob = Solution()
-        print(ob.count(n))
-
-# } Driver Code Ends
+    n = 20
+    print(f"Ways to reach score {n}: {Solution().count(n)}")

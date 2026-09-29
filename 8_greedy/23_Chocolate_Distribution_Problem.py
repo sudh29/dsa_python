@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Chocolate Distribution Problem
+Category: Greedy Algorithms
+Pattern: Sorting / Sliding Window of Size M
+
+Time Complexity:  O(N log N) - Sorting packets by chocolate count
+Space Complexity: O(1) auxiliary space
+"""
 
 
 class Solution:
@@ -10,19 +17,7 @@ class Solution:
         return res
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-
-    for _ in range(t):
-        N = int(input())
-        A = [int(x) for x in input().split()]
-        M = int(input())
-
-        solObj = Solution()
-
-        print(solObj.findMinDiff(A, N, M))
-# } Driver Code Ends
+    packets = [3, 4, 1, 9, 56, 7, 9, 12]
+    m = 5
+    print(f"Min difference for {m} students: {Solution().findMinDiff(packets, len(packets), m)}")

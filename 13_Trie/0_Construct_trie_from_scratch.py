@@ -1,11 +1,10 @@
 """
-class TrieNode:
+Problem: Construct Trie from Scratch
+Category: Trie
+Pattern: 26-Ary Prefix Tree
 
-    def __init__(self):
-        self.children = [None]*26
-
-        # isEndOfWord is True if node represent the end of the word
-        self.isEndOfWord = False
+Time Complexity:  O(L) per insert/search where L is word length
+Space Complexity: O(ALPHABET_SIZE * L * N) total trie node storage
 """
 
 
@@ -31,12 +30,6 @@ class Solution:
         return currentNode.isEndOfWord
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-
-# contributed by RavinderSinghPB
 class TrieNode:
     def __init__(self):
         self.children = [None] * 26
@@ -52,20 +45,10 @@ class Trie:
 
 
 if __name__ == "__main__":
-    t = int(input())
-    for tcs in range(t):
-        n = int(input())
-        arr = input().strip().split()
-        strs = input()
-
-        t = Trie()
-        ob = Solution()
-
-        for s in arr:
-            ob.insert(t.root, s)
-
-        if ob.search(t.root, strs):
-            print(1)
-        else:
-            print(0)
-# } Driver Code Ends
+    t = Trie()
+    sol = Solution()
+    for w in ["the", "a", "there", "answer", "any", "by"]:
+        sol.insert(t.root, w)
+    assert sol.search(t.root, "the") is True
+    assert sol.search(t.root, "these") is False
+    print("Trie construct and search demo passed.")

@@ -1,12 +1,21 @@
+"""
+Problem: Merge Intervals
+Category: Arrays
+Pattern: Sorting + Greedy Interval Overlap Merging
+
+Time Complexity:  O(N log N) - Sorting intervals by start time
+Space Complexity: O(N) - Storage for merged intervals
+"""
+
+
 class Solution:
-    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+    def merge(self, intervals: list[list[int]]) -> list[list[int]]:
         if len(intervals) == 1:
             return intervals
         intervals.sort()
         # print(intervals)
         temp = intervals[0]
         result = []
-        flag = 0
         for i in range(1, len(intervals)):
             # print(temp,intervals[i])
             if temp[1] >= intervals[i][0]:

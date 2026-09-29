@@ -1,3 +1,13 @@
+"""
+Problem: Kth Element Of Two Sorted Arrays
+Category: Searching & Sorting
+Pattern: Binary Search / Divide & Conquer
+
+Time Complexity:  O(N log N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def kthElement(self, arr1, arr2, n, m, k):
         i = 0

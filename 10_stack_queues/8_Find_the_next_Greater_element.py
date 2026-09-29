@@ -1,3 +1,13 @@
+"""
+Problem: Find The Next Greater Element
+Category: Stacks & Queues
+Pattern: Monotonic Stack
+
+Time Complexity:  O(N) - Each element is pushed and popped at most once
+Space Complexity: O(N) - Stack storing indices / elements
+"""
+
+
 class Solution:
     # Function to find the next greater element for each element of the array.
     def nextLargerElement(self, arr, n):

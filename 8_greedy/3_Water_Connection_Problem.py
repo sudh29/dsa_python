@@ -1,4 +1,13 @@
-# User function Template for python3
+"""
+Problem: Water Connection Problem
+Category: Greedy Algorithms
+Pattern: Connected Components / Path Traversal
+
+Time Complexity:  O(N) - Each house has at most one incoming and outgoing pipe
+Space Complexity: O(N) - Direct arrays for next houses and pipe diameters
+"""
+
+
 class Solution:
     def solve(self, n, p, a, b, d):
         # Create a dictionary to store the connections and their diameters
@@ -18,9 +27,7 @@ class Solution:
         for tank in tanks:
             tap, min_diameter = connections[tank]
             while tap in set(b):
-                if (
-                    tap not in connections
-                ):  # Check if tap is not found in the connections
+                if tap not in connections:  # Check if tap is not found in the connections
                     break
                 min_diameter = min(min_diameter, connections[tap][1])
                 tap = connections[tap][0]
@@ -29,28 +36,7 @@ class Solution:
         return pairs
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        n, p = map(int, input().strip().split())
-        a = []
-        b = []
-        d = []
-        for i in range(p):
-            x, y, z = map(int, input().strip().split())
-            a.append(x)
-            b.append(y)
-            d.append(z)
-
-        ob = Solution()
-        ans = ob.solve(n, p, a, b, d)
-        print(len(ans))
-        for i in ans:
-            print(str(i[0]) + " " + str(i[1]) + " " + str(i[2]))
-
-
-# } Driver Code Ends
+    n, p = 9, 6
+    a, b, d = [7, 5, 4, 2, 9, 3], [4, 9, 6, 8, 7, 1], [98, 72, 10, 22, 17, 66]
+    print(f"Tanks and taps: {Solution().solve(n, p, a, b, d)}")

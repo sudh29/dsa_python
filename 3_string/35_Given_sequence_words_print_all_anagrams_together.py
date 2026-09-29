@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Print All Anagrams Together
+Category: Strings
+Pattern: Hash Map / Sorted Word Grouping
+
+Time Complexity:  O(N * K log K) where N is word count and K is max word length
+Space Complexity: O(N * K) - Storing grouped anagram lists
+"""
 
 
 class Solution:
@@ -18,23 +25,7 @@ class Solution:
         return list(anagram_groups.values())
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-# contributed by RavinderSinghPB
 if __name__ == "__main__":
-    t = int(input())
-    for tcs in range(t):
-        n = int(input())
-        words = input().split()
-
-        ob = Solution()
-        ans = ob.Anagrams(words, n)
-
-        for grp in sorted(ans):
-            for word in grp:
-                print(word, end=" ")
-            print()
-
-# } Driver Code Ends
+    ob = Solution()
+    words = ["act", "god", "cat", "dog", "tac"]
+    print(f"Grouped anagrams of {words}: {ob.Anagrams(words)}")

@@ -1,3 +1,13 @@
+"""
+Problem: Count the Reversals for Balanced Brackets
+Category: Strings
+Pattern: Greedy / Balance Counters
+
+Time Complexity:  O(N) - Single pass through the bracket string
+Space Complexity: O(1) - Constant auxiliary counters
+"""
+
+
 def countRev(S):
     if len(S) % 2 != 0:
         return -1
@@ -33,13 +43,6 @@ def countRev(S):
     return reversals
 
 
-# {
-# Driver Code Starts
-t = int(input())
-for tc in range(t):
-    s = input()
-    print(countRev(s))
-
-# Contributed By: Pranay Bansal
-
-# } Driver Code Ends
+if __name__ == "__main__":
+    sample = "}{{}}{{{}"
+    print(f"Reversals needed for '{sample}': {countRev(sample)}")

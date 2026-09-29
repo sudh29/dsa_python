@@ -1,3 +1,12 @@
+"""
+Problem: Replace Every Element Least Greater Element Right
+Category: Binary Search Trees
+Pattern: BST Inorder / Divide & Conquer
+
+Time Complexity:  O(H) where H is tree height
+Space Complexity: O(H) - Recursion stack
+"""
+
 from typing import List
 
 

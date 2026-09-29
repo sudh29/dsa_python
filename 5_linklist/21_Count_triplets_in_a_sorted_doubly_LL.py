@@ -1,3 +1,13 @@
+"""
+Problem: Count Triplets In A Sorted Doubly Linked List
+Category: Linked Lists
+Pattern: Pointer Manipulation / Fast & Slow Pointers
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 def countTriplets(head, x):
     count = 0
     ptr1 = head

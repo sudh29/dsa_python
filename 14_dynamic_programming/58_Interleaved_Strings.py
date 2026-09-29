@@ -1,11 +1,18 @@
-# User function Template for python3
+"""
+Problem: Interleaved Strings
+Category: Dynamic Programming
+Pattern: 2D Grid DP / String Matching
+
+Time Complexity:  O(N * M) - DP matrix filling of prefix interleavings
+Space Complexity: O(N * M) - 2D boolean DP array
+"""
 
 
 class Solution:
     # function should return True/False
     def isInterleave(self, A, B, C):
-        n, m, l = len(A), len(B), len(C)
-        if n + m != l:
+        n, m, k = len(A), len(B), len(C)
+        if n + m != k:
             return False
         dp = [[False] * (m + 1) for _ in range(n + 1)]
         dp[0][0] = True
@@ -21,17 +28,6 @@ class Solution:
         return dp[n][m]
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-    for i in range(t):
-        arr = input().strip().split()
-        if Solution().isInterleave(arr[0], arr[1], arr[2]):
-            print(1)
-        else:
-            print(0)
-# contributed By: Harshit Sidhwa
-# } Driver Code Ends
+    a, b, c = "aabcc", "dbbca", "aadbbcbcac"
+    print(f"Is '{c}' interleaved from '{a}' and '{b}': {Solution().isInterleave(a, b, c)}")

@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Maximize The Cut Segments
+Category: Dynamic Programming
+Pattern: 1D DP / Unbounded Rod Cutting
+
+Time Complexity:  O(N) - Loop from 1 to N considering 3 cut lengths
+Space Complexity: O(N) - 1D DP table
+"""
 
 
 class Solution:
@@ -17,16 +24,8 @@ class Solution:
         return max(dp[n], 0)
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-# contributed by RavinderSinghPB
 if __name__ == "__main__":
-    t = int(input())
-    for tcs in range(t):
-        n = int(input())
-        x, y, z = [int(x) for x in input().split()]
-
-        print(Solution().maximizeTheCuts(n, x, y, z))
-# } Driver Code Ends
+    n, x, y, z = 4, 2, 1, 1
+    print(
+        f"Max cuts for length {n} with segments ({x}, {y}, {z}): {Solution().maximizeTheCuts(n, x, y, z)}"
+    )

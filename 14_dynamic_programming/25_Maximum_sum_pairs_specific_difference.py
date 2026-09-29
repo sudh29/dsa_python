@@ -1,3 +1,13 @@
+"""
+Problem: Maximum Sum of Pairs with Specific Difference
+Category: Dynamic Programming
+Pattern: Greedy / Sorting Adjacent Pairs
+
+Time Complexity:  O(N log N) - Sorting array in descending order
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def maxSumPairWithDifferenceLessThanK(self, arr, N, K):
         # # Greedy
@@ -27,26 +37,9 @@ class Solution:
         return dp[-1]
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-
-def main():
-    T = int(input())
-
-    while T > 0:
-        N = int(input())
-        arr = [int(x) for x in input().strip().split()]
-        K = int(input())
-        ob = Solution()
-        print(ob.maxSumPairWithDifferenceLessThanK(arr, N, K))
-
-        T -= 1
-
-
 if __name__ == "__main__":
-    main()
-
-
-# } Driver Code Ends
+    arr = [3, 5, 10, 15, 17, 12, 9]
+    k = 4
+    print(
+        f"Max pair sum with diff < {k}: {Solution().maxSumPairWithDifferenceLessThanK(arr, len(arr), k)}"
+    )

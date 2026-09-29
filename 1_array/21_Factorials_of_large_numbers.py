@@ -1,3 +1,13 @@
+"""
+Problem: Factorials Of Large Numbers
+Category: Arrays
+Pattern: Two Pointers / Linear Scan
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def factorial(self, N):
         # code here

@@ -1,8 +1,19 @@
+"""
+Problem: Find The Middle Element Of A Stack
+Category: Stacks & Queues
+Pattern: LIFO / FIFO State Tracking / Monotonic Stack
+
+Time Complexity:  O(N)
+Space Complexity: O(N) - Auxiliary stack/queue
+"""
+
+
 class Node:
     def __init__(self, x):
         self.data = x
         self.next = None
         self.prev = None
+
 
 class DoublyLinkedList:
     def __init__(self):
@@ -56,3 +67,9 @@ class DoublyLinkedList:
     def print_data(self):
         curr = self.head
         if self.count == 0:
+            print("Empty")
+            return
+        while curr != self.dummy:
+            print(curr.data, end=" ")
+            curr = curr.next
+        print()

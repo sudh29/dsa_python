@@ -1,16 +1,22 @@
 """
+Problem: Construct Binary Tree String Bracket Representation
+Category: Binary Trees
+Pattern: Tree Traversal (DFS / BFS)
 
-definition of binary tree node.
-class Node:
-    def _init_(self,val):
-        self.data = val
-        self.left = None
-        self.right = None
+Time Complexity:  O(N) - Visits each node once
+Space Complexity: O(H) - Recursion stack bounded by tree height
 """
 
 
+class Node:
+    def __init__(self, val):
+        self.data = val
+        self.left = None
+        self.right = None
+
+
 class Solution:
-    def treeFromString(self, s: str) -> Optional["Node"]:
+    def treeFromString(self, s: str) -> Node | None:
         def dfs(s):
             if not s:
                 return None

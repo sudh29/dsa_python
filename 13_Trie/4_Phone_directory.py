@@ -1,3 +1,13 @@
+"""
+Problem: Phone Directory Search
+Category: Trie
+Pattern: Trie Prefix Auto-Complete
+
+Time Complexity:  O(N * L + |query| * matches) - Building trie and querying prefixes
+Space Complexity: O(N * L) - Trie node storage
+"""
+
+
 class TrieNode:
     def __init__(self):
         self.children = {}
@@ -42,21 +52,9 @@ class Solution:
         return results
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        contact = input().split()
-        s = input()
-
-        ob = Solution()
-        ans = ob.displayContacts(n, contact, s)
-        for i in range(len(s)):
-            for val in ans[i]:
-                print(val, end=" ")
-            print()
-# } Driver Code Ends
+    contacts = ["geeikistest", "geeksforgeeks", "geeksfortest"]
+    query = "geeips"
+    print(
+        f"Phone directory search for '{query}': {Solution().displayContacts(len(contacts), contacts, query)}"
+    )

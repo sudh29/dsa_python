@@ -1,10 +1,18 @@
 """
+Problem: Merge Two Binary Search Tree
+Category: Binary Search Trees
+Pattern: BST Inorder / Divide & Conquer
+
+Time Complexity:  O(H) where H is tree height
+Space Complexity: O(H) - Recursion stack
+"""
+
+
 class Node:
     def __init__(self, val):
         self.right = None
         self.data = val
         self.left = None
-"""
 
 
 class Solution:

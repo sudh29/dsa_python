@@ -1,3 +1,13 @@
+"""
+Problem: First And Last Occurrences Of X
+Category: Searching & Sorting
+Pattern: Binary Search / Divide & Conquer
+
+Time Complexity:  O(N log N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 def find(arr, n, x):
     start = 0
     end = n - 1  # Adjusted for zero-based indexing in Python

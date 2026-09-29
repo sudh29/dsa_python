@@ -1,3 +1,19 @@
+"""
+Problem: Add 1 To A Number Represented Linked List
+Category: Linked Lists
+Pattern: Pointer Manipulation / Fast & Slow Pointers
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
 class Solution:
     def addOne(self, head):
         # Returns new head of linked List.

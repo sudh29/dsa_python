@@ -1,4 +1,13 @@
-# User function Template for python3
+"""
+Problem: Minimum Swaps for Bracket Balancing
+Category: Strings
+Pattern: Two Pointers / Greedy Swap
+
+Time Complexity:  O(N) - Single pass through bracket positions
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def minimumNumberOfSwaps(self, S):
         open_count, close_count, UB, swaps = 0, 0, 0, 0
@@ -14,13 +23,7 @@ class Solution:
         return swaps
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        S = str(input())
-        ob = Solution()
-        print(ob.minimumNumberOfSwaps(S))
-# } Driver Code Ends
+    ob = Solution()
+    s = "[]][]["
+    print(f"Min swaps for '{s}': {ob.minimumNumberOfSwaps(s)}")

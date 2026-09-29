@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Page Faults in LRU Cache
+Category: Greedy Algorithms
+Pattern: Least Recently Used (LRU) / Simulation
+
+Time Complexity:  O(N * C) where C is cache capacity
+Space Complexity: O(C) - Memory frames storage
+"""
 
 
 class Solution:
@@ -18,20 +25,7 @@ class Solution:
         return page_fault
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        N = int(input())
-        pages = input().split()
-        for itr in range(N):
-            pages[itr] = int(pages[itr])
-        C = int(input())
-
-        ob = Solution()
-        print(ob.pageFaults(N, C, pages))
-
-# } Driver Code Ends
+    pages = [5, 0, 1, 3, 2, 4, 1, 0, 5]
+    c = 4
+    print(f"Page faults with capacity {c}: {Solution().pageFaults(len(pages), c, pages)}")

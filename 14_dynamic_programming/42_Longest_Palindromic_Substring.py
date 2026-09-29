@@ -1,3 +1,13 @@
+"""
+Problem: Longest Palindromic Substring
+Category: Dynamic Programming
+Pattern: Memoization / Tabulation / Subproblem Overlap
+
+Time Complexity:  O(N^2) / Polynomial
+Space Complexity: O(N) - DP table storage
+"""
+
+
 class Solution:
     def longestPalindrome(self, s: str) -> str:
         # n = len(s)

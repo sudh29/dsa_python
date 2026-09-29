@@ -1,3 +1,13 @@
+"""
+Problem: Delete Nodes Having Greater Value On Right Linked List
+Category: Linked Lists
+Pattern: Pointer Manipulation / Fast & Slow Pointers
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def compute(self, head):
         """curr=head

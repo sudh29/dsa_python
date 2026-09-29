@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Smallest Sum Contiguous Subarray
+Category: Dynamic Programming
+Pattern: Kadane's Algorithm (Min Sum Variant)
+
+Time Complexity:  O(N) - Single pass through the array
+Space Complexity: O(1) auxiliary space
+"""
 
 
 class Solution:
@@ -19,24 +26,6 @@ class Solution:
         return min_sum
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-
-def main():
-    T = int(input())
-    while T > 0:
-        N = int(input())
-
-        A = [int(x) for x in input().strip().split()]
-
-        obj = Solution()
-        print(obj.smallestSumSubarray(A, N))
-
-        T -= 1
-
-
 if __name__ == "__main__":
-    main()
-# } Driver Code Ends
+    arr = [3, -4, 2, -3, -1, 7, -5]
+    print(f"Smallest contiguous sum: {Solution().smallestSumSubarray(arr, len(arr))}")

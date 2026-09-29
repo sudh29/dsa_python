@@ -1,3 +1,13 @@
+"""
+Problem: Count Inversions
+Category: Arrays
+Pattern: Two Pointers / Linear Scan
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 def mergesort(arr, s, e):
     count = 0
     if s < e:

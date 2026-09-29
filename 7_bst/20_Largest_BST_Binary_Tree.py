@@ -1,3 +1,13 @@
+"""
+Problem: Largest Binary Search Tree Binary Tree
+Category: Binary Search Trees
+Pattern: BST Inorder / Divide & Conquer
+
+Time Complexity:  O(H) where H is tree height
+Space Complexity: O(H) - Recursion stack
+"""
+
+
 class Solution:
     # Return the size of the largest sub-tree which is also a BST
     def largestBst(self, root):
@@ -6,9 +16,7 @@ class Solution:
                 return True
             if not (min_val < node.data < max_val):
                 return False
-            return is_bst(node.left, min_val, node.data) and is_bst(
-                node.right, node.data, max_val
-            )
+            return is_bst(node.left, min_val, node.data) and is_bst(node.right, node.data, max_val)
 
         def count_nodes(node):
             if not node:
@@ -20,8 +28,6 @@ class Solution:
                 return 0
             if is_bst(node):
                 return count_nodes(node)
-            return max(
-                find_largest_bst_size(node.left), find_largest_bst_size(node.right)
-            )
+            return max(find_largest_bst_size(node.left), find_largest_bst_size(node.right))
 
         return find_largest_bst_size(root)

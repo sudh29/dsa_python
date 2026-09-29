@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Egg Dropping Puzzle
+Category: Dynamic Programming
+Pattern: Minimax DP / Binary Search Optimization
+
+Time Complexity:  O(N * K) with binary search / O(N * K^2) standard DP
+Space Complexity: O(N * K) - DP table for eggs and floors
+"""
 
 
 class Solution:
@@ -26,16 +33,6 @@ class Solution:
         return dp[N][K]
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-# Contributed by : Nagendra Jha
-
 if __name__ == "__main__":
-    test_cases = int(input())
-    for cases in range(test_cases):
-        n, k = map(int, input().strip().split())
-        ob = Solution()
-        print(ob.eggDrop(n, k))
-# } Driver Code Ends
+    n, k = 2, 10
+    print(f"Min drops for {n} eggs and {k} floors: {Solution().eggDrop(n, k)}")

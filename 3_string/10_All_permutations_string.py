@@ -1,4 +1,13 @@
-# User function Template for python3
+"""
+Problem: Permutations of a Given String
+Category: Strings
+Pattern: Backtracking / Recursion
+
+Time Complexity:  O(N * N!) - Generates all N! permutations of length N
+Space Complexity: O(N!) - Storage for all generated permutations
+"""
+
+
 def permute(s):
     if len(s) == 0:
         return [""]
@@ -18,19 +27,8 @@ class Solution:
         return p
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-
 if __name__ == "__main__":
-    t = int(input())
-    for i in range(t):
-        S = input()
-        ob = Solution()
-        ans = ob.find_permutation(S)
-        ans.sort()
-        for i in ans:
-            print(i, end=" ")
-        print()
-# } Driver Code Ends
+    ob = Solution()
+    sample = "ABC"
+    res = ob.find_permutation(sample)
+    print(f"Permutations of {sample}: {res}")

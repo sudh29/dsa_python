@@ -1,3 +1,13 @@
+"""
+Problem: Union Of Two Arrays
+Category: Arrays
+Pattern: Two Pointers / Linear Scan
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     # Function to return the count of number of elements in union of two arrays.
     def doUnion(self, a, n, b, m):

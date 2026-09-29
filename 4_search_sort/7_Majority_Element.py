@@ -1,3 +1,13 @@
+"""
+Problem: Majority Element
+Category: Searching & Sorting
+Pattern: Binary Search / Divide & Conquer
+
+Time Complexity:  O(N log N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 def majorityElement(arr: list) -> int:
     size = len(arr)
     k = size // 2

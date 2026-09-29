@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Next Permutation
+Category: Strings
+Pattern: Two Pointers / In-place Array Manipulation
+
+Time Complexity:  O(N) - Linear scans and reversal
+Space Complexity: O(1) - In-place permutation
+"""
 
 
 class Solution:
@@ -17,21 +24,8 @@ class Solution:
         return arr
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        N = int(input())
-        arr = input().split()
-        for i in range(N):
-            arr[i] = int(arr[i])
-
-        ob = Solution()
-        ans = ob.nextPermutation(N, arr)
-        for i in range(N):
-            print(ans[i], end=" ")
-        print()
-# } Driver Code Ends
+    ob = Solution()
+    arr = [1, 2, 3]
+    res = ob.nextPermutation(len(arr), arr)
+    print(f"Next permutation of [1, 2, 3]: {res}")

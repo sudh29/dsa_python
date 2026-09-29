@@ -38,3 +38,7 @@
 | [33_Form_a_palindrome.py](33_Form_a_palindrome.py) | Greedy / Two Pointer / DP |
 | [34_Find_the_median.py](34_Find_the_median.py) | Sorting / Median Logic |
 | [35_Median_of_2_Sorted_Arrays_of_Different_Sizes.py](35_Median_of_2_Sorted_Arrays_of_Different_Sizes.py) | Binary Search on Partitions |
+| [36_Container_With_Most_Water.py](36_Container_With_Most_Water.py) | Two Pointers (Opposite Direction) |
+| [37_Subarray_Sum_Equals_K.py](37_Subarray_Sum_Equals_K.py) | Prefix Sum & Hash Map |
+| [38_Range_Sum_Query_Immutable.py](38_Range_Sum_Query_Immutable.py) | Prefix Sum / Range Query |
+| [39_Continuous_Subarray_Sum.py](39_Continuous_Subarray_Sum.py) | Prefix Sum & Modulo Hash Map |

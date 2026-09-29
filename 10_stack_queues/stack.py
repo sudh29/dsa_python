@@ -1,3 +1,12 @@
+"""
+Problem: Stack
+Category: Stacks & Queues
+Pattern: LIFO / FIFO State Tracking / Monotonic Stack
+
+Time Complexity:  O(N)
+Space Complexity: O(N) - Auxiliary stack/queue
+"""
+
 # implement stack using deque LIFO
 
 from collections import deque

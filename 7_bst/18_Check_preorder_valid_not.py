@@ -1,3 +1,13 @@
+"""
+Problem: Check Preorder Valid Not
+Category: Binary Search Trees
+Pattern: Range Invalidation [min_val, max_val] DFS
+
+Time Complexity:  O(N) - Checks each node satisfies BST invariant
+Space Complexity: O(H) - Call stack
+"""
+
+
 class Node:
     def __init__(self, data=0):
         self.data = data
@@ -31,6 +41,6 @@ def post_order(pre, size) -> Node:
         root.right = bst_from_preorder(preorder[i:])
         return root
 
-    postorder = solve(pre)
+    solve(pre)
     # print(postorder)
     return bst_from_preorder(pre)

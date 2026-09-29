@@ -1,9 +1,11 @@
-"""class Node:
-# Constructor to create a new Node
-def __init__(self, data):
-    self.data = data
-    self.left = None
-    self.right = None"""
+"""
+Problem: Check Tree Balanced Or Not
+Category: Binary Trees
+Pattern: Tree Traversal (DFS / BFS)
+
+Time Complexity:  O(N) - Visits each node once
+Space Complexity: O(H) - Recursion stack bounded by tree height
+"""
 
 
 # Function to check whether a binary tree is balanced or not.

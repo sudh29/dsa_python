@@ -1,4 +1,13 @@
-# User function Template for python3
+"""
+Problem: Word Break Problem
+Category: Dynamic Programming
+Pattern: 1D Prefix DP / Substring Matching
+
+Time Complexity:  O(N^2 * L) where L is max word length in dictionary
+Space Complexity: O(N) - Boolean DP array of prefix segmentations
+"""
+
+
 class TrieNode:
     def __init__(self):
         self.children = {}
@@ -60,21 +69,7 @@ class Solution:
         # return 1 if dp[-1] else 0
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    test_case = int(input())
-
-    for _ in range(test_case):
-        n = int(input())
-        dictionary = [word for word in input().strip().split()]
-        s = input().strip()
-        ob = Solution()
-        res = ob.wordBreak(n, s, dictionary)
-        if res:
-            print(1)
-        else:
-            print(0)
-# } Driver Code Ends
+    dictionary = ["i", "like", "sam", "sung", "samsung", "mobile"]
+    line = "ilikesamsung"
+    print(f"Can segment '{line}': {Solution().wordBreak(line, dictionary)}")

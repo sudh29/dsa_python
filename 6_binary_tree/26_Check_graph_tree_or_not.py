@@ -1,3 +1,13 @@
+"""
+Problem: Check Graph Tree Or Not
+Category: Binary Trees
+Pattern: Tree Traversal (DFS / BFS)
+
+Time Complexity:  O(N) - Visits each node once
+Space Complexity: O(H) - Recursion stack bounded by tree height
+"""
+
+
 class Solution:
     def isTree(self, n, adj):
         visited = [False] * n
@@ -12,7 +22,7 @@ class Solution:
     def isCyclicUtil(self, curr, visited, parent, adj):
         visited[curr] = True
         for i in adj[curr]:
-            if visited[i] == False:
+            if not visited[i]:
                 if self.isCyclicUtil(i, visited, curr, adj):
                     return True
             elif i != parent:

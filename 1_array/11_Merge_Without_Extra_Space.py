@@ -1,3 +1,13 @@
+"""
+Problem: Merge Without Extra Space
+Category: Arrays
+Pattern: Two Pointers / Linear Scan
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def merge(self, arr1, arr2, n, m):
         # code here

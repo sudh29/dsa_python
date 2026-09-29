@@ -1,4 +1,12 @@
-# User function Template for python3
+"""
+Problem: Rearrange Characters Such That No Adjacent Are Same
+Category: Heaps
+Pattern: Max-Heap / Greedy Frequency Scheduling
+
+Time Complexity:  O(N log(alphabet_size)) - Heap operations
+Space Complexity: O(alphabet_size) - Frequency counts and heap
+"""
+
 import heapq
 
 
@@ -27,26 +35,7 @@ class Solution:
         return "".join(res)
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        str1 = input()
-        solObj = Solution()
-        str2 = solObj.rearrangeString(str1)
-        if str2 == "-1":
-            print(0)
-        elif sorted(str1) != sorted(str2):
-            print(0)
-        else:
-            for i in range(len(str2) - 1):
-                if str2[i] == str2[i + 1]:
-                    print(0)
-                    break
-            else:
-                print(1)
-
-# } Driver Code Ends
+    ob = Solution()
+    for s in ["geeksforgeeks", "bbbaba"]:
+        print(f"Rearrange '{s}': {ob.rearrangeString(s)}")

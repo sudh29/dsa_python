@@ -1,3 +1,13 @@
+"""
+Problem: N-Queen Problem
+Category: Backtracking
+Pattern: Column Placements & Diagonal Conflict Bitsets
+
+Time Complexity:  O(N!) - Placing queens column by column
+Space Complexity: O(N) - Board placement tracking and recursion depth
+"""
+
+
 def is_safe(r, c, board, n):
     # Check left col
     for i in range(c):
@@ -41,25 +51,5 @@ class Solution:
         return result
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-
-        ob = Solution()
-        ans = ob.nQueen(n)
-        if len(ans) == 0:
-            print("-1")
-        else:
-            for i in range(len(ans)):
-                print("[", end="")
-                for j in range(len(ans[i])):
-                    print(ans[i][j], end=" ")
-                print("]", end=" ")
-            print()
-
-# } Driver Code Ends
+    print(f"4-Queens solutions: {Solution().nQueen(4)}")

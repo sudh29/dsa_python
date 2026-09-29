@@ -1,4 +1,13 @@
-# User function Template for python3
+"""
+Problem: Maximum Size Rectangle in Binary Matrix
+Category: Matrix
+Pattern: Monotonic Stack / Largest Rectangle in Histogram
+
+Time Complexity:  O(R * C) - Each cell is processed into histogram and pushed/popped from stack once per row
+Space Complexity: O(C) - Histogram array and stack for current row
+"""
+
+
 def max_histogram_area(hist):
     stack = []
     max_area = 0
@@ -32,23 +41,14 @@ class Solution:
         return max_area
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-
-# Driver Code
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        R, C = map(int, input().strip().split())
-        A = []
-        for i in range(R):
-            line = [int(x) for x in input().strip().split()]
-            A.append(line)
-        print(Solution().maxArea(A, R, C))
-
-# This code is contributed
-# by SHUBHAMSINGH10
-
-# } Driver Code Ends
+    matrix = [
+        [0, 1, 1, 0],
+        [1, 1, 1, 1],
+        [1, 1, 1, 1],
+        [1, 1, 0, 0],
+    ]
+    r, c = len(matrix), len(matrix[0])
+    res = Solution().maxArea(matrix, r, c)
+    assert res == 8, f"Expected 8, got {res}"
+    print(f"Maximum rectangle area: {res}")

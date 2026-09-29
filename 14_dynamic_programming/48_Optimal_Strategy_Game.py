@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Optimal Strategy for a Game
+Category: Dynamic Programming
+Pattern: Minimax Interval DP
+
+Time Complexity:  O(N^2) - Filling 2D table of subarray coin choices
+Space Complexity: O(N^2) - 2D DP array
+"""
 
 
 # Function to find the maximum possible amount of money we can win.
@@ -27,18 +34,6 @@ class Solution:
         return dp[0][n - 1]
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-# Contributed by : Nagendra Jha
-
 if __name__ == "__main__":
-    test_cases = int(input())
-    for cases in range(test_cases):
-        n = int(input())
-        arr = list(map(int, input().strip().split()))
-        ob = Solution()
-        print(ob.optimalStrategyOfGame(n, arr))
-
-# } Driver Code Ends
+    coins = [5, 3, 7, 10]
+    print(f"Max value player 1 can win: {Solution().optimalStrategyOfGame(len(coins), coins)}")

@@ -1,5 +1,15 @@
+"""
+Problem: Buy And Sell Stock Iii
+Category: Arrays
+Pattern: Two Pointers / Linear Scan
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
+    def maxProfit(self, prices: list[int]) -> int:
         n = len(prices)
         left = [0 for i in range(n)]
         right = [0 for i in range(n)]

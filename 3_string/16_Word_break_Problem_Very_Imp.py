@@ -1,4 +1,16 @@
- word_set = set(dictionary)
+"""
+Problem: Word Break Problem Very Imp
+Category: Strings
+Pattern: Two Pointers / Sliding Window
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
+class Solution:
+    def wordBreak(self, n, s, dictionary):
+        word_set = set(dictionary)
 
         # Memoization dictionary to store results of subproblems
         memo = {}

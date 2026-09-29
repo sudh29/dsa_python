@@ -1,3 +1,13 @@
+"""
+Problem: Implement N Stacks In An Array
+Category: Stacks & Queues
+Pattern: LIFO / FIFO State Tracking / Monotonic Stack
+
+Time Complexity:  O(N)
+Space Complexity: O(N) - Auxiliary stack/queue
+"""
+
+
 class KStacks:
     def __init__(self, k, n):
         self.k = k  # Number of stacks

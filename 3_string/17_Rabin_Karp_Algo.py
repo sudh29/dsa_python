@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Rabin-Karp Algorithm for Pattern Searching
+Category: Strings
+Pattern: Rolling Hash / Sliding Window
+
+Time Complexity:  O(N + M) average, O(N * M) worst case
+Space Complexity: O(1) auxiliary space
+"""
 
 
 def hashfn(x):
@@ -52,18 +59,9 @@ class Solution:
         return res
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        s = input().strip()
-        patt = input().strip()
-        ob = Solution()
-        ans = ob.search(patt, s)
-        for value in ans:
-            print(value, end=" ")
-        print()
-# } Driver Code Ends
+    ob = Solution()
+    txt = "geeksforgeeks"
+    pat = "geek"
+    res = ob.search(pat, txt)
+    print(f"Occurrences of '{pat}' in '{txt}': {res}")
