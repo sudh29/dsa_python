@@ -45,7 +45,10 @@ class Solution:
 
                 left_char = s[left]
                 window_counts[left_char] -= 1
-                if left_char in target_counts and window_counts[left_char] < target_counts[left_char]:
+                if (
+                    left_char in target_counts
+                    and window_counts[left_char] < target_counts[left_char]
+                ):
                     formed -= 1
 
                 left += 1
@@ -65,7 +68,11 @@ if __name__ == "__main__":
 
     for s_str, t_str, expected in test_cases:
         result = sol.minWindow(s_str, t_str)
-        print(f"s: {s_str!r}, t: {t_str!r} => Min Window: {result!r} (Expected: {expected!r})")
-        assert result == expected, f"Failed for s={s_str!r}, t={t_str!r}: got {result!r}, expected {expected!r}"
+        print(
+            f"s: {s_str!r}, t: {t_str!r} => Min Window: {result!r} (Expected: {expected!r})"
+        )
+        assert result == expected, (
+            f"Failed for s={s_str!r}, t={t_str!r}: got {result!r}, expected {expected!r}"
+        )
 
     print("All test cases passed!")

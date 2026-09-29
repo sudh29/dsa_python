@@ -1,3 +1,7 @@
+import atexit
+import io
+import sys
+
 # User function Template for python3
 
 
@@ -25,10 +29,6 @@ class Solution:
 # {
 # Driver Code Starts
 # Initial Template for Python 3
-
-import atexit
-import io
-import sys
 
 _INPUT_LINES = sys.stdin.read().splitlines()
 input = iter(_INPUT_LINES).__next__

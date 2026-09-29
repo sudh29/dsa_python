@@ -1,3 +1,5 @@
+import sys
+
 # User function Template for Python3
 
 
@@ -25,8 +27,6 @@ class Solution:
 # {
 # Driver Code Starts
 # Initial Template for Python3
-
-import sys
 
 input = sys.stdin.readline
 if __name__ == "__main__":

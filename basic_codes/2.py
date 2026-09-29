@@ -1,3 +1,7 @@
+from functools import lru_cache
+import logging
+import timeit
+
 ############### If then else ###################
 ip = "Enter the string  "
 if len(ip) < 6:
@@ -65,7 +69,6 @@ for key in new_dict.keys():
 print()
 tup_new = (1, 2, 3, 4, 4, 5, 6)
 print("Tuples ", tup_new)
-import timeit
 
 list_test = timeit.timeit(stmt="[1,1,2,3,4]", number=100000)
 tuple_test = timeit.timeit(stmt="[1,1,2,3,4]", number=100000)
@@ -74,7 +77,6 @@ print("Tuple time : ", tuple_test)
 
 ################## Logging ############################
 # Levels : Debug 10 , Info 20 , Warning 30 , Error 40, Critical 50
-import logging
 
 # create and configure logger
 # LOG_FORMAT = "%(Levelname)s %(asctime)s - %(message)s"
@@ -95,7 +97,6 @@ logger.critical("Hey this is a log file")
 
 ################## Recursion ############################
 # Fibonacci Sequence
-from functools import lru_cache
 
 
 # also can use

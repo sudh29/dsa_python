@@ -1,3 +1,8 @@
+import datetime
+from functools import reduce
+import math
+import statistics
+
 ############## List comp ################
 list1 = [i**2 for i in range(11)]
 print(list1)
@@ -12,7 +17,6 @@ gmovie = [title for title in movies if title.startswith("g")]
 print(gmovie)
 
 ################## Classes ##########################
-import datetime
 
 
 class USER:
@@ -84,7 +88,6 @@ print("Q_equation value: ", f1(5))
 
 
 ################# Map Filter Reduce List #####################
-import math
 
 
 def area_circle(r):
@@ -97,7 +100,6 @@ area = []
 print("Area of cicle : ", list(map(area_circle, list_radii)))
 
 # filter
-import statistics
 
 data = [1.3, 4.3, 5.1, 9.8, 7.8]
 avg = statistics.mean(data)
@@ -109,7 +111,6 @@ countries = ["", "India", "", "", "USA"]
 print(list(filter(None, countries)))
 
 # Reduce fn is used in python2 in python3 functools is used or for loop
-from functools import reduce
 
 
 # multiply all number in a list

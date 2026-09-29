@@ -1,3 +1,5 @@
+import sys
+
 MOD = 10**9 + 7
 
 
@@ -16,8 +18,6 @@ class Solution:
 # {
 # Driver Code Starts
 # Initial Template for Python 3
-
-import sys
 
 sys.setrecursionlimit(10**6)
 

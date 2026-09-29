@@ -33,19 +33,9 @@ class Solution:
         ) // 2  # Convert index in T back to original string
         return s[start : start + max_len]
 
-    def longestPalin(self, s):
+    def longestPalin(self, s: str) -> str:
         # Center expansion approach (or delegate to Manacher)
         return self.longestPalinManacher(s)
-        # code here
-        res = ""
-        for i in range(len(s)):
-            test = helper(s, i, i)
-            if len(test) > len(res):
-                res = test
-            test = helper(s, i, i + 1)
-            if len(test) > len(res):
-                res = test
-        return res if len(res) > 1 else s[0]
 
 
 # {

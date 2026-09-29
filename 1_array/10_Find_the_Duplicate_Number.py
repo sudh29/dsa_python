@@ -1,5 +1,5 @@
 class Solution:
-    def findDuplicate(self, nums: List[int]) -> int:
+    def findDuplicate(self, nums: list[int]) -> int:
         """sum_nums=sum(nums)
         nums_set=list(set(nums))
         sum_nums_set=sum(nums_set)

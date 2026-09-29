@@ -48,7 +48,11 @@ if __name__ == "__main__":
 
     for s_str, k_val, expected in test_cases:
         result = sol.characterReplacement(s_str, k_val)
-        print(f"s: {s_str!r}, k: {k_val} => Max Length: {result} (Expected: {expected})")
-        assert result == expected, f"Failed for s={s_str!r}, k={k_val}: got {result}, expected {expected}"
+        print(
+            f"s: {s_str!r}, k: {k_val} => Max Length: {result} (Expected: {expected})"
+        )
+        assert result == expected, (
+            f"Failed for s={s_str!r}, k={k_val}: got {result}, expected {expected}"
+        )
 
     print("All test cases passed!")

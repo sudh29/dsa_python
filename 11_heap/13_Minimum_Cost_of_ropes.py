@@ -1,5 +1,7 @@
-# User function Template for python3
+import atexit
 import heapq
+import io
+import sys
 
 
 class Solution:
@@ -22,9 +24,6 @@ class Solution:
 # {
 # Driver Code Starts
 # Initial Template for Python 3
-import atexit
-import io
-import sys
 
 # Contributed by : Nagendra Jha
 

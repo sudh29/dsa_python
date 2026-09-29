@@ -1,7 +1,12 @@
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+        self.prev = None
+
+
 class Solution:
-    def findPairsWithGivenSum(
-        self, target: int, head: Optional["Node"]
-    ) -> List[List[int]]:
+    def findPairsWithGivenSum(self, target: int, head: Node | None) -> list[list[int]]:
         firstnode = head
         lastnode = head
         while lastnode.next:

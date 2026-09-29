@@ -1,8 +1,10 @@
+import os
+import platform
 import struct
+import sys
+import time
 
 print(struct.calcsize("P") * 8)
-import platform
-import os
 
 print(os.name)
 print(platform.system())
@@ -23,8 +25,6 @@ def sum_d(n):
 
 print(sum_d(x))
 
-import sys
-
 print()
 if sys.byteorder == "little":
     # intel, alpha
@@ -36,8 +36,6 @@ print()
 
 
 # to clear terminal after program execution
-import os
-import time
 
 for i in range(5):
     print("-------------")

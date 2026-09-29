@@ -1,3 +1,9 @@
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
 class Solution:
     # Function to add two numbers represented by linked list.
     def addTwoLists(self, first, second):

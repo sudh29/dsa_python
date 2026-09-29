@@ -1,3 +1,10 @@
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+        self.bottom = None
+
+
 def merge(r1, r2):
     dummy = Node(0)
     curr = dummy

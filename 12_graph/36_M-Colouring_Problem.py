@@ -37,12 +37,12 @@ if __name__ == "__main__":
         V = int(input())
         k = int(input())
         m = int(input())
-        l = [int(x) for x in input().strip().split()]
+        edges = [int(x) for x in input().strip().split()]
         graph = [[0 for i in range(V)] for j in range(V)]
         cnt = 0
         for i in range(m):
-            graph[l[cnt] - 1][l[cnt + 1] - 1] = 1
-            graph[l[cnt + 1] - 1][l[cnt] - 1] = 1
+            graph[edges[cnt] - 1][edges[cnt + 1] - 1] = 1
+            graph[edges[cnt + 1] - 1][edges[cnt] - 1] = 1
             cnt += 2
         if graphColoring(graph, k, V):
             print(1)

@@ -44,7 +44,11 @@ if __name__ == "__main__":
 
     for arr, k_val, expected in test_cases:
         result = sol.subarraySum(arr, k_val)
-        print(f"Nums: {arr}, k={k_val} => Subarrays count: {result} (Expected: {expected})")
-        assert result == expected, f"Failed for nums={arr}, k={k_val}: got {result}, expected {expected}"
+        print(
+            f"Nums: {arr}, k={k_val} => Subarrays count: {result} (Expected: {expected})"
+        )
+        assert result == expected, (
+            f"Failed for nums={arr}, k={k_val}: got {result}, expected {expected}"
+        )
 
     print("All test cases passed!")

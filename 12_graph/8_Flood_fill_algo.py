@@ -18,8 +18,8 @@ class Solution:
                 self.dfs(image, newX, newY, old_col, new_col, directions)
 
     def floodFill(
-        self, image: List[List[int]], sr: int, sc: int, new_color: int
-    ) -> List[List[int]]:
+        self, image: list[list[int]], sr: int, sc: int, new_color: int
+    ) -> list[list[int]]:
         old_color = image[sr][sc]
         directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
         if old_color != new_color:

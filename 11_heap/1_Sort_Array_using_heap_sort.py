@@ -1,3 +1,7 @@
+import atexit
+import io
+import sys
+
 # User function Template for python3
 
 
@@ -32,9 +36,6 @@ class Solution:
 # {
 # Driver Code Starts
 # Initial Template for Python 3
-import atexit
-import io
-import sys
 
 # Contributed by : Mohit Kumara
 

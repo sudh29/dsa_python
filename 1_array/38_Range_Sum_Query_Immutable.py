@@ -32,14 +32,16 @@ if __name__ == "__main__":
     obj = NumArray(nums)
 
     queries = [
-        (0, 2, 1),   # (-2) + 0 + 3 = 1
+        (0, 2, 1),  # (-2) + 0 + 3 = 1
         (2, 5, -1),  # 3 + (-5) + 2 + (-1) = -1
         (0, 5, -3),  # (-2) + 0 + 3 + (-5) + 2 + (-1) = -3
     ]
 
-    for l, r, expected in queries:
-        result = obj.sumRange(l, r)
-        print(f"sumRange({l}, {r}) => {result} (Expected: {expected})")
-        assert result == expected, f"Failed for range ({l}, {r}): got {result}, expected {expected}"
+    for left, right, expected in queries:
+        result = obj.sumRange(left, right)
+        print(f"sumRange({left}, {right}) => {result} (Expected: {expected})")
+        assert result == expected, (
+            f"Failed for range ({left}, {right}): got {result}, expected {expected}"
+        )
 
     print("All test cases passed!")

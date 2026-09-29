@@ -30,8 +30,6 @@ class Solution:
 # Contributed by : Nagendra Jha
 
 
-
-
 if __name__ == "__main__":
     test_cases = int(input())
     for cases in range(test_cases):

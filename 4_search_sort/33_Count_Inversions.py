@@ -1,7 +1,7 @@
 class Solution:
-    def merge(self, arr: list[int], l: int, m: int, r: int) -> int:
+    def merge(self, arr: list[int], left: int, m: int, r: int) -> int:
         temp = []
-        i, j, ci = l, m + 1, 0
+        i, j, ci = left, m + 1, 0
 
         while i <= m and j <= r:
             if arr[i] <= arr[j]:
@@ -21,7 +21,7 @@ class Solution:
             j += 1
 
         for i in range(len(temp)):
-            arr[l + i] = temp[i]
+            arr[left + i] = temp[i]
 
         return ci
 

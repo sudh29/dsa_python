@@ -44,7 +44,11 @@ if __name__ == "__main__":
 
     for text, expected in test_cases:
         result = sol.lengthOfLongestSubstring(text)
-        print(f"String: {text!r} => Longest unique length: {result} (Expected: {expected})")
-        assert result == expected, f"Failed for {text!r}: got {result}, expected {expected}"
+        print(
+            f"String: {text!r} => Longest unique length: {result} (Expected: {expected})"
+        )
+        assert result == expected, (
+            f"Failed for {text!r}: got {result}, expected {expected}"
+        )
 
     print("All test cases passed!")

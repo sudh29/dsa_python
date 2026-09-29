@@ -1,3 +1,6 @@
+import sys
+
+
 class Solution:
     # Function to return list containing vertices in Topological order.
     def topoSort(self, V, adj):
@@ -40,8 +43,6 @@ class Solution:
 # {
 # Driver Code Starts
 # Driver Program
-
-import sys
 
 sys.setrecursionlimit(10**6)
 

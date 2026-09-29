@@ -1,3 +1,6 @@
+import sys
+
+
 class TrieNode:
     def __init__(self):
         self.children = {}
@@ -42,8 +45,6 @@ class Solution:
 # {
 # Driver Code Starts
 # Initial Template for Python 3
-
-import sys
 
 sys.setrecursionlimit(10**6)
 if __name__ == "__main__":

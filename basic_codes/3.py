@@ -1,5 +1,8 @@
-############# Random  #####################
+import csv
+from datetime import datetime
 import random
+
+############# Random  #####################
 
 outcome = ["rock", "paper", "scissors"]
 
@@ -13,9 +16,6 @@ for i in range(1):
 
 
 ############# CSV file  #####################
-
-import csv
-from datetime import datetime
 
 path = "/home/sudhanshu/Desktop/Python/work/gsp.csv"
 file = open(path, newline="")

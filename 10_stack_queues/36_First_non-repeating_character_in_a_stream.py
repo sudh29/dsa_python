@@ -1,4 +1,4 @@
-from collections import deque
+from collections import defaultdict, deque
 
 
 class Solution:
@@ -27,7 +27,6 @@ class Solution:
 
 
 # Alternative implementation using unordered_map equivalent
-from collections import defaultdict
 
 
 class SolutionAlt:

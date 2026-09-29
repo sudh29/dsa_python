@@ -1,8 +1,11 @@
+import random
+
+
 class Solution:
-    def kthSmallest(self, arr, l, r, k):
+    def kthSmallest(self, arr, left, r, k):
         """
         arr : given array
-        l : starting index of the array i.e 0
+        left : starting index of the array i.e 0
         r : ending index of the array i.e size-1
         k : find kth smallest element and return using this function
         """
@@ -11,7 +14,6 @@ class Solution:
 
 
 # Quickselect sort
-import random
 
 
 def quickselect(arr, k):

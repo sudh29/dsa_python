@@ -1,11 +1,10 @@
-'''
 class Node:
-    """ Class Node """
+    """Class Node"""
+
     def __init__(self, value):
         self.left = None
         self.data = value
         self.right = None
-'''
 
 
 # Function to convert a binary tree to doubly linked list.

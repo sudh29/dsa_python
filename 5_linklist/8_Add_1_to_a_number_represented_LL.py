@@ -1,3 +1,9 @@
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
 class Solution:
     def addOne(self, head):
         # Returns new head of linked List.

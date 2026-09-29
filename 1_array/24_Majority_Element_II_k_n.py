@@ -1,5 +1,5 @@
 class Solution:
-    def majorityElement(self, nums: List[int]) -> List[int]:
+    def majorityElement(self, nums: list[int]) -> list[int]:
         temp = set()
         k = len(nums) // 3
         dictemp = {}

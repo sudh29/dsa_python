@@ -2,25 +2,25 @@ class Solution:
     def MedianOfArrays(self, array1, array2):
         m = len(array1)
         n = len(array2)
-        l = 0
+        k = 0
         h = m + n
         i = 0
         j = 0
         temp = [0 for _ in range(h)]
-        while l < h:
+        while k < h:
             if i < m and j < n and array1[i] <= array2[j]:
-                temp[l] = array1[i]
+                temp[k] = array1[i]
                 i += 1
             elif i < m and j < n and array1[i] > array2[j]:
-                temp[l] = array2[j]
+                temp[k] = array2[j]
                 j += 1
             elif i < m and j >= n:
-                temp[l] = array1[i]
+                temp[k] = array1[i]
                 i += 1
             elif i >= m and j < n:
-                temp[l] = array2[j]
+                temp[k] = array2[j]
                 j += 1
-            l += 1
+            k += 1
         v = temp
         n = h
         if n % 2 == 0:

@@ -1,11 +1,11 @@
 def max_heapify(arr, N, i):
     largest = i
-    l = 2 * i + 1
-    r = 2 * i + 2
-    if l < N and arr[l] > arr[largest]:
-        largest = l
-    if r < N and arr[r] > arr[largest]:
-        largest = r
+    left = 2 * i + 1
+    right = 2 * i + 2
+    if left < N and arr[left] > arr[largest]:
+        largest = left
+    if right < N and arr[right] > arr[largest]:
+        largest = right
     if largest != i:
         arr[i], arr[largest] = arr[largest], arr[i]
         max_heapify(arr, N, largest)
@@ -13,12 +13,12 @@ def max_heapify(arr, N, i):
 
 def min_heapify(arr, N, i):
     smallest = i
-    l = 2 * i + 1
-    r = 2 * i + 2
-    if l < N and arr[l] < arr[smallest]:
-        smallest = l
-    if r < N and arr[r] < arr[smallest]:
-        smallest = r
+    left = 2 * i + 1
+    right = 2 * i + 2
+    if left < N and arr[left] < arr[smallest]:
+        smallest = left
+    if right < N and arr[right] < arr[smallest]:
+        smallest = right
     if smallest != i:
         arr[i], arr[smallest] = arr[smallest], arr[i]
         min_heapify(arr, N, smallest)

@@ -4,14 +4,14 @@ class Solution:
     def threeWayPartition(self, array, a, b):
         # code here
         n = len(array)
-        l = 0
+        left = 0
         r = n - 1
         i = 0
         while i <= r:
             if array[i] < a:
-                array[i], array[l] = array[l], array[i]
+                array[i], array[left] = array[left], array[i]
                 i += 1
-                l += 1
+                left += 1
             elif array[i] > b:
                 array[i], array[r] = array[r], array[i]
                 r -= 1

@@ -1,5 +1,4 @@
-# User function Template for python3
-from typing import List
+import sys
 
 
 def dfs(val, graph, visited, rec_stack):
@@ -17,7 +16,7 @@ def dfs(val, graph, visited, rec_stack):
 
 class Solution:
     # Function to detect cycle in a directed graph.
-    def isCyclic(self, V: int, adj: List[List[int]]) -> bool:
+    def isCyclic(self, V: int, adj: list[list[int]]) -> bool:
         visited = [False] * V
         rec_stack = [False] * V
         for i in range(V):
@@ -30,8 +29,6 @@ class Solution:
 # {
 # Driver Code Starts
 # Initial Template for Python 3
-
-import sys
 
 sys.setrecursionlimit(10**6)
 

@@ -4,9 +4,9 @@
 class Solution:
     def matrixMultiplication(self, N, arr):
         dp = [[0 for _ in range(N)] for _ in range(N)]
-        for l in range(2, N):
-            for i in range(1, N - l + 1):
-                j = i + l - 1
+        for length in range(2, N):
+            for i in range(1, N - length + 1):
+                j = i + length - 1
                 dp[i][j] = float("inf")
                 for k in range(i, j):
                     cost = dp[i][k] + dp[k + 1][j] + arr[i - 1] * arr[k] * arr[j]

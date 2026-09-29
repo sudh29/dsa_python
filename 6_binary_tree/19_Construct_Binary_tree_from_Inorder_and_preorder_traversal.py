@@ -1,13 +1,8 @@
-"""
-# Node class
-
 class Node:
-    def __init__(self,val):
+    def __init__(self, val):
         self.data = val
         self.right = None
         self.left = None
-
-"""
 
 
 class Solution:

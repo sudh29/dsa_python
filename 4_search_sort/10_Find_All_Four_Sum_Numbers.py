@@ -10,18 +10,18 @@ class Solution:
         for i in range(n - 3):
             for j in range(i + 1, n - 2):
                 k = j + 1
-                l = n - 1
-                while l > k:
-                    current_sum = arr[i] + arr[j] + arr[k] + arr[l]
+                right = n - 1
+                while right > k:
+                    current_sum = arr[i] + arr[j] + arr[k] + arr[right]
                     if current_sum == total_k:
-                        temp = [arr[i], arr[j], arr[k], arr[l]]
+                        temp = [arr[i], arr[j], arr[k], arr[right]]
                         st1.add(tuple(temp))  # Use a tuple to store in a set
                         k += 1
-                        l -= 1
+                        right -= 1
                     elif current_sum < total_k:
                         k += 1
                     else:
-                        l -= 1
+                        right -= 1
 
         # Converting the set back to a list of lists
         res = [list(item) for item in st1]

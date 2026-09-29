@@ -4,8 +4,8 @@
 class Solution:
     # function should return True/False
     def isInterleave(self, A, B, C):
-        n, m, l = len(A), len(B), len(C)
-        if n + m != l:
+        n, m, k = len(A), len(B), len(C)
+        if n + m != k:
             return False
         dp = [[False] * (m + 1) for _ in range(n + 1)]
         dp[0][0] = True

@@ -1,3 +1,5 @@
+from collections import deque
+
 # User function Template for python3
 
 
@@ -16,8 +18,6 @@ def LISS(root):
 # {
 # Driver Code Starts
 # Initial Template for Python 3
-
-from collections import deque
 
 
 # Tree Node

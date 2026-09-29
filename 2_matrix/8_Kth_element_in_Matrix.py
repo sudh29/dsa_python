@@ -14,15 +14,15 @@ def kthSmallest(mat, n, k):
         # print(low,high,mid)
         ans = 0
         for i in range(n):
-            l = 0
+            left = 0
             h = n - 1
-            while l <= h:
-                m = l + (h - l) // 2
+            while left <= h:
+                m = left + (h - left) // 2
                 if mat[i][m] <= mid:
-                    l = m + 1
+                    left = m + 1
                 else:
                     h = m - 1
-            ans += l
+            ans += left
         if ans < k:
             low = mid + 1
         else:

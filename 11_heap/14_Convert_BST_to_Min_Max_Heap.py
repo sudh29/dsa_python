@@ -1,3 +1,5 @@
+from collections import deque
+
 # User function Template for python3
 
 """
@@ -53,8 +55,6 @@ class Solution:
 # {
 # Driver Code Starts
 # Initial Template for Python
-
-from collections import deque
 
 
 # Tree Node
