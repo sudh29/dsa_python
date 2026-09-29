@@ -1,3 +1,13 @@
+"""
+Problem: Find Pairs With Given Sum In Doubly Linked List
+Category: Linked Lists
+Pattern: Pointer Manipulation / Fast & Slow Pointers
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Node:
     def __init__(self, data):
         self.data = data

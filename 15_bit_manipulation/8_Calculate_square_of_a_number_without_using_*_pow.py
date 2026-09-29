@@ -1,3 +1,13 @@
+"""
+Problem: Calculate Square Of A Number Without Using * Pow
+Category: Bit Manipulation
+Pattern: Bitwise AND / OR / XOR / Shift Tricks
+
+Time Complexity:  O(1) / O(log N) - Proportional to number of bits
+Space Complexity: O(1) auxiliary space
+"""
+
+
 def square_iterative(n):
     if n < 0:
         n = -n

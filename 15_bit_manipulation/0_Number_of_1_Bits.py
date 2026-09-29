@@ -1,3 +1,13 @@
+"""
+Problem: Number Of 1 Bits
+Category: Bit Manipulation
+Pattern: Brian Kernighan's Algorithm: n = n & (n - 1)
+
+Time Complexity:  O(k) where k is the number of set bits
+Space Complexity: O(1) auxiliary space
+"""
+
+
 def binary(n):
     res = ""
     while n >= 1:

@@ -1,3 +1,12 @@
+"""
+Problem: Dijkstra's Shortest Path Algorithm
+Category: Graph Algorithms
+Pattern: Greedy / Priority Queue (Min-Heap)
+
+Time Complexity:  O((V + E) log V) using min-heap
+Space Complexity: O(V + E) - Adjacency list and distance array
+"""
+
 import heapq
 
 
@@ -36,25 +45,7 @@ class Solution:
         return distances
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-
 if __name__ == "__main__":
-    test_cases = int(input())
-    for cases in range(test_cases):
-        V, E = map(int, input().strip().split())
-        adj = [[] for i in range(V)]
-        for i in range(E):
-            u, v, w = map(int, input().strip().split())
-            adj[u].append([v, w])
-            adj[v].append([u, w])
-        S = int(input())
-        ob = Solution()
-
-        res = ob.dijkstra(V, adj, S)
-        for i in res:
-            print(i, end=" ")
-        print()
-# } Driver Code Ends
+    v = 3
+    adj = [[[1, 1], [2, 6]], [[0, 1], [2, 2]], [[1, 2], [0, 6]]]
+    print(f"Shortest distances from 0: {Solution().dijkstra(v, adj, 0)}")

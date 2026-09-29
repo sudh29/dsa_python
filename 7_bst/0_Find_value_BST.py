@@ -1,3 +1,13 @@
+"""
+Problem: Find Value Binary Search Tree
+Category: Binary Search Trees
+Pattern: Binary Search Tree Property (Left < Root < Right)
+
+Time Complexity:  O(H) - O(log N) average, O(N) worst-case skewed tree
+Space Complexity: O(1) iterative / O(H) recursive stack
+"""
+
+
 class BST:
     # Function to search a node in BST.
     def search(self, node, x):

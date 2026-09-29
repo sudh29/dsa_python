@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Minimize the Heights II
+Category: Arrays
+Pattern: Greedy / Sorting
+
+Time Complexity:  O(N log N) - Dominated by sorting the array
+Space Complexity: O(1) auxiliary space
+"""
 
 
 class Solution:
@@ -29,19 +36,10 @@ class Solution:
         return diff
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    tc = int(input())
-    while tc > 0:
-        k = int(input())
-        n = int(input())
-        arr = list(map(int, input().strip().split()))
-        ob = Solution()
-        ans = ob.getMinDiff(arr, n, k)
-        print(ans)
-        tc -= 1
-
-# } Driver Code Ends
+    ob = Solution()
+    sample_arr = [1, 5, 8, 10]
+    sample_k = 2
+    res = ob.getMinDiff(sample_arr, len(sample_arr), sample_k)
+    assert res == 5, f"Expected 5, got {res}"
+    print(f"Minimize heights for {sample_arr}, k={sample_k} -> {res}")

@@ -1,3 +1,13 @@
+"""
+Problem: Median In A Row Wise Sorted Matrix
+Category: Matrix
+Pattern: 2D Grid Traversal / Row-Column Scan
+
+Time Complexity:  O(R * C)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def median(self, matrix, r, c):
         # code here

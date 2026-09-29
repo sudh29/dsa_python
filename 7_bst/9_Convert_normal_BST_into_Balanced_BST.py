@@ -1,3 +1,13 @@
+"""
+Problem: Convert Normal Binary Search Tree Into Balanced Binary Search Tree
+Category: Binary Search Trees
+Pattern: BST Inorder / Divide & Conquer
+
+Time Complexity:  O(H) where H is tree height
+Space Complexity: O(H) - Recursion stack
+"""
+
+
 class Solution:
     def buildBalancedTree(self, root):
         def inorder(node, ans):

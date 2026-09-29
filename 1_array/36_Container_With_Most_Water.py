@@ -49,8 +49,6 @@ if __name__ == "__main__":
     for heights, expected in test_cases:
         result = sol.maxArea(heights)
         print(f"Height: {heights} => Max Area: {result} (Expected: {expected})")
-        assert result == expected, (
-            f"Failed for {heights}: got {result}, expected {expected}"
-        )
+        assert result == expected, f"Failed for {heights}: got {result}, expected {expected}"
 
     print("All test cases passed!")

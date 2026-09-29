@@ -1,4 +1,13 @@
-# User function Template for python3
+"""
+Problem: Word Break Problem using Trie
+Category: Trie
+Pattern: Trie + Dynamic Programming / Memoized Search
+
+Time Complexity:  O(N * L + M^2) where M is query string length
+Space Complexity: O(N * L) for trie structure + O(M) for DP table
+"""
+
+
 class TrieNode:
     def __init__(self):
         self.children = {}
@@ -60,21 +69,7 @@ class Solution:
         return 1 if dp[-1] else 0
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    test_case = int(input())
-
-    for _ in range(test_case):
-        n = int(input())
-        dictionary = [word for word in input().strip().split()]
-        s = input().strip()
-        ob = Solution()
-        res = ob.wordBreak(n, s, dictionary)
-        if res:
-            print(1)
-        else:
-            print(0)
-# } Driver Code Ends
+    dictionary = ["i", "like", "sam", "sung", "samsung", "mobile", "ice", "cream"]
+    query = "ilikesamsung"
+    print(f"Word break possible for '{query}': {Solution().wordBreak(query, dictionary)}")

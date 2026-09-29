@@ -1,3 +1,12 @@
+"""
+Problem: Longest Possible Route in a Matrix with Hurdles
+Category: Backtracking
+Pattern: Exhaustive DFS Backtracking
+
+Time Complexity:  O(4^(R*C)) worst case path exploration
+Space Complexity: O(R * C) - Visited array and recursion stack
+"""
+
 from typing import List
 
 
@@ -24,16 +33,7 @@ class Solution:
     def longestPath(
         self, mat: List[List[int]], n: int, m: int, xs: int, ys: int, xd: int, yd: int
     ) -> int:
-        if (
-            xs < 0
-            or xs >= n
-            or ys < 0
-            or ys >= m
-            or xd < 0
-            or xd >= n
-            or yd < 0
-            or yd >= m
-        ):
+        if xs < 0 or xs >= n or ys < 0 or ys >= m or xd < 0 or xd >= n or yd < 0 or yd >= m:
             return -1
 
         visited = [[False for _ in range(m)] for _ in range(n)]
@@ -42,17 +42,12 @@ class Solution:
         return ans[0]
 
 
-# {
-# Driver Code Starts
-
-
 class IntArray:
     def __init__(self) -> None:
         pass
 
-    def Input(self, n):
-        arr = [int(i) for i in input().strip().split()]  # array input
-        return arr
+    def Input(self, *args):
+        return []
 
     def Print(self, arr):
         for i in arr:
@@ -64,12 +59,8 @@ class IntMatrix:
     def __init__(self) -> None:
         pass
 
-    def Input(self, n, m):
-        matrix = []
-        # matrix input
-        for _ in range(n):
-            matrix.append([int(i) for i in input().strip().split()])
-        return matrix
+    def Input(self, *args):
+        return []
 
     def Print(self, arr):
         for i in arr:
@@ -79,18 +70,9 @@ class IntMatrix:
 
 
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        a = IntArray().Input(2)
-
-        b = IntArray().Input(4)
-
-        mat = IntMatrix().Input(a[0], a[0])
-
-        obj = Solution()
-        res = obj.longestPath(mat, a[0], a[1], b[0], b[1], b[2], b[3])
-
-        print(res)
-
-
-# } Driver Code Ends
+    mat = [
+        [1, 1, 1, 1],
+        [1, 1, 0, 1],
+        [1, 1, 1, 1],
+    ]
+    print(f"Longest route from (0,0) to (1,3): {Solution().longestPath(mat, 3, 4, 0, 0, 1, 3)}")

@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Stock Buy and Sell Max K Transactions Allowed
+Category: Dynamic Programming
+Pattern: 2D DP with Max Diff Optimization
+
+Time Complexity:  O(K * N) - Filling K x N transaction matrix
+Space Complexity: O(K * N) - DP table storage
+"""
 
 
 class Solution:
@@ -14,19 +21,7 @@ class Solution:
         return dp[K][N - 1]
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        K = int(input())
-        N = int(input())
-        A = input().split()
-        for i in range(N):
-            A[i] = int(A[i])
-
-        ob = Solution()
-        print(ob.maxProfit(K, N, A))
-# } Driver Code Ends
+    prices = [10, 22, 5, 75, 65, 80]
+    k = 2
+    print(f"Max profit for {k} transactions: {Solution().maxProfit(k, len(prices), prices)}")

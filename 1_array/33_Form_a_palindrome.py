@@ -1,3 +1,13 @@
+"""
+Problem: Form A Palindrome
+Category: Arrays
+Pattern: Two Pointers / Linear Scan
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 def findMinInsertionsDP(str1, n):
     table = [[0 for i in range(n)] for i in range(n)]
     low, h, gap = 0, 0, 0

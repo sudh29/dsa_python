@@ -1,3 +1,12 @@
+"""
+Problem: Minimum Cost to Fill Given Weight in a Bag
+Category: Dynamic Programming
+Pattern: Unbounded Knapsack / Min-Cost DP
+
+Time Complexity:  O(N * W) - Evaluating package sizes up to weight W
+Space Complexity: O(W) - 1D DP table storage
+"""
+
 from typing import List
 
 
@@ -12,15 +21,12 @@ class Solution:
         return dp[w] if dp[w] != float("inf") else -1
 
 
-# {
-# Driver Code Starts
 class IntArray:
     def __init__(self) -> None:
         pass
 
-    def Input(self, n):
-        arr = [int(i) for i in input().strip().split()]  # array input
-        return arr
+    def Input(self, *args):
+        return []
 
     def Print(self, arr):
         for i in arr:
@@ -29,6 +35,6 @@ class IntArray:
 
 
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
+    cost = [20, 10, 4, 50, 100]
+    w = 5
+    print(f"Min cost for weight {w}: {Solution().minimumCost(cost, len(cost), w)}")

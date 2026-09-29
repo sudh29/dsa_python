@@ -1,3 +1,13 @@
+"""
+Problem: Spirally Traversing A Matrix
+Category: Matrix
+Pattern: Boundary Simulation (top, bottom, left, right)
+
+Time Complexity:  O(R * C) - Visits every matrix element once
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     # Function to return a list of integers denoting spiral traversal of matrix.
     def spirallyTraverse(self, matrix, r, c):

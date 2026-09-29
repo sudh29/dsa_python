@@ -1,3 +1,13 @@
+"""
+Problem: Longest Repeating Subsequence
+Category: Strings
+Pattern: Dynamic Programming (LCS Variant)
+
+Time Complexity:  O(N^2) - DP table computation with i != j constraint
+Space Complexity: O(N^2) - DP table storage
+"""
+
+
 class Solution:
     def LongestRepeatingSubsequence(self, s):
         def lrs_recursive(s, i, j, memo):
@@ -19,16 +29,7 @@ class Solution:
         return lrs_recursive(s, n, n, memo)
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    T = int(input())
-    for i in range(T):
-        str = input()
-        ob = Solution()
-        ans = ob.LongestRepeatingSubsequence(str)
-        print(ans)
-
-# } Driver Code Ends
+    ob = Solution()
+    s = "axxzxy"
+    print(f"Longest repeating subsequence length of '{s}': {ob.LongestRepeatingSubsequence(s)}")

@@ -1,3 +1,13 @@
+"""
+Problem: Find Min And Max Element In An Array
+Category: Searching & Sorting
+Pattern: Binary Search / Divide & Conquer
+
+Time Complexity:  O(N log N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 def getMinMax(a: list, n: int) -> tuple:
     # 2n-2 comparisions
     min_val = float("inf")  # Initialize to infinity

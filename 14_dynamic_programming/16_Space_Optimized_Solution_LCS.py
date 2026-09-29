@@ -1,3 +1,13 @@
+"""
+Problem: Space Optimized Solution Longest Common Subsequence
+Category: Dynamic Programming
+Pattern: Memoization / Tabulation / Subproblem Overlap
+
+Time Complexity:  O(N^2) / Polynomial
+Space Complexity: O(N) - DP table storage
+"""
+
+
 def lcs(X, Y):
     m = len(X)
     n = len(Y)

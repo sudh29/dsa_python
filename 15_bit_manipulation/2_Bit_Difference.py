@@ -1,3 +1,13 @@
+"""
+Problem: Bit Difference
+Category: Bit Manipulation
+Pattern: Bitwise AND / OR / XOR / Shift Tricks
+
+Time Complexity:  O(1) / O(log N) - Proportional to number of bits
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def countBitsFlip(self, a, b):
         # a_bin= bin(a)[2:]

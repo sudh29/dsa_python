@@ -1,3 +1,13 @@
+"""
+Problem: Segregate Even And Odd Nodes In A Linked List
+Category: Linked Lists
+Pattern: Pointer Manipulation / Fast & Slow Pointers
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def divide(self, N, head):
         # curr=head

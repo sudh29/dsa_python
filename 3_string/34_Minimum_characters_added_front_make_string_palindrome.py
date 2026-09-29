@@ -1,3 +1,13 @@
+"""
+Problem: Minimum Characters Added at Front to Make String Palindrome
+Category: Strings
+Pattern: KMP Algorithm / LPS Array
+
+Time Complexity:  O(N) - Building LPS array for concat string
+Space Complexity: O(N) - LPS array storage
+"""
+
+
 def ispal(ip):
     i = 0
     j = len(ip) - 1
@@ -39,14 +49,7 @@ class Solution:
         return len(s) - lps[-1]
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    for _ in range(int(input())):
-        s = input()
-        obj = Solution()
-        ans = obj.minChar(s)
-        print(ans)
-# } Driver Code Ends
+    ob = Solution()
+    s = "AACECAAAA"
+    print(f"Min characters to add for '{s}': {ob.minChar(s)}")

@@ -1,3 +1,13 @@
+"""
+Problem: Program for nth Catalan Number
+Category: Dynamic Programming
+Pattern: Catalan Convolution DP
+
+Time Complexity:  O(N^2) - Convolution sum over subproblems
+Space Complexity: O(N) - 1D DP array storing Catalan numbers
+"""
+
+
 class Solution:
     def findCatalan(self, N: int) -> int:
         MOD = 1000000007
@@ -9,14 +19,6 @@ class Solution:
         return dp[N]
 
 
-# {
-# Driver Code Starts
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-
-        obj = Solution()
-        res = obj.findCatalan(n)
-
-        print(res)
+    n = 5
+    print(f"Catalan number C({n}): {Solution().findCatalan(n)}")

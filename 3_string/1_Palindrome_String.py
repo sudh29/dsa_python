@@ -1,3 +1,13 @@
+"""
+Problem: Palindrome String
+Category: Strings
+Pattern: Two Pointers / Sliding Window
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def isPalindrome(self, S):
         n = len(S)

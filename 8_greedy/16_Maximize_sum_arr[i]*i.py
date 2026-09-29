@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Maximize sum of arr[i]*i
+Category: Greedy Algorithms
+Pattern: Greedy Sorting / Rearrangement Inequality
+
+Time Complexity:  O(N log N) - Sorting array in non-decreasing order
+Space Complexity: O(1) auxiliary space
+"""
 
 
 class Solution:
@@ -12,15 +19,6 @@ class Solution:
         return sum_total
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-
-for _ in range(0, int(input())):
-    n = int(input())
-    arr = list(map(int, input().strip().split()))
-    ob = Solution()
-    print(ob.Maximize(arr, n))
-
-# } Driver Code Ends
+if __name__ == "__main__":
+    arr = [5, 3, 2, 4, 1]
+    print(f"Maximized sum: {Solution().Maximize(arr, len(arr))}")

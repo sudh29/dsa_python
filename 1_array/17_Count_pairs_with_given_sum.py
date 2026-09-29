@@ -1,3 +1,13 @@
+"""
+Problem: Count Pairs With Given Sum
+Category: Arrays
+Pattern: Two Pointers / Linear Scan
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def getPairsCount(self, arr, n, k):
         # code here

@@ -1,4 +1,12 @@
-import sys
+"""
+Problem: Subset Sum Problem
+Category: Dynamic Programming
+Pattern: 0-1 Knapsack Boolean DP
+
+Time Complexity:  O(N * Sum) - Filling boolean DP array
+Space Complexity: O(Sum) - 1D boolean DP array
+"""
+
 
 # User function Template for Python3
 
@@ -18,21 +26,7 @@ class Solution:
         return 1 if dp[target] else 0
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python3
-
-input = sys.stdin.readline
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        N = int(input())
-        arr = input().split()
-        for it in range(N):
-            arr[it] = int(arr[it])
-
-        ob = Solution()
-        if ob.equalPartition(N, arr) == 1:
-            print("YES")
-        else:
-            print("NO")
+    arr = [3, 34, 4, 12, 5, 2]
+    s = 9
+    print(f"Subset with sum {s} exists: {Solution().isSubsetSum(len(arr), arr, s)}")

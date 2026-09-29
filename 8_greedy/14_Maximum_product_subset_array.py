@@ -1,3 +1,13 @@
+"""
+Problem: Maximum Product Subset of an Array
+Category: Greedy Algorithms
+Pattern: Greedy Product / Negative Count Parity
+
+Time Complexity:  O(N) - Single pass through the array
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def findMaxProduct(self, a, n):
         if n == 1:
@@ -16,24 +26,13 @@ class Solution:
                 max_negative = max(max_negative, i)
             prod = (prod * i) % mod
 
-        if zero_count == n or (
-            negative_count == 1 and negative_count + zero_count == n
-        ):
+        if zero_count == n or (negative_count == 1 and negative_count + zero_count == n):
             return 0
         if negative_count % 2 != 0:
             prod = (prod * pow(max_negative, mod - 2, mod)) % mod
         return prod
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    for _ in range(int(input())):
-        n = int(input())
-        a = list(map(int, input().split()))
-        obj = Solution()
-        ans = obj.findMaxProduct(a, n)
-        print(ans)
-# } Driver Code Ends
+    arr = [-1, -1, -2, 4, 3]
+    print(f"Max product subset of {arr}: {Solution().findMaxProduct(arr, len(arr))}")

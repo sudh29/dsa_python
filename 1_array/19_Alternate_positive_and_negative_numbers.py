@@ -1,3 +1,13 @@
+"""
+Problem: Alternate Positive And Negative Numbers
+Category: Arrays
+Pattern: Two Pointers / Linear Scan
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def rearrange(self, arr, n):
         # Extra memory

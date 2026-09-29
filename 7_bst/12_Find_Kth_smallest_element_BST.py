@@ -1,9 +1,10 @@
 """
-class Node:
-    def __init__(self, val):
-        self.right = None
-        self.data = val
-        self.left = None
+Problem: Find Kth Smallest Element Binary Search Tree
+Category: Binary Search Trees
+Pattern: Binary Search Tree Property (Left < Root < Right)
+
+Time Complexity:  O(H) - O(log N) average, O(N) worst-case skewed tree
+Space Complexity: O(1) iterative / O(H) recursive stack
 """
 
 

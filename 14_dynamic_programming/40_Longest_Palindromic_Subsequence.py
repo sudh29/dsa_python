@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Longest Palindromic Subsequence
+Category: Dynamic Programming
+Pattern: 2D Interval DP / LCS with Reversed String
+
+Time Complexity:  O(N^2) - 2D matrix computation
+Space Complexity: O(N^2) - 2D DP array
+"""
 
 
 class Solution:
@@ -15,15 +22,6 @@ class Solution:
         return dp[n][n]
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        s = input()
-        ob = Solution()
-        ans = ob.longestPalinSubseq(s)
-        print(ans)
-# } Driver Code Ends
+    s = "bbbab"
+    print(f"Longest palindromic subsequence of '{s}': {Solution().longestPalinSubseq(s)}")

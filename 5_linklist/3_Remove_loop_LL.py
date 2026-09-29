@@ -1,3 +1,13 @@
+"""
+Problem: Remove Loop Linked List
+Category: Linked Lists
+Pattern: Floyd's Cycle-Finding Algorithm (Fast & Slow Pointers)
+
+Time Complexity:  O(N) - Fast pointer catches slow pointer within one cycle
+Space Complexity: O(1) - Two pointer variables
+"""
+
+
 class Solution:
     # Function to remove a loop in the linked list.
     def removeLoop(self, head):

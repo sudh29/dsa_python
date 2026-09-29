@@ -1,3 +1,13 @@
+"""
+Problem: Stack That Supports Getmin In O1 Time And O1
+Category: Stacks & Queues
+Pattern: LIFO / FIFO State Tracking / Monotonic Stack
+
+Time Complexity:  O(N)
+Space Complexity: O(N) - Auxiliary stack/queue
+"""
+
+
 class StackOperations:
     def push(self, s, a):
         s.append(a)

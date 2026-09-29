@@ -1,4 +1,13 @@
-# User function Template for python3
+"""
+Problem: Triplet Sum In Array
+Category: Arrays
+Pattern: Two Pointers / Linear Scan
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     # Function to find if there exists a triplet in the
     # array A[] which sums up to X.

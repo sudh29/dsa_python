@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Count Subarrays Product Less Than K
+Category: Dynamic Programming
+Pattern: Sliding Window / Two Pointers
+
+Time Complexity:  O(N) - Each element added and removed at most once
+Space Complexity: O(1) auxiliary space
+"""
 
 
 class Solution:
@@ -26,26 +33,9 @@ class Solution:
         # return dp[k]
 
 
-# {
-# Driver Code Starts
-
-# Initial Template for Python 3
-
-
-def main():
-    T = int(input())
-
-    while T > 0:
-        n, k = [int(x) for x in input().strip().split()]
-        arr = [int(x) for x in input().strip().split()]
-
-        print(Solution().countSubArrayProductLessThanK(arr, n, k))
-
-        T -= 1
-
-
 if __name__ == "__main__":
-    main()
-
-
-# } Driver Code Ends
+    arr = [1, 2, 3, 4]
+    k = 10
+    print(
+        f"Subarrays with product < {k}: {Solution().countSubArrayProductLessThanK(arr, len(arr), k)}"
+    )

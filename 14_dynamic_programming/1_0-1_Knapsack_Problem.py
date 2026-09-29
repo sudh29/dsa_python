@@ -1,3 +1,13 @@
+"""
+Problem: 0-1 Knapsack Problem
+Category: Dynamic Programming
+Pattern: 0-1 Knapsack / 2D to 1D Space Optimization
+
+Time Complexity:  O(N * W) - Iterating items and remaining capacity
+Space Complexity: O(W) - Space-optimized 1D DP array
+"""
+
+
 class Solution:
     def knapSack(self, W, wt, val, n):
         dp = [[0 for _ in range(W + 1)] for _ in range(n + 1)]
@@ -11,19 +21,8 @@ class Solution:
         return dp[n][W]
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-# Contributed by : Nagendra Jha
-
 if __name__ == "__main__":
-    test_cases = int(input())
-    for cases in range(test_cases):
-        n = int(input())
-        W = int(input())
-        val = list(map(int, input().strip().split()))
-        wt = list(map(int, input().strip().split()))
-        ob = Solution()
-        print(ob.knapSack(W, wt, val, n))
-# } Driver Code Ends
+    val = [60, 100, 120]
+    wt = [10, 20, 30]
+    w = 50
+    print(f"0-1 Knapsack max value: {Solution().knapSack(w, wt, val, len(val))}")

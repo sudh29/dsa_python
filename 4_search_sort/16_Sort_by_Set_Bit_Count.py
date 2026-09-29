@@ -1,3 +1,13 @@
+"""
+Problem: Sort By Set Bit Count
+Category: Searching & Sorting
+Pattern: Binary Search / Divide & Conquer
+
+Time Complexity:  O(N log N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     # Function to count set bits (1s in binary) in a number
     @staticmethod

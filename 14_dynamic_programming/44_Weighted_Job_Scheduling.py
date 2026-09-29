@@ -1,4 +1,12 @@
-# User function Template for python3
+"""
+Problem: Weighted Job Scheduling
+Category: Dynamic Programming
+Pattern: Sorting + Binary Search + 1D DP
+
+Time Complexity:  O(N log N) - Sorting jobs and binary search for non-overlapping predecessors
+Space Complexity: O(N) - 1D DP array for max profit
+"""
+
 """
 class Job:
 
@@ -31,12 +39,6 @@ class Solution:
         return num_jobs, max_profit
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-
-# Contributed by : Nagendra Jha
 class Job:
     """
     Job class which stores profit and deadline.
@@ -49,18 +51,5 @@ class Job:
 
 
 if __name__ == "__main__":
-    test_cases = int(input())
-    for cases in range(test_cases):
-        n = int(input())
-        info = list(map(int, input().strip().split()))
-        Jobs = [Job() for i in range(n)]
-        for i in range(n):
-            Jobs[i].id = info[3 * i]
-            Jobs[i].deadline = info[3 * i + 1]
-            Jobs[i].profit = info[3 * i + 2]
-        ob = Solution()
-        res = ob.JobScheduling(Jobs, n)
-        print(res[0], end=" ")
-        print(res[1])
-
-# } Driver Code Ends
+    jobs = [Job(1, 2, 50), Job(3, 5, 20), Job(6, 19, 100), Job(2, 100, 200)]
+    print(f"Max profit from weighted jobs: {Solution().maximum_profit(jobs, len(jobs))}")

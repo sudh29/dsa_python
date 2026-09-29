@@ -1,38 +1,54 @@
-def main():
-    t = int(input())
-    for _ in range(t):
-        n, q = map(int, input().split())
-        v = []
+"""
+Problem: Kth Smallest Number Again
+Category: Searching & Sorting
+Pattern: Interval Merging / Binary Search
 
-        for _ in range(n):
-            x, y = map(int, input().split())
-            v.append((x, y))
+Time Complexity:  O(N log N + Q * M) where N is number of intervals, M is merged intervals, Q is queries
+Space Complexity: O(N) - Storage for merged intervals
+"""
 
-        v.sort()
 
-        idx = 0
-        for i in range(1, len(v)):
-            if v[idx][1] >= v[i][0]:
-                v[idx] = (v[idx][0], max(v[idx][1], v[i][1]))
-            else:
-                idx += 1
-                v.append(v[i])  # Append new interval
+def kth_smallest_number_again(intervals: list[tuple[int, int]], queries: list[int]) -> list[int]:
+    """Finds the k-th smallest number after merging overlapping intervals.
 
-        # Remove extra intervals from the list
-        v = v[: idx + 1]
+    Args:
+        intervals: List of (start, end) inclusive integer intervals.
+        queries: List of 1-indexed k values to find.
 
-        for _ in range(q):
-            k = int(input())
-            ans = -1
-            for i in range(idx + 1):
-                if (v[i][1] - v[i][0] + 1) >= k:
-                    ans = v[i][0] + k - 1
-                    break
-                else:
-                    k -= v[i][1] - v[i][0] + 1
+    Returns:
+        List of answers for each query (-1 if k exceeds total numbers).
+    """
+    if not intervals:
+        return [-1] * len(queries)
 
-            print(ans)
+    sorted_intervals = sorted(intervals)
+    merged = [list(sorted_intervals[0])]
+
+    for curr_start, curr_end in sorted_intervals[1:]:
+        if merged[-1][1] >= curr_start:
+            merged[-1][1] = max(merged[-1][1], curr_end)
+        else:
+            merged.append([curr_start, curr_end])
+
+    results = []
+    for k in queries:
+        ans = -1
+        rem = k
+        for start, end in merged:
+            count = end - start + 1
+            if count >= rem:
+                ans = start + rem - 1
+                break
+            rem -= count
+        results.append(ans)
+
+    return results
 
 
 if __name__ == "__main__":
-    main()
+    test_intervals = [(1, 5), (10, 15)]
+    test_queries = [3, 6, 12]
+    expected = [3, 10, -1]
+    actual = kth_smallest_number_again(test_intervals, test_queries)
+    assert actual == expected, f"Expected {expected}, got {actual}"
+    print(f"Kth smallest number again demo passed: {actual}")

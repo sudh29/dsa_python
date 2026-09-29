@@ -1,4 +1,13 @@
-# User function Template for python3
+"""
+Problem: Find Smallest Number Given Number Digits Sum Digits
+Category: Greedy Algorithms
+Pattern: Greedy Choice / Sorting
+
+Time Complexity:  O(N log N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def smallestNumber(self, S, D):
         if 9 * D < S:

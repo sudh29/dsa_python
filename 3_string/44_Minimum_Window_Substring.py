@@ -68,9 +68,7 @@ if __name__ == "__main__":
 
     for s_str, t_str, expected in test_cases:
         result = sol.minWindow(s_str, t_str)
-        print(
-            f"s: {s_str!r}, t: {t_str!r} => Min Window: {result!r} (Expected: {expected!r})"
-        )
+        print(f"s: {s_str!r}, t: {t_str!r} => Min Window: {result!r} (Expected: {expected!r})")
         assert result == expected, (
             f"Failed for s={s_str!r}, t={t_str!r}: got {result!r}, expected {expected!r}"
         )

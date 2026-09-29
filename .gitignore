@@ -41,3 +41,7 @@ venv.bak/
 .coverage
 htmlcov/
 .mypy_cache/
+
+# Office temporary lock files
+.~lock.*#
+~$*

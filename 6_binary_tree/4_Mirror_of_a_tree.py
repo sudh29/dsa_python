@@ -1,3 +1,13 @@
+"""
+Problem: Mirror Of A Tree
+Category: Binary Trees
+Pattern: Recursive DFS Node Swapping
+
+Time Complexity:  O(N) - Inverts left and right subtrees for every node
+Space Complexity: O(H) - Call stack
+"""
+
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val

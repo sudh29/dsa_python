@@ -1,3 +1,13 @@
+"""
+Problem: Find The Middle Element Of A Stack
+Category: Stacks & Queues
+Pattern: LIFO / FIFO State Tracking / Monotonic Stack
+
+Time Complexity:  O(N)
+Space Complexity: O(N) - Auxiliary stack/queue
+"""
+
+
 class Node:
     def __init__(self, x):
         self.data = x

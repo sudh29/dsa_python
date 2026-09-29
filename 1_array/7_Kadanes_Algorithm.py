@@ -1,3 +1,13 @@
+"""
+Problem: Kadanes Algorithm
+Category: Arrays
+Pattern: Kadane's Dynamic Programming Algorithm
+
+Time Complexity:  O(N) - Single pass through the array
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     ##Complete this function
     # Function to find the sum of contiguous subarray with maximum sum.

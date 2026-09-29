@@ -1,3 +1,13 @@
+"""
+Problem: Three Way Partitioning
+Category: Arrays
+Pattern: Two Pointers / Linear Scan
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     # Function to partition the array around the range such
     # that array is divided into three parts.

@@ -1,3 +1,13 @@
+"""
+Problem: Survival on an Island
+Category: Greedy Algorithms
+Pattern: Math / Greedy Buying
+
+Time Complexity:  O(1) - Constant time arithmetic check
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def minimumDays(self, S, N, M):
         if M > N or (S > 6 and (N * 6) < (M * 7)):
@@ -9,14 +19,6 @@ class Solution:
         return res
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        S, N, M = [int(x) for x in input().split()]
-
-        ob = Solution()
-        print(ob.minimumDays(S, N, M))
+    s, n, m = 10, 16, 2
+    print(f"Min days to buy food (S={s}, N={n}, M={m}): {Solution().minimumDays(s, n, m)}")

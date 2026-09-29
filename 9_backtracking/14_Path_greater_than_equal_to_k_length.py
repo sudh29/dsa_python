@@ -1,3 +1,13 @@
+"""
+Problem: Path of Greater Than Equal to K Length
+Category: Backtracking
+Pattern: DFS with Backtracking & Visited Set
+
+Time Complexity:  O(V!) worst case simple path enumeration
+Space Complexity: O(V) - Visited array and recursion depth
+"""
+
+
 def dfs(val, visited, graph, path_len, K):
     if path_len >= K:
         return 1
@@ -23,21 +33,6 @@ class Solution:
         return dfs(0, visited, graph, 0, K)
 
 
-# {
-# Driver Code Starts
-
-
 if __name__ == "__main__":
-    ob = Solution()
-    t = int(input())
-    for _ in range(t):
-        V, E, K = map(int, input().split())
-        A = list(map(int, input().split()))
-        ans = ob.pathMoreThanK(V, E, K, A)
-        if ans:
-            print(1)
-        else:
-            print(0)
-
-
-# } Driver Code Ends
+    edges = [0, 1, 4, 0, 7, 8, 1, 2, 8, 1, 7, 11, 2, 3, 7, 2, 5, 4, 3, 4, 9, 3, 5, 14]
+    print(f"Path >= 58 exists: {Solution().pathMoreThanK(9, 8, 58, edges)}")

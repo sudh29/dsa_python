@@ -1,3 +1,13 @@
+"""
+Problem: Common Elements In All Rows Of A Given Matrix
+Category: Matrix
+Pattern: 2D Grid Traversal / Row-Column Scan
+
+Time Complexity:  O(R * C)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def distinct(self, M, N):
         # code here

@@ -1,3 +1,13 @@
+"""
+Problem: Rotate Doubly Linked List
+Category: Linked Lists
+Pattern: Pointer Manipulation / Fast & Slow Pointers
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def rotateDLL(self, start, p):
         first = start

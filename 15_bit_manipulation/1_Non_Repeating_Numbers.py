@@ -1,3 +1,13 @@
+"""
+Problem: Non Repeating Numbers
+Category: Bit Manipulation
+Pattern: XOR Accumulation & Rightmost Set Bit Partition
+
+Time Complexity:  O(N) - Two passes over the array
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def singleNumber(self, nums):
         sums = 0

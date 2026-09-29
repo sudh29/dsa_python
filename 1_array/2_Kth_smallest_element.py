@@ -1,3 +1,12 @@
+"""
+Problem: Kth Smallest Element
+Category: Arrays
+Pattern: Two Pointers / Linear Scan
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
 import random
 
 

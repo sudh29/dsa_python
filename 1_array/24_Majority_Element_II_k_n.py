@@ -1,3 +1,13 @@
+"""
+Problem: Majority Element Ii K N
+Category: Arrays
+Pattern: Two Pointers / Linear Scan
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def majorityElement(self, nums: list[int]) -> list[int]:
         temp = set()

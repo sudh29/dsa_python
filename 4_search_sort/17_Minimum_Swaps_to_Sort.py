@@ -1,3 +1,13 @@
+"""
+Problem: Minimum Swaps To Sort
+Category: Searching & Sorting
+Pattern: Binary Search / Divide & Conquer
+
+Time Complexity:  O(N log N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     # Function to find the minimum number of swaps required to sort the array
     def minSwaps(self, nums):

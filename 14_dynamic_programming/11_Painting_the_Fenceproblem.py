@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Painting the Fence
+Category: Dynamic Programming
+Pattern: State Reduction / Fibonacci Variant
+
+Time Complexity:  O(N) - Single loop computing combinations modulo 10^9 + 7
+Space Complexity: O(1) - Constant auxiliary space using state variables
+"""
 
 
 class Solution:
@@ -24,19 +31,6 @@ class Solution:
         return prev1
 
 
-# {
-# Driver Code Starts
-
-# Initial Template for Python 3
-
-
-t = int(input())
-for _ in range(0, t):
-    x = list(map(int, input().split()))
-    n = x[0]
-    k = x[1]
-    ob = Solution()
-    ans = ob.countWays(n, k)
-    print(ans)
-
-# } Driver Code Ends
+if __name__ == "__main__":
+    n, k = 3, 2
+    print(f"Ways to paint {n} posts with {k} colors: {Solution().countWays(n, k)}")

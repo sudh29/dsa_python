@@ -1,3 +1,13 @@
+"""
+Problem: Find Minimum and Maximum Element in an Array
+Category: Arrays
+Pattern: Linear Scan / Single Pass Comparison
+
+Time Complexity:  O(N) - Single pass through the array with at most 2(N-1) comparisons
+Space Complexity: O(1) auxiliary space
+"""
+
+
 def getMinMax(a, n):
     min_val = float("inf")
     max_val = float("-inf")
@@ -9,24 +19,8 @@ def getMinMax(a, n):
     return [min_val, max_val]
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-
-def main():
-    T = int(input())
-
-    while T > 0:
-        n = int(input())
-        a = [int(x) for x in input().strip().split()]
-
-        product = getMinMax(a, n)
-        print(product[0], end=" ")
-        print(product[1])
-
-        T -= 1
-
-
 if __name__ == "__main__":
-    main()
+    demo_arr = [3, 2, 1, 56, 10000, 167]
+    result = getMinMax(demo_arr, len(demo_arr))
+    assert result == [1, 10000], f"Expected [1, 10000], got {result}"
+    print(f"Min and Max of {demo_arr} -> {result}")

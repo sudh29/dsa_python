@@ -1,3 +1,13 @@
+"""
+Problem: Sort A Stack Using Recursion
+Category: Stacks & Queues
+Pattern: LIFO / FIFO State Tracking / Monotonic Stack
+
+Time Complexity:  O(N)
+Space Complexity: O(N) - Auxiliary stack/queue
+"""
+
+
 class SortedStack:
     def __init__(self):
         self.s = []

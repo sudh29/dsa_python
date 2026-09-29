@@ -1,9 +1,10 @@
 """
-class Node:
-    def __init__(self, val):
-        self.right = None
-        self.data = val
-        self.left = None
+Problem: Check If Binary Tree Is Sum Tree Or Not
+Category: Binary Trees
+Pattern: Tree Traversal (DFS / BFS)
+
+Time Complexity:  O(N) - Visits each node once
+Space Complexity: O(H) - Recursion stack bounded by tree height
 """
 
 # your task is to complete this function

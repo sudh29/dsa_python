@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Longest Common Substring
+Category: Dynamic Programming
+Pattern: 2D Grid DP / Consecutive Match Resets
+
+Time Complexity:  O(N * M) - Nested loop over characters of both strings
+Space Complexity: O(N * M) - DP matrix storage
+"""
 
 
 class Solution:
@@ -17,16 +24,6 @@ class Solution:
         return max_len
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        S1 = input().strip()
-        S2 = input().strip()
-        ob = Solution()
-        print(ob.longestCommonSubstr(S1, S2))
-
-# } Driver Code Ends
+    s1, s2 = "ABCDGH", "ACDGHR"
+    print(f"Longest common substring: {Solution().longestCommonSubstr(s1, s2, len(s1), len(s2))}")

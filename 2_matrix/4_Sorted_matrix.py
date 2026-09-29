@@ -1,3 +1,13 @@
+"""
+Problem: Sorted Matrix
+Category: Matrix
+Pattern: 2D Grid Traversal / Row-Column Scan
+
+Time Complexity:  O(R * C)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def sortedMatrix(self, N, Mat):
         # code here

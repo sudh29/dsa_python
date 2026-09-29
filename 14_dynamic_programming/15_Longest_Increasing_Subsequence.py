@@ -1,3 +1,12 @@
+"""
+Problem: Longest Increasing Subsequence
+Category: Dynamic Programming
+Pattern: Memoization / Tabulation / Subproblem Overlap
+
+Time Complexity:  O(N^2) / Polynomial
+Space Complexity: O(N) - DP table storage
+"""
+
 from bisect import bisect_left
 
 

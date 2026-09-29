@@ -1,3 +1,13 @@
+"""
+Problem: Rotate By 90 Degree Anti
+Category: Matrix
+Pattern: Matrix Transposition & Row/Column Reversal
+
+Time Complexity:  O(N^2) - In-place cell swapping
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     # Function to rotate matrix anticlockwise by 90 degrees.
     def rotateby90(self, a, n):

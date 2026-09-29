@@ -1,4 +1,13 @@
-# User function Template for python3
+"""
+Problem: Longest Palindromic Substring
+Category: Strings
+Pattern: Manacher's Algorithm / Center Expansion
+
+Time Complexity:  O(N) using Manacher's algorithm
+Space Complexity: O(N) auxiliary space
+"""
+
+
 # Manacher’s Algorithm
 class Solution:
     def longestPalinManacher(self, s):
@@ -28,9 +37,7 @@ class Solution:
         max_len, center_index = max((P[i], i) for i in range(1, n - 1))
 
         # Extract the longest palindromic substring
-        start = (
-            center_index - max_len
-        ) // 2  # Convert index in T back to original string
+        start = (center_index - max_len) // 2  # Convert index in T back to original string
         return s[start : start + max_len]
 
     def longestPalin(self, s: str) -> str:
@@ -38,14 +45,7 @@ class Solution:
         return self.longestPalinManacher(s)
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-
-    for _ in range(t):
-        S = input()
-
-        ob = Solution()
+    ob = Solution()
+    for s in ["babad", "cbbd", "racecar"]:
+        print(f"Longest palindrome in '{s}': {ob.longestPalin(s)}")

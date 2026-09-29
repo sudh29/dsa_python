@@ -1,9 +1,17 @@
+"""
+Problem: Kmp Algo
+Category: Strings
+Pattern: Two Pointers / Sliding Window
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def lps(self, s: str) -> int:
         n = len(s)
-        lps_arr = [
-            0
-        ] * n  # Initialize lps array to store lengths of longest prefix suffixes
+        lps_arr = [0] * n  # Initialize lps array to store lengths of longest prefix suffixes
 
         # Build lps_arr for the pattern
         i = 1

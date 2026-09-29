@@ -1,3 +1,13 @@
+"""
+Problem: Flatten Binary Search Tree Sorted List
+Category: Binary Search Trees
+Pattern: BST Inorder / Divide & Conquer
+
+Time Complexity:  O(H) where H is tree height
+Space Complexity: O(H) - Recursion stack
+"""
+
+
 class TreeNode:
     def __init__(self, value):
         self.val = value

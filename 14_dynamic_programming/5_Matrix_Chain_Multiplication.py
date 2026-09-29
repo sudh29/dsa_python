@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Matrix Chain Multiplication
+Category: Dynamic Programming
+Pattern: Interval DP / Optimal Parenthesization
+
+Time Complexity:  O(N^3) - Evaluating split points for all interval lengths
+Space Complexity: O(N^2) - 2D DP matrix storage
+"""
 
 
 class Solution:
@@ -15,18 +22,6 @@ class Solution:
         return dp[1][N - 1]
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        N = int(input())
-        arr = input().split()
-        for i in range(N):
-            arr[i] = int(arr[i])
-
-        ob = Solution()
-        print(ob.matrixMultiplication(N, arr))
-# } Driver Code Ends
+    arr = [40, 20, 30, 10, 30]
+    print(f"Min operations for matrix chain: {Solution().matrixMultiplication(len(arr), arr)}")

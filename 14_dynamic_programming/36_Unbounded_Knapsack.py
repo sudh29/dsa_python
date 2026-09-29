@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Unbounded Knapsack
+Category: Dynamic Programming
+Pattern: 1D DP / Repeated Item Usage
+
+Time Complexity:  O(N * W) - Iterating through weights for each item
+Space Complexity: O(W) - 1D DP array storage
+"""
 
 
 class Solution:
@@ -10,21 +17,8 @@ class Solution:
         return dp[W]
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        N, W = [int(x) for x in input().split()]
-        val = input().split()
-        for itr in range(N):
-            val[itr] = int(val[itr])
-        wt = input().split()
-        for it in range(N):
-            wt[it] = int(wt[it])
-
-        ob = Solution()
-        print(ob.knapSack(N, W, val, wt))
-# } Driver Code Ends
+    val = [1, 1]
+    wt = [2, 1]
+    w = 3
+    print(f"Unbounded knapsack max value: {Solution().knapSack(len(val), w, val, wt)}")

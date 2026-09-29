@@ -1,4 +1,12 @@
-import sys
+"""
+Problem: Partition Equal Subset Sum
+Category: Backtracking
+Pattern: Subset Sum / 0-1 Knapsack DP
+
+Time Complexity:  O(N * sum) - Pseudo-polynomial subset sum DP
+Space Complexity: O(sum) - 1D boolean DP array
+"""
+
 
 # User function Template for Python3
 
@@ -24,22 +32,6 @@ class Solution:
         return solve(arr, 0, 0, target_sum)
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python3
-
-input = sys.stdin.readline
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        N = int(input())
-        arr = input().split()
-        for it in range(N):
-            arr[it] = int(arr[it])
-
-        ob = Solution()
-        if ob.equalPartition(N, arr) == 1:
-            print("YES")
-        else:
-            print("NO")
-# } Driver Code Ends
+    arr = [1, 5, 11, 5]
+    print(f"Equal subset partition possible for {arr}: {Solution().equalPartition(len(arr), arr)}")

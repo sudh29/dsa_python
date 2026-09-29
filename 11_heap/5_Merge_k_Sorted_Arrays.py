@@ -1,3 +1,12 @@
+"""
+Problem: Merge K Sorted Arrays
+Category: Heaps
+Pattern: Min-Heap / K-Way Merge
+
+Time Complexity:  O(N * K * log K) where N is array length
+Space Complexity: O(K) heap space + O(N * K) output array
+"""
+
 import heapq
 
 
@@ -14,22 +23,7 @@ class Solution:
         return res
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        numbers = [[0 for _ in range(n)] for _ in range(n)]
-        line = input().strip().split()
-        for i in range(n):
-            for j in range(n):
-                numbers[i][j] = int(line[i * n + j])
-        ob = Solution()
-        merged_list = ob.mergeKArrays(numbers, n)
-        for i in merged_list:
-            print(i, end=" ")
-        print()
-# } Driver Code Ends
+    ob = Solution()
+    arrays = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    print(f"Merged arrays: {ob.mergeKArrays(arrays, len(arrays))}")

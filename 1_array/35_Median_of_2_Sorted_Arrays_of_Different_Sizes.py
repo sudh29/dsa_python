@@ -1,3 +1,13 @@
+"""
+Problem: Median Of 2 Sorted Arrays Of Different Sizes
+Category: Arrays
+Pattern: Two Pointers / Linear Scan
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def MedianOfArrays(self, array1, array2):
         m = len(array1)

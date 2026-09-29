@@ -1,3 +1,13 @@
+"""
+Problem: Find Common Elements In 3 Sorted Arrays
+Category: Arrays
+Pattern: Two Pointers / Linear Scan
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def commonElements(self, A, B, C, n1, n2, n3):
         # Extra space

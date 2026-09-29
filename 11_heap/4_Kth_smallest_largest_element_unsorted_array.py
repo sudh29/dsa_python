@@ -1,3 +1,12 @@
+"""
+Problem: Kth Smallest Largest Element Unsorted Array
+Category: Heaps
+Pattern: Priority Queue / Min-Max Heapify
+
+Time Complexity:  O(N log K)
+Space Complexity: O(K) auxiliary heap space
+"""
+
 import heapq
 
 

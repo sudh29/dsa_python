@@ -1,3 +1,13 @@
+"""
+Problem: Fractional Knapsack Problem
+Category: Greedy Algorithms
+Pattern: Greedy Value-to-Weight Ratio Sorting
+
+Time Complexity:  O(N log N) - Sorting items by value/weight ratio
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Item:
     def __init__(self, val, w):
         self.value = val
@@ -23,24 +33,7 @@ class Solution:
         return total_value
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-# Contributed by : Nagendra Jha
-
-
 if __name__ == "__main__":
-    test_cases = int(input())
-    for cases in range(test_cases):
-        n, W = map(int, input().strip().split())
-        info = list(map(int, input().strip().split()))
-        arr = [Item(0, 0) for i in range(n)]
-        for i in range(n):
-            arr[i].value = info[2 * i]
-            arr[i].weight = info[2 * i + 1]
-
-        ob = Solution()
-        print("%.6f" % ob.fractionalknapsack(W, arr, n))
-
-# } Driver Code Ends
+    items = [Item(60, 10), Item(100, 20), Item(120, 30)]
+    w = 50
+    print(f"Max value for weight {w}: {Solution().fractionalknapsack(w, items, len(items)):.2f}")

@@ -1,3 +1,12 @@
+"""
+Problem: Minimum Time Taken by Each Job in a DAG
+Category: Graph Algorithms
+Pattern: Topological Sort / Level-by-Level BFS
+
+Time Complexity:  O(V + E) - Standard topological sort traversal
+Space Complexity: O(V + E) - Graph representation and job times array
+"""
+
 from typing import List
 
 
@@ -27,15 +36,12 @@ class Solution:
         return ans
 
 
-# {
-# Driver Code Starts
 class IntArray:
     def __init__(self) -> None:
         pass
 
     def Input(self, n):
-        arr = [int(i) for i in input().strip().split()]  # array input
-        return arr
+        return []
 
     def Print(self, arr):
         for i in arr:
@@ -47,12 +53,8 @@ class IntMatrix:
     def __init__(self) -> None:
         pass
 
-    def Input(self, n, m):
-        matrix = []
-        # matrix input
-        for _ in range(n):
-            matrix.append([int(i) for i in input().strip().split()])
-        return matrix
+    def Input(self, n):
+        return []
 
     def Print(self, arr):
         for i in arr:
@@ -62,16 +64,21 @@ class IntMatrix:
 
 
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        a = IntArray().Input(2)
-
-        edges = IntMatrix().Input(a[1], a[1])
-
-        obj = Solution()
-        res = obj.minimumTime(a[0], a[1], edges)
-
-        IntArray().Print(res)
-
-
-# } Driver Code Ends
+    n, m = 10, 13
+    edges = [
+        [1, 3],
+        [1, 4],
+        [1, 5],
+        [2, 3],
+        [2, 8],
+        [2, 9],
+        [3, 6],
+        [4, 6],
+        [4, 8],
+        [5, 8],
+        [6, 7],
+        [7, 8],
+        [8, 10],
+    ]
+    res = Solution().minimumTime(n, m, edges)
+    print(f"Job completion times: {res}")

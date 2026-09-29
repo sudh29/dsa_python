@@ -1,9 +1,10 @@
 """
-class Node:
-    def __init__(self,val):
-        self.data = val
-        self.left = None
-        self.right = None
+Problem: Is Binary Tree Heap
+Category: Heaps
+Pattern: Priority Queue / Min-Max Heapify
+
+Time Complexity:  O(N log K)
+Space Complexity: O(K) auxiliary heap space
 """
 
 
@@ -19,9 +20,9 @@ def complete_tree_util(root, index, node_count):
         return True
     if index >= node_count:
         return False
-    return complete_tree_util(
-        root.left, 2 * index + 1, node_count
-    ) and complete_tree_util(root.right, 2 * index + 2, node_count)
+    return complete_tree_util(root.left, 2 * index + 1, node_count) and complete_tree_util(
+        root.right, 2 * index + 2, node_count
+    )
 
 
 def heap_property_util(root):

@@ -1,3 +1,13 @@
+"""
+Problem: Construct Binary Search Tree From Preorder Traversal
+Category: Binary Search Trees
+Pattern: BST Inorder / Divide & Conquer
+
+Time Complexity:  O(H) where H is tree height
+Space Complexity: O(H) - Recursion stack
+"""
+
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val

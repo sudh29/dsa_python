@@ -1,3 +1,13 @@
+"""
+Problem: Maximum Sum Such That No 2 Elements Are Adjacent
+Category: Searching & Sorting
+Pattern: Binary Search / Divide & Conquer
+
+Time Complexity:  O(N log N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     # Function to find the maximum money the thief can get.
     def FindMaxSum(self, arr, n):

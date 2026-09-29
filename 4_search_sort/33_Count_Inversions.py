@@ -1,3 +1,13 @@
+"""
+Problem: Count Inversions
+Category: Searching & Sorting
+Pattern: Binary Search / Divide & Conquer
+
+Time Complexity:  O(N log N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def merge(self, arr: list[int], left: int, m: int, r: int) -> int:
         temp = []

@@ -1,3 +1,13 @@
+"""
+Problem: Gold Mine Problem
+Category: Dynamic Programming
+Pattern: 2D Grid DP / Column-by-Column Transitions
+
+Time Complexity:  O(N * M) - Visiting each cell of N x M gold mine
+Space Complexity: O(N * M) - DP matrix storage
+"""
+
+
 class Solution:
     def maxGold(self, n, m, M):
         for col in range(m - 2, -1, -1):
@@ -9,21 +19,6 @@ class Solution:
         return max(M[row][0] for row in range(n))
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python3
-
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        n, m = [int(x) for x in input().split()]
-        tarr = [int(x) for x in input().split()]
-        M = []
-        j = 0
-        for i in range(n):
-            M.append(tarr[j : j + m])
-            j = j + m
-
-        ob = Solution()
-        print(ob.maxGold(n, m, M))
-# } Driver Code Ends
+    mine = [[1, 3, 3], [2, 1, 4], [0, 6, 4]]
+    print(f"Max gold collected: {Solution().maxGold(len(mine), len(mine[0]), mine)}")

@@ -1,3 +1,13 @@
+"""
+Problem: Split A Circular Linked List Into Two Halves
+Category: Linked Lists
+Pattern: Pointer Manipulation / Fast & Slow Pointers
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def splitList(self, head, head1, head2):
         head1 = head

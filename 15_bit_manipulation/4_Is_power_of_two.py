@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Is Power Of Two
+Category: Bit Manipulation
+Pattern: Bitwise Check: (n & (n - 1)) == 0
+
+Time Complexity:  O(1) - Single bitwise operation
+Space Complexity: O(1) auxiliary space
+"""
 
 
 class Solution:

@@ -1,4 +1,12 @@
-# User function Template for python3
+"""
+Problem: Smallest Range Covering Elements from K Lists
+Category: Heaps
+Pattern: Min-Heap / K Pointers
+
+Time Complexity:  O(N * K * log K) where N is max list length
+Space Complexity: O(K) - Heap storing one element per list
+"""
+
 import heapq
 
 
@@ -32,18 +40,7 @@ class Solution:
         return [low, high]
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-t = int(input())
-for _ in range(t):
-    line = input().strip().split()
-    n = int(line[0])
-    k = int(line[1])
-    numbers = []
-    for i in range(k):
-        numbers.append([int(x) for x in input().strip().split()])
-    r = Solution().smallestRange(numbers, n, k)
-    print(r[0], r[1])
-# } Driver Code Ends
+if __name__ == "__main__":
+    lists = [[1, 3, 5, 7, 9], [0, 2, 4, 8, 10], [2, 3, 5, 7, 11]]
+    res = Solution().smallestRange(lists, 5, 3)
+    print(f"Smallest range: {res}")

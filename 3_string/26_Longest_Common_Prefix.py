@@ -1,3 +1,13 @@
+"""
+Problem: Longest Common Prefix
+Category: Strings
+Pattern: Two Pointers / Sliding Window
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def longestCommonPrefix(self, strs: list[str]) -> str:
         if not strs:

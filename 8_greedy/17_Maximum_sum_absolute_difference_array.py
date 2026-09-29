@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Maximum Sum of Absolute Differences of an Array
+Category: Greedy Algorithms
+Pattern: Greedy Interleaving / Closed Form Formula
+
+Time Complexity:  O(1) using closed-form formula
+Space Complexity: O(1) auxiliary space
+"""
 
 
 class Solution:
@@ -25,13 +32,6 @@ class Solution:
         # return MaximumSum
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        N = int(input())
-
-        ob = Solution()
+    for n in [4, 5, 6]:
+        print(f"Max sum of differences for N={n}: {Solution().maxSum(n)}")

@@ -1,4 +1,11 @@
-import sys
+"""
+Problem: Friends Pairing Problem
+Category: Dynamic Programming
+Pattern: Fibonacci Variant: dp[i] = dp[i-1] + (i-1)*dp[i-2]
+
+Time Complexity:  O(N) - Linear iteration up to N
+Space Complexity: O(1) - State variables tracking previous two values
+"""
 
 
 class Solution:
@@ -21,16 +28,6 @@ class Solution:
         return dp[n]
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-sys.setrecursionlimit(10**6)
-
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-        ob = Solution()
-        print(ob.countFriendsPairings(n))
-# } Driver Code Ends
+    n = 3
+    print(f"Friends pairing ways for {n}: {Solution().countFriendsPairings(n)}")

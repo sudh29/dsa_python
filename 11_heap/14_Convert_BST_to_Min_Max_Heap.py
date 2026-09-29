@@ -1,3 +1,12 @@
+"""
+Problem: Convert BST to Min/Max Heap
+Category: Heaps
+Pattern: Inorder Traversal & Preorder/Postorder Refill
+
+Time Complexity:  O(N) - Linear tree traversals and array filling
+Space Complexity: O(N) - Array for storing BST elements and recursion stack
+"""
+
 from collections import deque
 
 # User function Template for python3
@@ -52,12 +61,6 @@ class Solution:
         preorder_traversal(root, arr, [0])
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python
-
-
-# Tree Node
 class Node:
     def __init__(self, val):
         self.data = val
@@ -66,6 +69,8 @@ class Node:
 
 
 # Function to Build Tree
+
+
 def buildTree(s):
     # Corner Case
     if len(s) == 0 or s[0] == "N":
@@ -131,16 +136,12 @@ def postOrder(root):
 
 
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(0, t):
-        s = input()
-        root = buildTree(s)
-        ob = Solution()
-
-        ob.convertToMaxHeapUtil(root)
-        postOrder(root)
-
-        print()
-
-
-# } Driver Code Ends
+    root = Node(4)
+    root.left = Node(2)
+    root.right = Node(6)
+    root.left.left = Node(1)
+    root.left.right = Node(3)
+    root.right.left = Node(5)
+    root.right.right = Node(7)
+    Solution().convertToMaxHeapUtil(root)
+    print("Converted BST to Max Heap successfully.")

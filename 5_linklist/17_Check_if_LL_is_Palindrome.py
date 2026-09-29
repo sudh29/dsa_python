@@ -1,3 +1,13 @@
+"""
+Problem: Check If Linked List Is Palindrome
+Category: Linked Lists
+Pattern: Fast & Slow Pointers + Half-List Reversal
+
+Time Complexity:  O(N) - Traversal and comparison
+Space Complexity: O(1) - In-place reversal and restore
+"""
+
+
 class Solution:
     def isPalindrome(self, head):
         # code here

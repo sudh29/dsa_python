@@ -1,3 +1,13 @@
+"""
+Problem: Minimum Size Subarray Sum
+Category: Arrays
+Pattern: Two Pointers / Linear Scan
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def minSubArrayLen(self, target: int, nums: list[int]) -> int:
         """n=len(nums)

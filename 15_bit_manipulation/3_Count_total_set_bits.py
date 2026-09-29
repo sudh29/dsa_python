@@ -1,3 +1,13 @@
+"""
+Problem: Count Total Set Bits
+Category: Bit Manipulation
+Pattern: Brian Kernighan's Algorithm: n = n & (n - 1)
+
+Time Complexity:  O(k) where k is the number of set bits
+Space Complexity: O(1) auxiliary space
+"""
+
+
 def cal_x(n):
     x = 0
     while (1 << x) <= n:

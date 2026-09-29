@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Find Position Of The Only Set Bit
+Category: Bit Manipulation
+Pattern: Brian Kernighan's Algorithm: n = n & (n - 1)
+
+Time Complexity:  O(k) where k is the number of set bits
+Space Complexity: O(1) auxiliary space
+"""
 
 
 class Solution:

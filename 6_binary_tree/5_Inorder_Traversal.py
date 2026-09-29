@@ -1,3 +1,13 @@
+"""
+Problem: Inorder Traversal
+Category: Binary Trees
+Pattern: Tree Traversal / DFS
+
+Time Complexity:  O(N) - Visits every node exactly once
+Space Complexity: O(H) - Call stack depth
+"""
+
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val

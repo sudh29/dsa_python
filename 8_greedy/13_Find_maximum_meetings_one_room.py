@@ -1,3 +1,13 @@
+"""
+Problem: Find Maximum Meetings in One Room
+Category: Greedy Algorithms
+Pattern: Activity Selection / Sort by End Time
+
+Time Complexity:  O(N log N) - Sorting meetings by finish time
+Space Complexity: O(N) - Storing meeting indices and end times
+"""
+
+
 class Solution:
     # Function to find the maximum number of meetings that can
     # be performed in a meeting room.
@@ -13,18 +23,7 @@ class Solution:
         return res
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-# Contributed by : Nagendra Jha
-
 if __name__ == "__main__":
-    test_cases = int(input())
-    for cases in range(test_cases):
-        n = int(input())
-        start = list(map(int, input().strip().split()))
-        end = list(map(int, input().strip().split()))
-        ob = Solution()
-        print(ob.maximumMeetings(n, start, end))
-# } Driver Code Ends
+    start = [1, 3, 0, 5, 8, 5]
+    end = [2, 4, 6, 7, 9, 9]
+    print(f"Max meetings: {Solution().maximumMeetings(len(start), start, end)}")

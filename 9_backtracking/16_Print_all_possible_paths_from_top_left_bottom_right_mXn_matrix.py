@@ -1,4 +1,13 @@
-# User function Template for python3
+"""
+Problem: Count All Possible Paths from Top-Left to Bottom-Right of Matrix
+Category: Backtracking
+Pattern: Dynamic Programming / Combinatorics (Right & Down)
+
+Time Complexity:  O(M * N) - 2D grid filling or O(min(M, N)) combinatorics
+Space Complexity: O(N) - 1D DP array
+"""
+
+
 def binomialCoefficient(n, k):
     return factorial(n) // (factorial(k) * factorial(n - k))
 
@@ -38,16 +47,6 @@ class Solution:
         return num_paths % (10**9 + 7)
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
 if __name__ == "__main__":
-    T = int(input())
-    for i in range(T):
-        m, n = input().split()
-        m = int(m)
-        n = int(n)
-        ob = Solution()
-        print(ob.numberOfPaths(m, n))
-
-# } Driver Code Ends
+    m, n = 3, 3
+    print(f"Paths in {m}x{n} grid: {Solution().numberOfPaths(m, n)}")

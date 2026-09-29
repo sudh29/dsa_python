@@ -1,3 +1,13 @@
+"""
+Problem: Check If Tree Binary Search Tree Or Not
+Category: Binary Search Trees
+Pattern: Range Invalidation [min_val, max_val] DFS
+
+Time Complexity:  O(N) - Checks each node satisfies BST invariant
+Space Complexity: O(H) - Call stack
+"""
+
+
 class Solution:
     # Function to check whether a Binary Tree is BST or not.
     def isBST(self, root):

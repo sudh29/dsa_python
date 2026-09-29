@@ -1,4 +1,13 @@
-# User function Template for python3
+"""
+Problem: Longest Common Subsequence
+Category: Strings
+Pattern: Dynamic Programming (2D Grid)
+
+Time Complexity:  O(N * M) - Filling DP matrix of size (N+1) x (M+1)
+Space Complexity: O(N * M) - DP matrix storage
+"""
+
+
 def solve(n, m, X, Y, ans):
     if m == 0 or n == 0:
         return 0
@@ -29,19 +38,7 @@ class Solution:
         return prev[m]
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-# Contributed by : Nagendra Jha
-
 if __name__ == "__main__":
-    test_cases = int(input())
-    for cases in range(test_cases):
-        n, m = map(int, input().strip().split())
-        str1 = str(input())
-        str2 = str(input())
-        ob = Solution()
-        print(ob.lcs(n, m, str1, str2))
-
-# } Driver Code Ends
+    ob = Solution()
+    s1, s2 = "ABCDGH", "AEDFHR"
+    print(f"LCS of '{s1}' and '{s2}': {ob.lcs(len(s1), len(s2), s1, s2)}")

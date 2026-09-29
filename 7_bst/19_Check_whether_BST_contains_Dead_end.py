@@ -1,3 +1,13 @@
+"""
+Problem: Check Whether Binary Search Tree Contains Dead End
+Category: Binary Search Trees
+Pattern: Range Invalidation [min_val, max_val] DFS
+
+Time Complexity:  O(N) - Checks each node satisfies BST invariant
+Space Complexity: O(H) - Call stack
+"""
+
+
 class Solution:
     def isDeadEnd(self, root):
         # def inorder(node,ans,leaf):

@@ -1,3 +1,13 @@
+"""
+Problem: Check Mirror N-Ary Tree
+Category: Binary Trees
+Pattern: Recursive DFS Node Swapping
+
+Time Complexity:  O(N) - Inverts left and right subtrees for every node
+Space Complexity: O(H) - Call stack
+"""
+
+
 class Solution:
     def checkMirrorTree(self, n, e, A, B):
         dict_map = {}

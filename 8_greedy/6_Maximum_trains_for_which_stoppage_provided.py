@@ -1,3 +1,13 @@
+"""
+Problem: Maximum Trains for Which Stoppage Can Be Provided
+Category: Greedy Algorithms
+Pattern: Activity Selection per Platform
+
+Time Complexity:  O(N log N) - Sorting trains by departure time per platform
+Space Complexity: O(N) - Segregating trains by platform number
+"""
+
+
 class Solution:
     def maxStop(self, n, m, trains):
         trains = sorted(trains, key=lambda x: x[1])
@@ -15,15 +25,13 @@ class Solution:
         return count
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    for _ in range(int(input())):
-        n, m = map(int, input().split())
-        trains = []
-        for i in range(m):
-            trains.append([int(i) for i in input().split()])
-        print(Solution().maxStop(n, m, trains))
-# } Driver Code Ends
+    trains = [
+        [1000, 1030, 1],
+        [1010, 1030, 1],
+        [1000, 1020, 2],
+        [1030, 1230, 2],
+        [1200, 1230, 3],
+        [900, 1005, 1],
+    ]
+    print(f"Max trains stopped: {Solution().maxStop(3, len(trains), trains)}")

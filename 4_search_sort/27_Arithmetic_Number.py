@@ -1,12 +1,20 @@
+"""
+Problem: Arithmetic Number
+Category: Searching & Sorting
+Pattern: Binary Search / Divide & Conquer
+
+Time Complexity:  O(N log N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def inSequence(self, A: int, B: int, C: int) -> int:
         if C == 0:
             return int(A == B)  # Return 1 if A equals B, else return 0
         d = (B - A) // C
         r = (B - A) % C
-        return int(
-            d >= 0 and r == 0
-        )  # Return 1 if both conditions are satisfied, else return 0
+        return int(d >= 0 and r == 0)  # Return 1 if both conditions are satisfied, else return 0
 
 
 # Example usage:

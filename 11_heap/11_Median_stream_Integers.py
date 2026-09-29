@@ -1,4 +1,12 @@
-# User function Template for python3
+"""
+Problem: Find Median in a Data Stream
+Category: Heaps
+Pattern: Two Heaps (Max-Heap & Min-Heap)
+
+Time Complexity:  O(log N) per insertion, O(1) per median query
+Space Complexity: O(N) - Storage for two balanced heaps
+"""
+
 import heapq
 import math
 
@@ -28,18 +36,10 @@ class Solution:
         self.balanceHeaps()
 
 
-# {
-# Driver Code Starts.
-
 if __name__ == "__main__":
-    t = int(input())
+    import math
 
-    for _ in range(t):
-        n = int(input())
-        ob = Solution()
-        for i in range(n):
-            x = int(input())
-            ob.insertHeaps(x)
-            print(math.floor(ob.getMedian()))
-
-# } Driver Code Ends
+    ob = Solution()
+    for x in [5, 15, 1, 3]:
+        ob.insertHeaps(x)
+        print(f"Inserted {x}, median = {math.floor(ob.getMedian())}")

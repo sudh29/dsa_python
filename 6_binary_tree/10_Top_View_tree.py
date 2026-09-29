@@ -1,3 +1,13 @@
+"""
+Problem: Top View Tree
+Category: Binary Trees
+Pattern: Tree Traversal (DFS / BFS)
+
+Time Complexity:  O(N) - Visits each node once
+Space Complexity: O(H) - Recursion stack bounded by tree height
+"""
+
+
 class Solution:
     # Function to return a list of nodes visible from the top view
     # from left to right in Binary Tree.

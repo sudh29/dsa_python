@@ -1,3 +1,13 @@
+"""
+Problem: Remove Invalid Parentheses
+Category: Backtracking
+Pattern: Exhaustive State Exploration / Pruning
+
+Time Complexity:  O(2^N) / Exponential
+Space Complexity: O(N) - Recursion call stack
+"""
+
+
 def isParenthesis(c):
     return (c == "(") or (c == ")")
 

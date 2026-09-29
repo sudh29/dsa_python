@@ -1,11 +1,16 @@
+"""
+Problem: Flood Fill Algo
+Category: Graph Algorithms
+Pattern: Breadth-First Search / Depth-First Search
+
+Time Complexity:  O(V + E)
+Space Complexity: O(V) - Visited set and traversal queue/stack
+"""
+
+
 class Solution:
     def is_valid(self, image, x, y, M, N, old_col, new_col):
-        return (
-            0 <= x < M
-            and 0 <= y < N
-            and image[x][y] == old_col
-            and image[x][y] != new_col
-        )
+        return 0 <= x < M and 0 <= y < N and image[x][y] == old_col and image[x][y] != new_col
 
     # DFS
     def dfs(self, image, x, y, old_col, new_col, directions):

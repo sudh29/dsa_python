@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Smallest Subset with Sum Greater Than All Other Elements
+Category: Greedy Algorithms
+Pattern: Greedy Sorting / Suffix Sum Comparison
+
+Time Complexity:  O(N log N) - Sorting in descending order
+Space Complexity: O(1) auxiliary space
+"""
 
 
 class Solution:
@@ -20,16 +27,6 @@ class Solution:
         return i
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        N = int(input())
-        A = list(map(int, input().strip().split()))
-        ob = Solution()
-        ans = ob.minSubset(A, N)
-        print(ans)
-# } Driver Code Ends
+    arr = [2, 17, 7, 3]
+    print(f"Min subset size: {Solution().minSubset(arr, len(arr))}")

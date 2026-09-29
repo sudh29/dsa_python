@@ -1,3 +1,13 @@
+"""
+Problem: Reverse Linked List Groups Given Size
+Category: Linked Lists
+Pattern: In-place Pointer Reversal
+
+Time Complexity:  O(N) - Traverses list once reversing pointers
+Space Complexity: O(1) - In-place pointer modifications
+"""
+
+
 class Solution:
     def reverse(self, head, k):
         curr = head

@@ -1,3 +1,13 @@
+"""
+Problem: Find Missing And Repeating
+Category: Searching & Sorting
+Pattern: Binary Search / Divide & Conquer
+
+Time Complexity:  O(N log N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 def findTwoElement(arr: list, n: int) -> tuple:
     temp = [0, 0]  # Array to hold the two elements
     sum1 = sum(range(1, n + 1))  # Sum of first n natural numbers

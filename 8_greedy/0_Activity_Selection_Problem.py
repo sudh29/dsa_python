@@ -1,3 +1,13 @@
+"""
+Problem: Activity Selection Problem
+Category: Greedy Algorithms
+Pattern: Greedy Choice / Sorting
+
+Time Complexity:  O(N log N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     # Function to find the maximum number of activities that can
     # be performed by a single person.

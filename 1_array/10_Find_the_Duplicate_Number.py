@@ -1,3 +1,13 @@
+"""
+Problem: Find The Duplicate Number
+Category: Arrays
+Pattern: Floyd's Tortoise and Hare / Index Marking
+
+Time Complexity:  O(N) - Linear time detection
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def findDuplicate(self, nums: list[int]) -> int:
         """sum_nums=sum(nums)

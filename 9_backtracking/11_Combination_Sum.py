@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Combination Sum
+Category: Backtracking
+Pattern: Recursive Subset Generation / Pruning
+
+Time Complexity:  O(2^T) where T is target / min element
+Space Complexity: O(T) - Recursion depth bounded by target
+"""
 
 
 def solve(arr, target, current, idx, result):
@@ -26,30 +33,7 @@ class Solution:
         return result
 
 
-# {
-# Driver Code Starts.
-
-
 if __name__ == "__main__":
-    test_cases = int(input())
-    for cases in range(test_cases):
-        n = int(input())
-        a = list(map(int, input().strip().split()))
-        s = int(input())
-        ob = Solution()
-        result = ob.combinationalSum(a, s)
-        if not len(result):
-            print("Empty")
-            continue
-        for i in range(len(result)):
-            print("(", end="")
-            size = len(result[i])
-            for j in range(size - 1):
-                print(result[i][j], end=" ")
-            if size:
-                print(result[i][size - 1], end=")")
-            else:
-                print(")", end="")
-        print()
-
-# } Driver Code Ends
+    candidates = [2, 4, 6, 8]
+    target = 8
+    print(f"Combinations summing to {target}: {Solution().combinationalSum(candidates, target)}")

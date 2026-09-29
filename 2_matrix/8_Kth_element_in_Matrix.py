@@ -1,3 +1,13 @@
+"""
+Problem: Kth Element In Matrix
+Category: Matrix
+Pattern: 2D Grid Traversal / Row-Column Scan
+
+Time Complexity:  O(R * C)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 def kthSmallest(mat, n, k):
     # Your code goes here
     # temp=[]

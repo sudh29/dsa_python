@@ -1,3 +1,13 @@
+"""
+Problem: Search In A Rotated Sorted Array
+Category: Searching & Sorting
+Pattern: Binary Search / Divide & Conquer
+
+Time Complexity:  O(N log N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def search(self, nums: list[int], target: int) -> int:
         start, end = 0, len(nums) - 1

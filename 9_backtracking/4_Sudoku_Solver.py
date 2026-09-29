@@ -1,3 +1,13 @@
+"""
+Problem: Sudoku Solver
+Category: Backtracking
+Pattern: Constraint Satisfaction / Backtracking Search
+
+Time Complexity:  O(9^(empty_cells)) worst case with early pruning
+Space Complexity: O(81) - Fixed 9x9 grid recursion stack
+"""
+
+
 def find_next_empty(puzzle):
     for i in range(9):
         for j in range(9):
@@ -44,27 +54,18 @@ class Solution:
                 print(arr[row][col], end=" ")
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-    while t > 0:
-        grid = [[0 for i in range(9)] for j in range(9)]
-        row = [int(x) for x in input().strip().split()]
-        k = 0
-        for i in range(9):
-            for j in range(9):
-                grid[i][j] = row[k]
-                k += 1
-
-        ob = Solution()
-
-        if ob.SolveSudoku(grid):
-            ob.printGrid(grid)
-            print()
-        else:
-            print("No solution exists")
-        t = t - 1
-# } Driver Code Ends
+    grid = [
+        [3, 0, 6, 5, 0, 8, 4, 0, 0],
+        [5, 2, 0, 0, 0, 0, 0, 0, 0],
+        [0, 8, 7, 0, 0, 0, 0, 3, 1],
+        [0, 0, 3, 0, 1, 0, 0, 8, 0],
+        [9, 0, 0, 8, 6, 3, 0, 0, 5],
+        [0, 5, 0, 0, 9, 0, 6, 0, 0],
+        [1, 3, 0, 0, 0, 0, 2, 5, 0],
+        [0, 0, 0, 0, 0, 0, 0, 7, 4],
+        [0, 0, 5, 2, 0, 6, 3, 0, 0],
+    ]
+    sol = Solution()
+    if sol.SolveSudoku(grid):
+        print("Sudoku solved successfully.")

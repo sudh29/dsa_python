@@ -1,3 +1,13 @@
+"""
+Problem: First Non-Repeating Character In A Stream
+Category: Linked Lists
+Pattern: Pointer Manipulation / Fast & Slow Pointers
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def FirstNonRepeating(self, A):
         res = []

@@ -1,3 +1,12 @@
+"""
+Problem: Find The First Repeated Word In String
+Category: Strings
+Pattern: Two Pointers / Sliding Window
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
 from collections import Counter
 
 

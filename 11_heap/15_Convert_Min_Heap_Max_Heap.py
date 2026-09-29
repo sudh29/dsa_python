@@ -1,4 +1,13 @@
-# User function Template for python3
+"""
+Problem: Convert Min Heap to Max Heap
+Category: Heaps
+Pattern: Bottom-Up Max-Heapify
+
+Time Complexity:  O(N) - Linear time build-heap algorithm
+Space Complexity: O(log N) - Recursion stack for heapify
+"""
+
+
 def max_heapify(arr, N, i):
     largest = i
     left = 2 * i + 1
@@ -19,16 +28,8 @@ class Solution:
             max_heapify(arr, N, i)
 
 
-# {
-# Driver Code Starts.
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        N = int(input())
-        arr = list(map(int, input().split()))
-        ob = Solution()
-        ob.convertMinToMaxHeap(N, arr)
-        for val in arr:
-            print(val, end=" ")
-        print()
-# } Driver Code Ends
+    ob = Solution()
+    arr = [3, 5, 9, 6, 8, 20, 10, 12, 18, 9]
+    ob.convertMinToMaxHeap(len(arr), arr)
+    print(f"Converted to max heap: {arr}")

@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Maximize Sum of Consecutive Differences in a Circular Array
+Category: Greedy Algorithms
+Pattern: Sorting / High-Low Interleaving
+
+Time Complexity:  O(N log N) - Sorting the array
+Space Complexity: O(1) auxiliary space
+"""
 
 
 def maxSum(arr, n):
@@ -27,17 +34,6 @@ def maxSum(arr, n):
     # return MaximumSum
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-
-t = int(input())
-for _ in range(0, t):
-    n = int(input())
-    # x=list(map(int,input().split()))
-    # n=x[0]
-    # k=x[1]
-    arr = list(map(int, input().split()))
-    ans = maxSum(arr, n)
-    print(ans)
+if __name__ == "__main__":
+    arr = [4, 2, 1, 8]
+    print(f"Max circular consecutive differences sum: {maxSum(arr, len(arr))}")

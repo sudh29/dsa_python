@@ -1,3 +1,12 @@
+"""
+Problem: Multiply Two Linked List
+Category: Linked Lists
+Pattern: Pointer Manipulation / Fast & Slow Pointers
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
 MOD = 10**9 + 7
 
 

@@ -1,10 +1,10 @@
 """
-# Node Class:
-class Node:
-    def __init__(self,val):
-        self.data = val
-        self.left = None
-        self.right = None
+Problem: Convert Binary Tree Sum Tree
+Category: Binary Trees
+Pattern: Tree Traversal (DFS / BFS)
+
+Time Complexity:  O(N) - Visits each node once
+Space Complexity: O(H) - Recursion stack bounded by tree height
 """
 
 

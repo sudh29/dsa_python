@@ -1,4 +1,12 @@
-import sys
+"""
+Problem: Partition Equal Subset Sum
+Category: Dynamic Programming
+Pattern: Subset Sum / 0-1 Knapsack
+
+Time Complexity:  O(N * sum) - Pseudo-polynomial DP table filling
+Space Complexity: O(sum) - 1D boolean DP array
+"""
+
 
 # User function Template for Python3
 
@@ -18,22 +26,6 @@ class Solution:
         return 1 if dp[target] else 0
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python3
-
-input = sys.stdin.readline
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        N = int(input())
-        arr = input().split()
-        for it in range(N):
-            arr[it] = int(arr[it])
-
-        ob = Solution()
-        if ob.equalPartition(N, arr) == 1:
-            print("YES")
-        else:
-            print("NO")
-# } Driver Code Ends
+    arr = [1, 5, 11, 5]
+    print(f"Equal partition possible: {Solution().equalPartition(len(arr), arr)}")

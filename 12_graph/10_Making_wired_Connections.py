@@ -1,3 +1,13 @@
+"""
+Problem: Making Wired Connections
+Category: Graph Algorithms
+Pattern: Breadth-First Search / Depth-First Search
+
+Time Complexity:  O(V + E)
+Space Complexity: O(V) - Visited set and traversal queue/stack
+"""
+
+
 def solve_dfs(val, graph, visited):
     visited[val] = True
     for i in graph[val]:

@@ -1,3 +1,12 @@
+"""
+Problem: Largest Independent Set Problem on Trees
+Category: Dynamic Programming
+Pattern: Tree DP (Include/Exclude Node)
+
+Time Complexity:  O(N) - Postorder tree traversal visiting each node once
+Space Complexity: O(N) - Memoization table / tree nodes
+"""
+
 from collections import deque
 
 # User function Template for python3
@@ -15,12 +24,6 @@ def LISS(root):
     return max(size_incl, size_excl)
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-
-# Tree Node
 class Node:
     def __init__(self, val):
         self.right = None
@@ -32,6 +35,8 @@ class Node:
 
 
 # Function to Build Tree
+
+
 def buildTree(s):
     # Corner Case
     if len(s) == 0 or s[0] == "N":
@@ -88,9 +93,10 @@ def buildTree(s):
 
 
 if __name__ == "__main__":
-    test_cases = int(input())
-    for cases in range(test_cases):
-        s = input()
-        root = buildTree(s)
-        print(LISS(root))
-# } Driver Code Ends
+    root = Node(10)
+    root.left = Node(20)
+    root.right = Node(30)
+    root.left.left = Node(40)
+    root.left.right = Node(50)
+    root.right.right = Node(60)
+    print(f"Size of Largest Independent Set: {LISS(root)}")

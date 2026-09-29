@@ -1,3 +1,13 @@
+"""
+Problem: Find All Four Sum Numbers
+Category: Searching & Sorting
+Pattern: Binary Search / Divide & Conquer
+
+Time Complexity:  O(N log N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     # arr: input list of integers
     # total_k: the quadruple sum required

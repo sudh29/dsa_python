@@ -1,3 +1,13 @@
+"""
+Problem: Reverse A Linked List
+Category: Linked Lists
+Pattern: In-place Pointer Reversal
+
+Time Complexity:  O(N) - Traverses list once reversing pointers
+Space Complexity: O(1) - In-place pointer modifications
+"""
+
+
 class Solution:
     # Function to reverse a linked list.
     def reverseList(self, head):

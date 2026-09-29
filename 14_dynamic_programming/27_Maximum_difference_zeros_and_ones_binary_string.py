@@ -1,4 +1,13 @@
-# User function Template for python3
+"""
+Problem: Maximum Difference of Zeros and Ones in Binary String
+Category: Dynamic Programming
+Pattern: Kadane's Algorithm on Mapped Values
+
+Time Complexity:  O(N) - Linear scan applying Kadane's algorithm (+1 for 0, -1 for 1)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def maxSubstring(self, S):
         # 	    # Kadane's Algorithm
@@ -21,17 +30,6 @@ class Solution:
         return max(dp) if max(dp) > 0 else -1
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    T = int(input())
-    for i in range(T):
-        s = input()
-
-        ob = Solution()
-        answer = ob.maxSubstring(s)
-        print(answer)
-
-# } Driver Code Ends
+    s = "11000010001"
+    print(f"Max diff of zeros and ones: {Solution().maxSubstring(s)}")

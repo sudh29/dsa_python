@@ -1,3 +1,13 @@
+"""
+Problem: Nth Node From End Of Linked List
+Category: Linked Lists
+Pattern: Pointer Manipulation / Fast & Slow Pointers
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 def getNthFromLast(head, n):
     slow = head
     fast = head

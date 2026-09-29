@@ -1,3 +1,13 @@
+"""
+Problem: Buy And Sell Stock Iii
+Category: Arrays
+Pattern: Two Pointers / Linear Scan
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def maxProfit(self, prices: list[int]) -> int:
         n = len(prices)

@@ -1,9 +1,10 @@
 """
-class Node:
-    def __init__(self, key):
-        self.key = key
-        self.left = None
-        self.right = None
+Problem: Find Inorder Successor And Inorder Predecessor Binary Search Tree
+Category: Binary Search Trees
+Pattern: Binary Search Tree Property (Left < Root < Right)
+
+Time Complexity:  O(H) - O(log N) average, O(N) worst-case skewed tree
+Space Complexity: O(1) iterative / O(H) recursive stack
 """
 
 

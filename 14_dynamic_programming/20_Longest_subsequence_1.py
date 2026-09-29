@@ -1,3 +1,12 @@
+"""
+Problem: Longest Subsequence Such That Difference Between Adjacent Is One
+Category: Dynamic Programming
+Pattern: Hash Map / DP Lookup
+
+Time Complexity:  O(N) - Linear pass querying dp[x-1] and dp[x+1]
+Space Complexity: O(N) - Hash map storing max lengths
+"""
+
 from typing import List
 
 
@@ -11,15 +20,12 @@ class Solution:
         return max(dp)
 
 
-# {
-# Driver Code Starts
 class IntArray:
     def __init__(self) -> None:
         pass
 
-    def Input(self, n):
-        arr = [int(i) for i in input().strip().split()]  # array input
-        return arr
+    def Input(self, *args):
+        return []
 
     def Print(self, arr):
         for i in arr:
@@ -28,13 +34,5 @@ class IntArray:
 
 
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        n = int(input())
-
-        a = IntArray().Input(n)
-
-        obj = Solution()
-        res = obj.longestSubseq(n, a)
-
-        print(res)
+    arr = [10, 9, 4, 5, 4, 8, 6]
+    print(f"Longest diff-1 subsequence: {Solution().longestSubsequence(len(arr), arr)}")

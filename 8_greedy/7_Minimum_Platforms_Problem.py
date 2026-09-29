@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Minimum Platforms Required for Railway Station
+Category: Greedy Algorithms
+Pattern: Two Pointers / Sorting Arrivals & Departures
+
+Time Complexity:  O(N log N) - Sorting arrival and departure times separately
+Space Complexity: O(1) auxiliary space
+"""
 
 
 class Solution:
@@ -33,19 +40,7 @@ class Solution:
         return result
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-# Contributed by : Nagendra Jha
-
-
 if __name__ == "__main__":
-    test_cases = int(input())
-    for cases in range(test_cases):
-        n = int(input())
-        arrival = list(map(int, input().strip().split()))
-        departure = list(map(int, input().strip().split()))
-        ob = Solution()
-        print(ob.minimumPlatform(n, arrival, departure))
-# } Driver Code Ends
+    arr = [900, 940, 950, 1100, 1500, 1800]
+    dep = [910, 1200, 1120, 1130, 1900, 2000]
+    print(f"Min platforms needed: {Solution().minimumPlatform(len(arr), arr, dep)}")

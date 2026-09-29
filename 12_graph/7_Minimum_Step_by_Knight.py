@@ -1,3 +1,13 @@
+"""
+Problem: Minimum Steps by Knight
+Category: Graph Algorithms
+Pattern: Shortest Path in Unweighted Grid (BFS)
+
+Time Complexity:  O(N^2) - Every cell on the chessboard visited at most once
+Space Complexity: O(N^2) - Visited board matrix and BFS queue
+"""
+
+
 def is_valid(x, y, N):
     return 1 <= x <= N and 1 <= y <= N
 
@@ -27,16 +37,9 @@ class Solution:
         return -1
 
 
-# {
-# Driver Code Starts
-
-T = int(input())
-for i in range(T):
-    N = int(input())
-    KnightPos = list(map(int, input().split()))
-    TargetPos = list(map(int, input().split()))
-    obj = Solution()
-    ans = obj.minStepToReachTarget(KnightPos, TargetPos, N)
-    print(ans)
-
-# } Driver Code Ends
+if __name__ == "__main__":
+    n = 6
+    kpos, tpos = [4, 5], [1, 1]
+    print(
+        f"Min knight steps from {kpos} to {tpos} on {n}x{n}: {Solution().minStepToReachTarget(kpos, tpos, n)}"
+    )

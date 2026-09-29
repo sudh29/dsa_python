@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Roman Numerals to Decimal
+Category: Strings
+Pattern: Greedy / Right-to-Left Traversal
+
+Time Complexity:  O(N) - Single pass through Roman numeral string
+Space Complexity: O(1) - Fixed symbol lookup table
+"""
 
 
 class Solution:
@@ -14,14 +21,7 @@ class Solution:
         return total
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        ob = Solution()
-        S = input()
-        print(ob.romanToDecimal(S))
-# } Driver Code Ends
+    ob = Solution()
+    for roman in ["III", "IV", "IX", "LVIII", "MCMXCIV"]:
+        print(f"{roman} -> {ob.romanToDecimal(roman)}")

@@ -1,4 +1,13 @@
-# User function Template for python3
+"""
+Problem: Print Anagrams Together using Trie
+Category: Trie
+Pattern: Trie with Leaf Indices / Hash Mapping
+
+Time Complexity:  O(N * L log L) - Sorting each word and inserting into trie
+Space Complexity: O(N * L) - Trie storage for anagram groups
+"""
+
+
 class TrieNode:
     def __init__(self):
         self.children = {}
@@ -48,23 +57,6 @@ class Solution:
         return anagram_groups
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-# contributed by RavinderSinghPB
 if __name__ == "__main__":
-    t = int(input())
-    for tcs in range(t):
-        n = int(input())
-        words = input().split()
-
-        ob = Solution()
-        ans = ob.Anagrams(words, n)
-
-        for grp in sorted(ans):
-            for word in grp:
-                print(word, end=" ")
-            print()
-
-# } Driver Code Ends
+    words = ["act", "god", "cat", "dog", "tac"]
+    print(f"Grouped anagrams: {Solution().Anagrams(words)}")

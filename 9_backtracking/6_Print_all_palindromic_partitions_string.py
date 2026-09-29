@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Print All Palindromic Partitions of a String
+Category: Backtracking
+Pattern: DFS Partitioning / Palindrome Check
+
+Time Complexity:  O(N * 2^N) - Generating all substring partitionings
+Space Complexity: O(N) - Recursion stack and current partition list
+"""
 
 
 class Solution:
@@ -38,19 +45,6 @@ class Solution:
         return s == s[::-1]
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        S = input()
-
-        ob = Solution()
-        allPart = ob.allPalindromicPerms(S)
-        for i in range(len(allPart)):
-            for j in range(len(allPart[i])):
-                print(allPart[i][j], end=" ")
-            print()
-# } Driver Code Ends
+    s = "geeks"
+    print(f"Palindromic partitions of '{s}': {Solution().allPalindromicPerms(s)}")

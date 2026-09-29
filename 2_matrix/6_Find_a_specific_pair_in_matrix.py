@@ -1,3 +1,13 @@
+"""
+Problem: Find A Specific Pair In Matrix
+Category: Matrix
+Pattern: 2D Grid Traversal / Row-Column Scan
+
+Time Complexity:  O(R * C)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 def find_max_value(mat):
     n = len(mat)
 

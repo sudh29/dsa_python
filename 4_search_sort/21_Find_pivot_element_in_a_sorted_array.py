@@ -1,3 +1,13 @@
+"""
+Problem: Find Pivot Element In A Sorted Array
+Category: Searching & Sorting
+Pattern: Binary Search / Divide & Conquer
+
+Time Complexity:  O(N log N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 def get_pivot_element(array, left, right):
     if right < left:
         return -1

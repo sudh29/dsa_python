@@ -1,3 +1,13 @@
+"""
+Problem: Convert Binary Tree Doubly Linked List
+Category: Binary Trees
+Pattern: Tree Traversal (DFS / BFS)
+
+Time Complexity:  O(N) - Visits each node once
+Space Complexity: O(H) - Recursion stack bounded by tree height
+"""
+
+
 class Node:
     """Class Node"""
 

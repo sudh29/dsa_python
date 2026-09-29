@@ -1,3 +1,13 @@
+"""
+Problem: Longest Consecutive Subsequence
+Category: Arrays
+Pattern: Two Pointers / Linear Scan
+
+Time Complexity:  O(N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     # arr[] : the input array
     # N : size of the array arr[]

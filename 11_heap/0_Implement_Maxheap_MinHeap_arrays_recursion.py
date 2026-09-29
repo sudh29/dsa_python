@@ -1,3 +1,13 @@
+"""
+Problem: Implement Maxheap Minheap Arrays Recursion
+Category: Heaps
+Pattern: Priority Queue / Min-Max Heapify
+
+Time Complexity:  O(N log K)
+Space Complexity: O(K) auxiliary heap space
+"""
+
+
 def max_heapify(arr, N, i):
     largest = i
     left = 2 * i + 1

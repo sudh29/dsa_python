@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Maximize Sum After K Negations
+Category: Greedy Algorithms
+Pattern: Min-Heap / Sorting / Greedy Negation
+
+Time Complexity:  O(N log N) - Sorting negative elements and smallest magnitude
+Space Complexity: O(1) auxiliary space
+"""
 
 
 class Solution:
@@ -22,23 +29,7 @@ class Solution:
         return sum(a)
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-
-def main():
-    T = int(input())
-
-    while T > 0:
-        sz = [int(x) for x in input().strip().split()]
-        n, k = sz[0], sz[1]
-        a = [int(x) for x in input().strip().split()]
-        ob = Solution()
-        print(ob.maximizeSum(a, n, k))
-
-        T -= 1
-
-
 if __name__ == "__main__":
-    main()
+    arr = [1, 2, -3, 4, 5]
+    k = 1
+    print(f"Max sum after {k} negations: {Solution().maximizeSum(arr, len(arr), k)}")

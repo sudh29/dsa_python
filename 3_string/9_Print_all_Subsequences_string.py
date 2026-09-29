@@ -1,4 +1,11 @@
-# User function Template for python3
+"""
+Problem: Print All Subsequences of a String
+Category: Strings
+Pattern: Recursion / Pick-or-Don't-Pick
+
+Time Complexity:  O(2^N) - Generates all 2^N possible subsequences
+Space Complexity: O(2^N) - Storage for all subsequences
+"""
 
 VOWELS = {"a", "e", "i", "o", "u"}
 
@@ -24,20 +31,7 @@ class Solution:
         return res
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        S = input()
-        ans = set()
-        ob = Solution()
-        ans = ob.allPossibleSubsequences(S)
-        if len(ans) == 0:
-            print(-1, end="")
-        else:
-            for i in ans:
-                print(i, end=" ")
-        print()
-# } Driver Code Ends
+    ob = Solution()
+    s = "abc"
+    print(f"All subsequences of '{s}': {ob.AllPossibleStrings(s)}")

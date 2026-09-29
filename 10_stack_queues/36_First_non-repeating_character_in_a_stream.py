@@ -1,3 +1,12 @@
+"""
+Problem: First Non-Repeating Character In A Stream
+Category: Stacks & Queues
+Pattern: LIFO / FIFO State Tracking / Monotonic Stack
+
+Time Complexity:  O(N)
+Space Complexity: O(N) - Auxiliary stack/queue
+"""
+
 from collections import defaultdict, deque
 
 

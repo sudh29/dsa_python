@@ -1,3 +1,13 @@
+"""
+Problem: Diameter Of A Tree
+Category: Binary Trees
+Pattern: Postorder DFS / Bottom-Up Height Calculation
+
+Time Complexity:  O(N) - Visits each node once computing subtree heights
+Space Complexity: O(H) - Recursion stack bounded by tree height
+"""
+
+
 class Solution:
     # Function to return the diameter of a Binary Tree.
     # def height(self,root):

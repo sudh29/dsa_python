@@ -1,4 +1,13 @@
-# User function Template for python3
+"""
+Problem: Row With Max 1S
+Category: Matrix
+Pattern: 2D Grid Traversal / Row-Column Scan
+
+Time Complexity:  O(R * C)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 class Solution:
     def rowWithMax1s(self, arr, n, m):
         # code here

@@ -1,3 +1,12 @@
+"""
+Problem: Create and Print Adjacency List Graph
+Category: Graph Algorithms
+Pattern: Adjacency List Construction
+
+Time Complexity:  O(V + E) - Linear in vertices and edges
+Space Complexity: O(V + E) - Storage for adjacency lists
+"""
+
 from typing import List
 
 
@@ -11,17 +20,12 @@ class Solution:
         return res
 
 
-# {
-# Driver Code Starts
-
-
 class IntArray:
     def __init__(self) -> None:
         pass
 
-    def Input(self):
-        arr = [int(i) for i in input().strip().split()]  # array input
-        return arr
+    def Input(self, n):
+        return []
 
     def Print(self, arr):
         for i in arr:
@@ -33,12 +37,8 @@ class IntMatrix:
     def __init__(self) -> None:
         pass
 
-    def Input(self, n, m):
-        matrix = []
-        # matrix input
-        for _ in range(n):
-            matrix.append([int(i) for i in input().strip().split()])
-        return matrix
+    def Input(self, n):
+        return []
 
     def Print(self, arr):
         for i in arr:
@@ -48,15 +48,6 @@ class IntMatrix:
 
 
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        V, E = IntArray().Input()
-
-        edges = IntMatrix().Input(E, 2)
-
-        obj = Solution()
-        res = obj.printGraph(V, edges)
-
-        for row in res:
-            print(*sorted(row))
-# } Driver Code Ends
+    v = 4
+    edges = [[0, 1], [0, 2], [1, 2], [2, 3]]
+    print(f"Adjacency list: {Solution().printGraph(v, edges)}")

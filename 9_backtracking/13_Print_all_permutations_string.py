@@ -1,3 +1,13 @@
+"""
+Problem: Print All Permutations of a String
+Category: Backtracking
+Pattern: Swap-based Backtracking
+
+Time Complexity:  O(N * N!) - N! permutations of length N
+Space Complexity: O(N) - Recursion call stack depth
+"""
+
+
 def solve(S, index, res):
     if index == len(S) - 1:
         res.append("".join(S))
@@ -19,19 +29,6 @@ class Solution:
         return res
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-
 if __name__ == "__main__":
-    t = int(input())
-    for i in range(t):
-        S = input()
-        ob = Solution()
-        ans = ob.find_permutation(S)
-        ans.sort()
-        for i in ans:
-            print(i, end=" ")
-        print()
-# } Driver Code Ends
+    s = "ABC"
+    print(f"Permutations of '{s}': {Solution().find_permutation(s)}")

@@ -1,3 +1,13 @@
+"""
+Problem: Tree Isomorphism Problem
+Category: Binary Trees
+Pattern: Tree Traversal (DFS / BFS)
+
+Time Complexity:  O(N) - Visits each node once
+Space Complexity: O(H) - Recursion stack bounded by tree height
+"""
+
+
 class Solution:
     # Return True if the given trees are isomotphic. Else return False.
     def isIsomorphic(self, root1, root2):

@@ -1,9 +1,10 @@
 """
-class Node:
-    def __init__(self, value):
-        self.left = None
-        self.data = value
-        self.right = None
+Problem: Find Lca Binary Tree
+Category: Binary Trees
+Pattern: Recursive Tree Traversal (Bottom-Up LCA)
+
+Time Complexity:  O(N) - Visits each node at most once
+Space Complexity: O(H) - Recursion stack
 """
 
 

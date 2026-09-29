@@ -1,4 +1,12 @@
-# User function Template for python3
+"""
+Problem: Minimum Sum of Two Numbers Formed from Digits of an Array
+Category: Heaps
+Pattern: Greedy / Sorting / Alternating Digits
+
+Time Complexity:  O(N log N) - Sorting the digit array
+Space Complexity: O(N) - Result string representation
+"""
+
 import heapq
 
 
@@ -20,19 +28,7 @@ class Solution:
         return num1 + num2
 
 
-# {
-# Driver Code Starts
-# Initial Template for Python 3
-
-
 if __name__ == "__main__":
-    tc = int(input())
-    while tc > 0:
-        n = int(input())
-        arr = list(map(int, input().strip().split()))
-        ob = Solution()
-        ans = ob.solve(arr, n)
-        print(ans)
-        tc -= 1
-
-# } Driver Code Ends
+    ob = Solution()
+    arr = [6, 8, 4, 5, 2, 3]
+    print(f"Min sum for {arr}: {ob.solve(arr, len(arr))}")

@@ -1,3 +1,13 @@
+"""
+Problem: Middle Of The Linked List
+Category: Linked Lists
+Pattern: Fast & Slow Pointers (Tortoise and Hare)
+
+Time Complexity:  O(N) - Single pass through list
+Space Complexity: O(1) - Two pointer variables
+"""
+
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val

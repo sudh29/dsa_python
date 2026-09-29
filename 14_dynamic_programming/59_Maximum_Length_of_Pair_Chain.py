@@ -1,3 +1,13 @@
+"""
+Problem: Maximum Length Of Pair Chain
+Category: Dynamic Programming
+Pattern: Memoization / Tabulation / Subproblem Overlap
+
+Time Complexity:  O(N^2) / Polynomial
+Space Complexity: O(N) - DP table storage
+"""
+
+
 class Solution:
     def findLongestChain(self, pairs: list[list[int]]) -> int:
         pairs.sort(key=lambda x: x[1])

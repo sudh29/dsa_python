@@ -1,3 +1,12 @@
+"""
+Problem: Maximum Size Square Sub-Matrix with All 1s
+Category: Dynamic Programming
+Pattern: 2D Grid DP / Min of Three Neighbors
+
+Time Complexity:  O(R * C) - Single pass through matrix
+Space Complexity: O(R * C) - DP table storage
+"""
+
 from typing import List
 
 
@@ -16,18 +25,12 @@ class Solution:
         return max_side
 
 
-# {
-# Driver Code Starts
 class IntMatrix:
     def __init__(self) -> None:
         pass
 
-    def Input(self, n, m):
-        matrix = []
-        # matrix input
-        for _ in range(n):
-            matrix.append([int(i) for i in input().strip().split()])
-        return matrix
+    def Input(self, *args):
+        return []
 
     def Print(self, arr):
         for i in arr:
@@ -37,13 +40,12 @@ class IntMatrix:
 
 
 if __name__ == "__main__":
-    t = int(input())
-    for _ in range(t):
-        n, m = map(int, input().split())
-
-        mat = IntMatrix().Input(n, m)
-
-        obj = Solution()
-        res = obj.maxSquare(n, m, mat)
-
-        print(res)
+    mat = [
+        [0, 1, 1, 0, 1],
+        [1, 1, 0, 1, 0],
+        [0, 1, 1, 1, 0],
+        [1, 1, 1, 1, 0],
+        [1, 1, 1, 1, 1],
+        [0, 0, 0, 0, 0],
+    ]
+    print(f"Max square size: {Solution().maxSquare(len(mat), len(mat[0]), mat)}")

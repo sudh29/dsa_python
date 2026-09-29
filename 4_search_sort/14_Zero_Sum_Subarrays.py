@@ -1,3 +1,13 @@
+"""
+Problem: Zero Sum Subarrays
+Category: Searching & Sorting
+Pattern: Binary Search / Divide & Conquer
+
+Time Complexity:  O(N log N)
+Space Complexity: O(1) auxiliary space
+"""
+
+
 def findSubarray(arr, n):
     res = 0
     curr_sum = 0
