@@ -1,3 +1,6 @@
+MOD = 10**9 + 7
+
+
 def multiplyTwoList(head1, head2):
     first = head1
     # first_str=""

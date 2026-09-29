@@ -9,9 +9,9 @@ class BST:
         #     return self.search(node.right,x)
         # return self.search(node.left,x)
 
-        if root is None:
+        if node is None:
             return 0
-        q = [root]
+        q = [node]
         while q:
             curr = q.pop(0)
             if curr is not None:

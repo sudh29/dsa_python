@@ -6,7 +6,7 @@ class Node:
 
 
 def maxLevel(root):
-    if root == None:
+    if root is None:
         return 0
     return 1 + max(maxLevel(root.left), maxLevel(root.right))
 
@@ -16,7 +16,7 @@ sum = []
 
 def maxLevelSum_(root, max_level, current):
     global sum
-    if root == None:
+    if root is None:
         return
     sum[current] += root.val
     maxLevelSum_(root.left, max_level, current + 1)

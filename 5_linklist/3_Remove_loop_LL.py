@@ -12,7 +12,7 @@ class Solution:
             if first == second:
                 node = first
                 break
-        if node != None:
+        if node is not None:
             first = node
             second = node
             k = 1

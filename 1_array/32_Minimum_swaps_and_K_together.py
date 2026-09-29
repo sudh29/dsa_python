@@ -4,7 +4,6 @@ import sys
 def minSwap(arr, n, k):
     # Complete the function
     res = sys.maxsize
-    swaps = 0
     fav = 0
     no_fav = 0
     for i in range(n):

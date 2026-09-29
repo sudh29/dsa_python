@@ -1,6 +1,6 @@
 def mergeArrays(arr1, arr2, n1, n2):
     arr3 = []
-    i, j, k = 0, 0, 0
+    i, j, _k = 0, 0, 0
 
     # Merge elements from both arrays until one of them is exhausted
     while i < n1 and j < n2:

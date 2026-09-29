@@ -15,7 +15,7 @@ def maxSumLevel(root):
     curSum = maxSum = level = maxLevel = 0
     while len(q) > 0:
         node = q.pop(0)
-        if node == None:
+        if node is None:
             if curSum > maxSum:
                 maxSum = curSum
                 maxLevel = level

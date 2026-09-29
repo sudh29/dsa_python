@@ -1,7 +1,6 @@
 # 📚 DSA Python Roadmap
 
 This repository contains categorized solutions to Data Structures and Algorithms (DSA) problems using Python. Each topic below links to a detailed `README.md` file containing problem statements and solutions.
-New changes
 
 ---
 
@@ -29,7 +28,7 @@ New changes
 
 ## ⚙️ Setup & Development Guide
 
-A step-by-step guide to set up and run Django projects using [`uv`](https://astral.sh/uv/), a blazing fast Python package manager.
+A step-by-step guide to set up and run this DSA project using [`uv`](https://astral.sh/uv/), a fast Python package manager.
 
 ### ✅ Requirements
 

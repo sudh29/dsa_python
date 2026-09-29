@@ -17,7 +17,7 @@ class Solution:
         #     arr[i] = arr2.pop(0)
         #     i += 1
 
-        # In place 
+        # In place
         n = len(arr)
         # Step 1: Partition (move negatives to left, positives to right)
         i, j = 0, n - 1

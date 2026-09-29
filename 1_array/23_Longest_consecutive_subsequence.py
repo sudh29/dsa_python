@@ -21,7 +21,7 @@ class Solution:
 
         HS = set(arr)
         res = -1000000
-        for i in range(n):
+        for i in range(N):
             if (arr[i] - 1) not in HS:
                 val = arr[i] + 1
                 while val in HS:

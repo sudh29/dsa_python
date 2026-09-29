@@ -67,9 +67,9 @@ def deleteDeepest(root, data):
 
 # function to delete element in binary tree
 def deletion(root, data):
-    if root == None:
+    if root is None:
         return None
-    if root.left == None and root.right == None:
+    if root.left is None and root.right is None:
         if root.val == data:
             return None
         else:

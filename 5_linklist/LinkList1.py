@@ -68,7 +68,7 @@ class LinkList:
                 break
             prev = current
             current = current.next
-        if current == None:
+        if current is None:
             return
         prev.next = current.next
         current = None

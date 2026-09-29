@@ -1,4 +1,5 @@
-#User function Template for python3
+# User function Template for python3
+
 
 class Solution:
     def maxProfit(self, K, N, A):
@@ -8,15 +9,16 @@ class Solution:
         for t in range(1, K + 1):
             max_so_far = -A[0]
             for d in range(1, N):
-                dp[t][d] = max(dp[t][d-1], A[d] + max_so_far)
-                max_so_far = max(max_so_far, dp[t-1][d] - A[d])
-        return dp[K][N-1]
+                dp[t][d] = max(dp[t][d - 1], A[d] + max_so_far)
+                max_so_far = max(max_so_far, dp[t - 1][d] - A[d])
+        return dp[K][N - 1]
 
-#{
- # Driver Code Starts
-#Initial Template for Python 3
 
-if __name__ == '__main__':
+# {
+# Driver Code Starts
+# Initial Template for Python 3
+
+if __name__ == "__main__":
     t = int(input())
     for _ in range(t):
         K = int(input())

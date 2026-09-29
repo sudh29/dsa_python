@@ -46,7 +46,7 @@ if __name__ == "__main__":
             graph[list[cnt] - 1][list[cnt + 1] - 1] = 1
             graph[list[cnt + 1] - 1][list[cnt] - 1] = 1
             cnt += 2
-        if graphColoring(graph, k, V) == True:
+        if graphColoring(graph, k, V):
             print(1)
         else:
             print(0)

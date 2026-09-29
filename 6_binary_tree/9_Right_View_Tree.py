@@ -10,12 +10,12 @@ class Solution:
             n = len(q)
             for i in range(1, n + 1):
                 temp = q.pop(0)
-                if temp != None:
+                if temp is not None:
                     if i == 1:
                         res.append(temp.data)
-                    if temp.right != None:
+                    if temp.right is not None:
                         q.append(temp.right)
-                    if temp.left != None:
+                    if temp.left is not None:
                         q.append(temp.left)
         return res
 

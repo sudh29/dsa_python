@@ -6,7 +6,7 @@ from collections import defaultdict
 def topologicalU(v, visit, stack, graph):
     visit[v] = True
     for i in graph[v]:
-        if visit[i] == False:
+        if not visit[i]:
             topologicalU(i, visit, stack, graph)
     stack.append(v)
 
@@ -15,7 +15,7 @@ def topologicalSort(g, graph):
     visited = [False] * (g)
     stack = []
     for i in range((g)):
-        if visited[i] == False:
+        if not visited[i]:
             topologicalU(i, visited, stack, graph)
     print(stack[::-1])
 

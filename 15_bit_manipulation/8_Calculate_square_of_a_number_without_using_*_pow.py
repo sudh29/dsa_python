@@ -1,8 +1,8 @@
-def square(n):
+def square_iterative(n):
     if n < 0:
         n = -n
     res = n
-    for i in range(1, n):
+    for _ in range(1, n):
         res += n
     return res
 

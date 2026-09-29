@@ -15,12 +15,12 @@ class Solution:
         #     if a_bin[i]!=b_bin[i]:
         #         c+=1
         # return c
-        
+
         # xor = a ^ b
         # count = 0
         # while xor:
         #     count += xor & 1
         #     xor >>= 1
         # return count
-        
-        return bin(a ^ b).count('1')
+
+        return bin(a ^ b).count("1")

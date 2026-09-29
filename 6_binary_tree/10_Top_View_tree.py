@@ -12,10 +12,10 @@ class Solution:
             curr, hd = q.pop(0)
             if hd not in m.keys():
                 m[hd] = curr.data
-            if curr.left != None:
+            if curr.left is not None:
                 q.append((curr.left, hd - 1))
                 l = min(l, hd - 1)
-            if curr.right != None:
+            if curr.right is not None:
                 q.append((curr.right, hd + 1))
                 r = max(r, hd + 1)
         res = []

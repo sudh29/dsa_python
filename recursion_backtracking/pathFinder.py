@@ -7,11 +7,11 @@ def pathFinder(mat, pos, n):
     x, y = pos
     if x + 1 < n and mat[x + 1][y] == 1:
         a = pathFinder(mat, (x + 1, y), n)
-        if a != None:
+        if a is not None:
             return (x, y) + a
     if y + 1 < n and mat[x][y + 1] == 1:
         b = pathFinder(mat, (x, y + 1), n)
-        if b != None:
+        if b is not None:
             return (x, y) + b
 
 

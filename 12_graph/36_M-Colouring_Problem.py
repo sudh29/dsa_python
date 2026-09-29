@@ -44,7 +44,7 @@ if __name__ == "__main__":
             graph[l[cnt] - 1][l[cnt + 1] - 1] = 1
             graph[l[cnt + 1] - 1][l[cnt] - 1] = 1
             cnt += 2
-        if graphColoring(graph, k, V) == True:
+        if graphColoring(graph, k, V):
             print(1)
         else:
             print(0)

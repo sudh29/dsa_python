@@ -47,7 +47,7 @@ class Node:
 class Solution:
     def printBoundaryView(self, root):
         if not root:
-            return res
+            return []
         res = []
         if not isleaf(root):
             res.append(root.data)

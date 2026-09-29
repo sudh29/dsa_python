@@ -1,20 +1,25 @@
-if n == 0:
+from bisect import bisect_left
+
+
+class Solution:
+    def longestSubsequence(self, a, n):
+        if n == 0:
             return 0
 
-        # dp array to store the smallest end elements of all increasing subsequences
-        # with different lengths
+        # dp array to store the smallest tail of all increasing subsequences of various lengths
         dp = []
 
         for num in a:
-            pos = binary_search(dp, num)
-
-            # If pos is equal to the length of dp, it means num is greater than
-            # all elements in dp, hence we extend the longest subsequence found so far
+            pos = bisect_left(dp, num)
             if pos == len(dp):
                 dp.append(num)
             else:
-                # Otherwise, replace the element at pos with num
                 dp[pos] = num
 
-        # The length of dp will be our answer
         return len(dp)
+
+
+if __name__ == "__main__":
+    a = [0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15]
+    ob = Solution()
+    print(ob.longestSubsequence(a, len(a)))

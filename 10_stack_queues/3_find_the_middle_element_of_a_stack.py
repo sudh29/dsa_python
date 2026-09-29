@@ -4,6 +4,7 @@ class Node:
         self.next = None
         self.prev = None
 
+
 class DoublyLinkedList:
     def __init__(self):
         self.dummy = Node(-1)
@@ -56,3 +57,9 @@ class DoublyLinkedList:
     def print_data(self):
         curr = self.head
         if self.count == 0:
+            print("Empty")
+            return
+        while curr != self.dummy:
+            print(curr.data, end=" ")
+            curr = curr.next
+        print()

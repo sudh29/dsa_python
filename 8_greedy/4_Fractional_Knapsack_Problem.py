@@ -30,10 +30,6 @@ class Solution:
 # Contributed by : Nagendra Jha
 
 
-class Item:
-    def __init__(self, val, w):
-        self.value = val
-        self.weight = w
 
 
 if __name__ == "__main__":

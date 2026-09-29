@@ -22,7 +22,7 @@ class Solution:
         end = head
         prev = None
         curr = head
-        while end.next != None:
+        while end.next is not None:
             end = end.next
         new_end = end
         while curr.data % 2 != 0 and curr != end:

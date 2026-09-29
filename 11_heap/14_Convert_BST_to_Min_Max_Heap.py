@@ -122,7 +122,7 @@ def buildTree(s):
 
 
 def postOrder(root):
-    if root == None:
+    if root is None:
         return
 
     postOrder(root.left)

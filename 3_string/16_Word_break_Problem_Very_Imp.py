@@ -1,4 +1,6 @@
- word_set = set(dictionary)
+class Solution:
+    def wordBreak(self, n, s, dictionary):
+        word_set = set(dictionary)
 
         # Memoization dictionary to store results of subproblems
         memo = {}

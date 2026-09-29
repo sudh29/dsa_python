@@ -6,7 +6,6 @@ class Solution:
         # print(intervals)
         temp = intervals[0]
         result = []
-        flag = 0
         for i in range(1, len(intervals)):
             # print(temp,intervals[i])
             if temp[1] >= intervals[i][0]:

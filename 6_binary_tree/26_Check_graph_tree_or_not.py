@@ -12,7 +12,7 @@ class Solution:
     def isCyclicUtil(self, curr, visited, parent, adj):
         visited[curr] = True
         for i in adj[curr]:
-            if visited[i] == False:
+            if not visited[i]:
                 if self.isCyclicUtil(i, visited, curr, adj):
                     return True
             elif i != parent:

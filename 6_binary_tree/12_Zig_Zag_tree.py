@@ -26,7 +26,7 @@ class Solution:
                 if curr.right:
                     q.append(curr.right)
             flag = not flag
-            if flag == False:
+            if not flag:
                 level = level[::-1]
             for i in level:
                 res.append(i)

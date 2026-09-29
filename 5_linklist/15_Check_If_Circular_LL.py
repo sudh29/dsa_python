@@ -1,5 +1,5 @@
 def isCircular(head):
-    if head == None:
+    if head is None:
         return True
     curr = head
     while curr:

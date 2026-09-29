@@ -76,6 +76,6 @@ if __name__ == "__main__":
         obj = Solution()
         merged = obj.mergeHeaps(a, b, n, m)
         flag = isMerged(copyA, copyB, merged)
-        print(0 if flag == False else 1)
+        print(0 if not flag else 1)
 
 # } Driver Code Ends

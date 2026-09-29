@@ -59,9 +59,18 @@ print(user0.age())
 
 ############## Lambda  ###############
 
-g = lambda x: 3 * x + 1
+
+def g(x):
+    return 3 * x + 1
+
+
 print(g(2))
-full_name = lambda fn, ln: fn.strip().title() + " " + ln.strip().title()
+
+
+def full_name(fn, ln):
+    return fn.strip().title() + " " + ln.strip().title()
+
+
 print(full_name("     Sudhanshu   ", "   Chaudhary  "))
 
 
@@ -102,8 +111,12 @@ print(list(filter(None, countries)))
 # Reduce fn is used in python2 in python3 functools is used or for loop
 from functools import reduce
 
+
 # multiply all number in a list
-multi = lambda x, y: x * y
+def multi(x, y):
+    return x * y
+
+
 print(reduce(multi, data))
 
 

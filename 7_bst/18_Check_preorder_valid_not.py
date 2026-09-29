@@ -31,6 +31,6 @@ def post_order(pre, size) -> Node:
         root.right = bst_from_preorder(preorder[i:])
         return root
 
-    postorder = solve(pre)
+    solve(pre)
     # print(postorder)
     return bst_from_preorder(pre)

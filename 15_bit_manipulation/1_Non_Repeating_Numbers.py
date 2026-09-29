@@ -1,18 +1,24 @@
 class Solution:
-	def singleNumber(self, nums):
-	    sums=0
+    def singleNumber(self, nums):
+        sums = 0
         for i in nums:
-            sums = sums ^ (i)
-        right_set_bit = (sums & -sums)
-        x=0
-        y=0
+            sums = sums ^ i
+        right_set_bit = sums & -sums
+        x = 0
+        y = 0
         for i in nums:
             if i & right_set_bit:
-                x=x^i
+                x = x ^ i
             else:
-                y=y^i
+                y = y ^ i
 
-        if x<y:
-            return [x,y]
+        if x < y:
+            return [x, y]
         else:
-            return [y,x]
+            return [y, x]
+
+
+if __name__ == "__main__":
+    nums = [1, 2, 3, 2, 1, 4]
+    ob = Solution()
+    print(ob.singleNumber(nums))  # Expected [3, 4]

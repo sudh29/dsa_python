@@ -5,14 +5,13 @@ class Solution:
     ##Complete this function
     # Function to check if given number n is a power of two.
     def isPowerofTwo(self, n):
-        ##Your code here
-        if n == 0:
+        # Optimal O(1) bitwise approach
+        if n <= 0:
             return False
-        else:
-            res = n & (n - 1)
-            return True if res == 0 else False
+        return (n & (n - 1)) == 0
 
-    def isPowerofTwo(self, n):
+    def isPowerofTwo_iterative(self, n):
+        # Iterative O(log n) approach
         if n == 1 or n == 2:
             return True
         elif n % 2 == 0:
@@ -23,5 +22,4 @@ class Solution:
                     return True
                 if x > n:
                     return False
-        else:
-            return False
+        return False

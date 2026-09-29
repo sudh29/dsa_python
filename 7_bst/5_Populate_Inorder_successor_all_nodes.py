@@ -15,7 +15,7 @@ class Solution:
         if root is None:
             return
         self.populateNext(root.left)
-        if temp != None:
+        if temp is not None:
             temp.next = root
         temp = root
         self.populateNext(root.right)

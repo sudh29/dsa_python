@@ -1,6 +1,6 @@
 def reverseDLL(head):
     # return head after
-    if head == None or head.next == None:
+    if head is None or head.next is None:
         return head
     curr = head
     while curr.next:

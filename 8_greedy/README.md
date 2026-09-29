@@ -25,7 +25,7 @@
 | [22_Smallest_subset_with_sum_greater_than_all_other_elements.py](22_Smallest_subset_with_sum_greater_than_all_other_elements.py) | Greedy / Sorting |
 | [23_Chocolate_Distribution_Problem.py](23_Chocolate_Distribution_Problem.py) | Greedy / Sliding Window |
 | [26_GERGOVIA_Wine_trading_Gergovia.py](26_GERGOVIA_Wine_trading_Gergovia.py) | Greedy / Prefix Sum |
-| [31_Minimum _Cost_ropes.py](31_Minimum _Cost_ropes.py) | Greedy / Min Heap |
+| [31_Minimum_Cost_ropes.py](31_Minimum_Cost_ropes.py) | Greedy / Min Heap |
 | [32_Find_smallest_number_given_number_digits_sum_digits.py](32_Find_smallest_number_given_number_digits_sum_digits.py) | Greedy / Digit Construction |
 | [33_Rearrange_characters.py](33_Rearrange_characters.py) | Greedy / Heap / Frequency Count |
 | [34_Find_Maximum_Equal_sum_Three_Stack.py](34_Find_Maximum_Equal_sum_Three_Stack.py) | Greedy / Prefix Sum / Stack Trimming |

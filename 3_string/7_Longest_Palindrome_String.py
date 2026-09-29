@@ -1,7 +1,7 @@
 # User function Template for python3
 # Manacher’s Algorithm
 class Solution:
-    def longestPalin(self, s):
+    def longestPalinManacher(self, s):
         # Preprocess the string to add boundaries
         T = "^#" + "#".join(s) + "#$"
         n = len(T)
@@ -33,16 +33,9 @@ class Solution:
         ) // 2  # Convert index in T back to original string
         return s[start : start + max_len]
 
-
-def helper(s, left, right):
-    while (left >= 0 and right < len(s)) and s[left] == s[right]:
-        left -= 1
-        right += 1
-    return s[left + 1 : right]
-
-
-class Solution:
     def longestPalin(self, s):
+        # Center expansion approach (or delegate to Manacher)
+        return self.longestPalinManacher(s)
         # code here
         res = ""
         for i in range(len(s)):

@@ -28,8 +28,8 @@ class Solution:
             path.append(root)
             if root.data == k:
                 return True
-            if (root.left != None and solve(root.left, path, k)) or (
-                root.right != None and solve(root.right, path, k)
+            if (root.left is not None and solve(root.left, path, k)) or (
+                root.right is not None and solve(root.right, path, k)
             ):
                 return True
             path.pop()

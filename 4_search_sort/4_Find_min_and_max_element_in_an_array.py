@@ -39,6 +39,7 @@ def getMinMax(a: list, n: int) -> tuple:
     #     i += 2
     # return mn, mx
 
+
 # Example usage:
 # arr = [1, 2, 3, 4, 5]
 # print(getMinMax(arr, len(arr)))  # Output: (1, 5)
